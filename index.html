@@ -53,6 +53,7 @@
   }
 
   * { box-sizing: border-box; }
+  html { font-size: 125%; }
   @media (prefers-reduced-motion: reduce) {
     * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   }
@@ -605,16 +606,48 @@
     });
   }
 
-  function score(text, item) {
-    var norm = text.replace(/\s+/g, "");
+  var PARTICLES = ["에서","에게","까지","부터","처럼","보다","라도","이나","은는","은","는","이","가","을","를","의","에","도","만","과","와","나"];
+  function stripParticle(w) {
+    for (var i = 0; i < PARTICLES.length; i++) {
+      var p = PARTICLES[i];
+      if (w.length > p.length && w.slice(-p.length) === p) return w.slice(0, -p.length);
+    }
+    return w;
+  }
+  function corpusOf(item) {
+    return (item.q + " " + item.a).toLowerCase().replace(/\s+/g, "");
+  }
+  function kwScore(norm, item) {
     var s = 0;
     item.kw.forEach(function (k) {
-      var words = k.split(/\s+/).filter(Boolean);
+      var words = k.toLowerCase().split(/\s+/).filter(Boolean);
       var allFound = words.every(function (w) { return norm.indexOf(w) !== -1; });
       if (allFound) s += words.length;
     });
-    if (norm.indexOf(item.q.replace(/\s+/g, "").slice(0, 6)) !== -1) s += 1;
+    if (norm.indexOf(item.q.toLowerCase().replace(/\s+/g, "").slice(0, 6)) !== -1) s += 1;
     return s;
+  }
+  function docFreq(word) {
+    var c = 0;
+    QA.forEach(function (item) { if (corpusOf(item).indexOf(word) !== -1) c++; });
+    return c;
+  }
+  function fuzzyScore(text, item) {
+    var words = text.toLowerCase().replace(/[?!.,]/g, " ").split(/\s+/)
+      .map(stripParticle)
+      .filter(function (w) { return w.length >= 2; });
+    var c = corpusOf(item);
+    var s = 0;
+    words.forEach(function (w) {
+      if (c.indexOf(w) === -1) return;
+      if (docFreq(w) > 3) return; // too generic (appears in most answers) — not a useful signal
+      s += 1;
+    });
+    return s;
+  }
+  function score(text, item) {
+    var norm = text.toLowerCase().replace(/\s+/g, "");
+    return kwScore(norm, item) * 5 + fuzzyScore(text, item);
   }
 
   function findAnswer(text) {
