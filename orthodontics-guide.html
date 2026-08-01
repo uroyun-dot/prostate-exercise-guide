@@ -1,0 +1,877 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>교정치료 환자 안내서 · 조선대병원 교정과</title>
+<style>
+  :root {
+    --ink: #16221f;
+    --ink-soft: #43524d;
+    --paper: #eff2ed;
+    --paper-raised: #ffffff;
+    --pine: #24534a;
+    --pine-strong: #163b34;
+    --pine-soft: #dbe7e1;
+    --gold: #93691f;
+    --gold-soft: #f1e3c4;
+    --brick: #8a3d32;
+    --brick-soft: #f3ddd8;
+    --mist: #6e7c77;
+    --line: #d3ddd6;
+    --shadow: 0 1px 2px rgba(22,34,31,0.06), 0 8px 24px -12px rgba(22,34,31,0.18);
+    --radius: 14px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e9efec;
+      --ink-soft: #b3c1bb;
+      --paper: #101815;
+      --paper-raised: #16211d;
+      --pine: #74ab9c;
+      --pine-strong: #a7cdc0;
+      --pine-soft: #1c2f29;
+      --gold: #dcb15c;
+      --gold-soft: #33291a;
+      --brick: #e0897b;
+      --brick-soft: #35211d;
+      --mist: #8ba098;
+      --line: #26332d;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.6);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e9efec; --ink-soft: #b3c1bb; --paper: #101815; --paper-raised: #16211d;
+    --pine: #74ab9c; --pine-strong: #a7cdc0; --pine-soft: #1c2f29; --gold: #dcb15c;
+    --gold-soft: #33291a; --brick: #e0897b; --brick-soft: #35211d; --mist: #8ba098; --line: #26332d;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.6);
+    color-scheme: dark;
+  }
+  :root[data-theme="light"] {
+    --ink: #16221f; --ink-soft: #43524d; --paper: #eff2ed; --paper-raised: #ffffff;
+    --pine: #24534a; --pine-strong: #163b34; --pine-soft: #dbe7e1; --gold: #93691f;
+    --gold-soft: #f1e3c4; --brick: #8a3d32; --brick-soft: #f3ddd8; --mist: #6e7c77; --line: #d3ddd6;
+    --shadow: 0 1px 2px rgba(22,34,31,0.06), 0 8px 24px -12px rgba(22,34,31,0.18);
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+  html { font-size: 125%; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", "Noto Sans KR", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* ---------- Header ---------- */
+  header.top {
+    background: linear-gradient(180deg, var(--pine-strong) 0%, var(--pine) 100%);
+    color: #f4f8f6;
+    padding: 36px 20px 44px;
+  }
+  header.top .wrap { padding-bottom: 0; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: #cfe7dc;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold-soft);
+    display: inline-block;
+  }
+  h1.title {
+    font-size: clamp(1.7rem, 4.2vw, 2.3rem);
+    line-height: 1.3;
+    margin: 0 0 12px;
+    font-weight: 800;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  header.top p.lede {
+    margin: 0;
+    font-size: 1.02rem;
+    color: #dcece5;
+    max-width: 56ch;
+  }
+
+  /* ---------- Disclaimer banner ---------- */
+  .disclaimer {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: -24px 0 32px;
+    box-shadow: var(--shadow);
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .disclaimer strong { color: var(--ink); }
+  .disclaimer svg { flex: none; margin-top: 2px; color: var(--gold); }
+
+  /* ---------- Section headings ---------- */
+  section { margin-top: 52px; }
+  .section-head { margin-bottom: 22px; }
+  .section-kicker {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--pine);
+    margin: 0 0 6px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 6px;
+    font-weight: 800;
+    text-wrap: balance;
+  }
+  .section-sub { margin: 0; color: var(--ink-soft); font-size: 0.98rem; max-width: 60ch; }
+
+  /* ---------- Comparison table ---------- */
+  .table-wrap { overflow-x: auto; margin-top: 10px; }
+  table.consensus { border-collapse: collapse; width: 100%; font-size: 0.86rem; min-width: 560px; }
+  table.consensus th, table.consensus td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+  table.consensus th { color: var(--mist); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  table.consensus td { color: var(--ink-soft); }
+  table.consensus td:first-child { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Type selector cards ---------- */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 480px) { .type-grid { grid-template-columns: 1fr; } }
+  .type-card {
+    text-align: left;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .type-card:hover, .type-card:focus-visible { border-color: var(--pine); transform: translateY(-1px); }
+  .type-card.active { border-color: var(--pine); box-shadow: var(--shadow), 0 0 0 2px var(--pine-soft) inset; }
+  .type-card .icon {
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    background: var(--pine-soft);
+    color: var(--pine-strong);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px;
+  }
+  .type-card h3 { margin: 0 0 6px; font-size: 1rem; font-weight: 700; }
+  .type-card p { margin: 0; font-size: 0.88rem; color: var(--ink-soft); }
+  .type-card .pick {
+    display: inline-block; margin-top: 10px;
+    font-size: 0.78rem; font-weight: 700; color: var(--pine-strong);
+  }
+  .type-card.active .pick::after { content: " ✓ 선택됨"; }
+  .type-card:not(.active) .pick::after { content: " 안내서 보기 →"; }
+
+  /* ---------- Guide panel ---------- */
+  .guide-panel {
+    margin-top: 24px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 4px 24px 24px;
+  }
+  .guide-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0 14px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 20px;
+  }
+  .guide-head .icon {
+    flex: none;
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    background: var(--pine-strong);
+    color: #f4f8f6;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .guide-head h3 { margin: 0 0 3px; font-size: 1.28rem; font-weight: 800; }
+  .guide-head p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+  .guide-summary { margin: 0 0 24px; font-size: 0.98rem; color: var(--ink-soft); }
+
+  .guide-sub {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--pine);
+    margin: 26px 0 10px;
+  }
+  .guide-sub:first-of-type { margin-top: 0; }
+  .guide-panel ul.plain { margin: 0; padding-left: 1.2em; color: var(--ink-soft); font-size: 0.94rem; }
+  .guide-panel ul.plain li + li { margin-top: 6px; }
+  .guide-panel ul.plain li.warn { color: var(--brick); font-weight: 600; }
+  .guide-panel ul.plain li.warn::marker { color: var(--brick); }
+
+  .pc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 480px) { .pc-grid { grid-template-columns: 1fr; } }
+  .pc-box { border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; }
+  .pc-box.good { background: var(--pine-soft); color: var(--pine-strong); }
+  .pc-box.bad { background: var(--brick-soft); color: var(--brick); }
+  .pc-box h4 { margin: 0 0 8px; font-size: 0.86rem; font-weight: 800; }
+  .pc-box ul { margin: 0; padding-left: 1.1em; }
+  .pc-box li + li { margin-top: 4px; }
+
+  .stat-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
+  .stat-pill {
+    font-size: 0.78rem; font-weight: 600;
+    background: var(--pine-soft); color: var(--pine-strong);
+    border-radius: 100px; padding: 5px 12px;
+  }
+
+  .faq-item { border-top: 1px solid var(--line); padding: 14px 0; }
+  .faq-item:first-child { border-top: none; padding-top: 0; }
+  .faq-item .q { margin: 0 0 6px; font-weight: 700; font-size: 0.95rem; }
+  .faq-item .a { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+
+  /* ---------- Transition banner ---------- */
+  .bridge {
+    margin-top: 56px;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: var(--radius);
+    background: var(--pine-soft);
+    border: 1px dashed var(--pine);
+  }
+  .bridge h2 { margin: 0 0 8px; }
+  .bridge p { margin: 0; color: var(--ink-soft); }
+
+  /* ---------- Chat ---------- */
+  .chat-shell {
+    margin-top: 24px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .chat-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    background: var(--pine-strong);
+    color: #f4f8f6;
+  }
+  .chat-head .dot { width: 9px; height: 9px; border-radius: 50%; background: #7fe0b8; }
+  .chat-head strong { font-size: 0.96rem; }
+  .chat-head span { font-size: 0.8rem; color: #cfe7dc; }
+  .chat-log {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 480px;
+    overflow-y: auto;
+  }
+  .msg { display: flex; gap: 10px; max-width: 92%; }
+  .msg.bot { align-self: flex-start; }
+  .msg.user { align-self: flex-end; flex-direction: row-reverse; }
+  .avatar {
+    flex: none; width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.72rem; font-weight: 700;
+  }
+  .msg.bot .avatar { background: var(--pine-soft); color: var(--pine-strong); }
+  .msg.user .avatar { background: var(--gold-soft); color: var(--gold); }
+  .bubble {
+    padding: 11px 14px;
+    border-radius: 14px;
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+  .msg.bot .bubble { background: var(--paper); border: 1px solid var(--line); border-top-left-radius: 4px; }
+  .msg.user .bubble { background: var(--pine); color: #f4f8f6; border-top-right-radius: 4px; }
+  .bubble .src {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    color: var(--mist);
+    border-top: 1px solid var(--line);
+    padding-top: 6px;
+  }
+  .chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 0 18px 16px;
+  }
+  .chip {
+    border: 1px solid var(--pine);
+    color: var(--pine-strong);
+    background: transparent;
+    border-radius: 100px;
+    padding: 7px 13px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .chip:hover, .chip:focus-visible { background: var(--pine); color: #fff; }
+  .chat-input {
+    display: flex;
+    gap: 8px;
+    padding: 14px 16px;
+    border-top: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .chat-input input {
+    flex: 1;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 11px 16px;
+    font-size: 0.95rem;
+    background: var(--paper-raised);
+    color: var(--ink);
+    font-family: inherit;
+  }
+  .chat-input input:focus-visible { outline: 2px solid var(--pine); outline-offset: 1px; }
+  .chat-input button {
+    border: none;
+    background: var(--pine);
+    color: #fff;
+    border-radius: 100px;
+    padding: 0 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .chat-input button:hover { background: var(--pine-strong); }
+  .chat-input button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ---------- Sources ---------- */
+  details.sources {
+    margin-top: 44px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 4px 18px;
+  }
+  details.sources summary {
+    cursor: pointer;
+    padding: 14px 0;
+    font-weight: 700;
+    font-size: 0.98rem;
+    list-style: none;
+  }
+  details.sources summary::-webkit-details-marker { display: none; }
+  details.sources summary::before { content: "＋ "; color: var(--pine); }
+  details.sources[open] summary::before { content: "－ "; }
+  .source-list { padding: 0 0 16px; margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .source-list li { margin-bottom: 6px; }
+  .source-list a { color: var(--pine-strong); }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--mist);
+    font-size: 0.85rem;
+  }
+  footer strong { color: var(--ink-soft); }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">조선대병원 교정과 · 환자 교육 자료</p>
+    <h1 class="title">나에게 맞는 교정 장치,<br>무엇이 다를까요?</h1>
+    <p class="lede">교정 장치 종류를 선택하면 해당 장치의 특징·관리법·주의사항을 정리한 안내서를 볼 수 있습니다. 아래 챗봇에서 교정 전반에 대한 궁금증도 질문해 보세요.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="disclaimer">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div><strong>이 자료는 일반적인 안내이며 진료를 대신하지 않습니다.</strong> 실제 적용 가능한 장치, 발치 여부, 치료 기간과 비용은 부정교합의 정도와 개인의 구강 상태에 따라 크게 다르므로, 정확한 진단과 치료 계획은 반드시 담당 교정전문의와 상의해 주세요.</div>
+  </div>
+
+  <!-- ===== COMPARISON TABLE ===== -->
+  <section id="compare">
+    <div class="section-head">
+      <p class="section-kicker">한눈에 비교</p>
+      <h2>교정 장치 종류 요약</h2>
+      <p class="section-sub">아래는 대표적인 특징을 비교한 것으로, 실제 심미성·기간·통원 주기는 케이스 난이도에 따라 달라질 수 있습니다.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="consensus" id="compareTable"></table>
+    </div>
+  </section>
+
+  <!-- ===== TYPE SELECTOR ===== -->
+  <section id="types">
+    <div class="section-head">
+      <p class="section-kicker">종류 선택</p>
+      <h2>교정 종류를 선택하세요</h2>
+      <p class="section-sub">카드를 클릭하면 아래에 해당 장치의 환자 안내서가 나타납니다.</p>
+    </div>
+    <div class="type-grid" id="typeGrid"></div>
+  </section>
+
+  <!-- ===== GUIDE PANEL ===== -->
+  <div class="guide-panel" id="guidePanel"></div>
+
+  <!-- ===== BRIDGE ===== -->
+  <div class="bridge">
+    <h2>더 궁금한 점이 있으신가요?</h2>
+    <p>아래 채팅창에 자유롭게 질문을 입력해 보세요. 준비된 자료 안에서 답을 찾아드립니다.</p>
+  </div>
+
+  <!-- ===== CHAT ===== -->
+  <section id="chat" aria-label="교정 관련 질문 챗봇">
+    <div class="chat-shell">
+      <div class="chat-head">
+        <span class="dot"></span>
+        <div>
+          <strong>교정과 환자 안내 챗봇</strong><br>
+          <span>공신력 있는 자료 기반 · 진료를 대신하지 않습니다</span>
+        </div>
+      </div>
+      <div class="chat-log" id="chatLog" role="log" aria-live="polite"></div>
+      <div class="chips" id="chipRow"></div>
+      <form class="chat-input" id="chatForm">
+        <input id="chatInput" type="text" autocomplete="off" placeholder="예: 유지장치는 얼마나 껴야 하나요?" aria-label="질문 입력" />
+        <button type="submit">보내기</button>
+      </form>
+    </div>
+  </section>
+
+  <details class="sources">
+    <summary>이 자료의 근거가 된 출처 보기</summary>
+    <ul class="source-list">
+      <li>대한치과교정학회 — <a href="https://www.kao.or.kr" target="_blank" rel="noopener">kao.or.kr</a> (환자용 교정 안내)</li>
+      <li>American Association of Orthodontists — <a href="https://www.aaoinfo.org" target="_blank" rel="noopener">aaoinfo.org</a></li>
+      <li>American Dental Association, MouthHealthy — <a href="https://www.mouthhealthy.org" target="_blank" rel="noopener">mouthhealthy.org</a></li>
+      <li>Mayo Clinic — <a href="https://www.mayoclinic.org" target="_blank" rel="noopener">mayoclinic.org</a> (교정 장치 종류)</li>
+      <li>Cleveland Clinic — <a href="https://my.clevelandclinic.org" target="_blank" rel="noopener">clevelandclinic.org</a></li>
+      <li>NHS — <a href="https://www.nhs.uk" target="_blank" rel="noopener">nhs.uk</a> (브레이스 관리·유지장치)</li>
+    </ul>
+    <p style="font-size:0.85rem;color:var(--mist);padding-bottom:14px;">기관별 권장 사항에 차이가 있을 수 있어 이 자료는 공통적으로 통용되는 일반적인 값을 기본으로 정리했습니다. 정확한 개인별 치료 계획은 반드시 담당 교정전문의 진료를 통해 확인하세요.</p>
+  </details>
+
+  <footer>
+    <p><strong>조선대병원 교정과</strong> 환자 교육 자료 · 정기적으로 업데이트됩니다.</p>
+    <p>장치 파손, 통증, 이상 증상이 있거나 궁금한 점은 챗봇 답변과 관계없이 언제든 담당 진료팀에 문의해 주세요.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  function icon(path) {
+    return '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' + path + '</svg>';
+  }
+  var ICONS = {
+    metal: icon('<path d="M4 14c1.5 2 3 3 4 3s2-1 2-3-1-3-2-3 0-3 2-3 2.5 1 4 3 2.5 3 4 3 2-1 2-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 14v2m16-2v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>'),
+    ceramic: icon('<path d="m12 3 2.2 5.1L19 10l-4.8 1.9L12 17l-2.2-5.1L5 10l4.8-1.9L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 15.5 19 18l2.5 1-2.5 1-1 2.5-1-2.5L14.5 19l2.5-1 1-2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>'),
+    lingual: icon('<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m4 5 16 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>'),
+    aligner: icon('<rect x="4" y="7" width="16" height="10" rx="5" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="1.5 2.5"/>'),
+    child: icon('<circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>'),
+    surgery: icon('<path d="M3 8c3 0 5-2 5-4M3 8c0 3 2 5 4 5m10-5c-3 0-5-2-5-4m5 4c0 3-2 5-4 5M7 13l6 6a2.5 2.5 0 0 0 3.5-3.5L13 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>')
+  };
+
+  var TYPES = [
+    {
+      id: "metal",
+      name: "메탈 브라켓 교정",
+      tagline: "가장 보편적인 고정식 금속 교정장치",
+      icon: ICONS.metal,
+      stat: { aesthetics: "낮음", cooperation: "낮음(고정식)", visit: "4~6주", duration: "18~30개월" },
+      summary: "스테인리스 스틸 브라켓과 와이어를 치아 표면에 부착하는 가장 오래되고 널리 쓰이는 고정식 장치입니다. 거의 모든 부정교합에 적용할 수 있고, 이동 조절력이 강해 복잡한 케이스에도 널리 사용됩니다.",
+      goodFor: [
+        "복잡한 부정교합, 발치가 필요한 경우",
+        "치아 이동 범위가 크거나 정밀한 조절이 필요한 경우",
+        "탈부착 없이 꾸준한 관리가 가능한 환자(협조도에 크게 좌우되지 않음)"
+      ],
+      rules: [
+        { text: "얼음, 견과류, 딱딱한 과자, 오징어 등 딱딱한 음식은 피하세요.", warn: true },
+        { text: "엿, 캐러멜, 껌 등 끈적한 음식은 브라켓 탈락의 원인이 됩니다.", warn: true },
+        { text: "교정용 칫솔·치간칫솔을 사용해 브라켓 주변과 와이어 아래를 꼼꼼히 닦으세요." },
+        { text: "와이어 끝이 볼을 찌르면 교정용 왁스로 임시 완화 후 병원에 알려주세요." },
+        { text: "브라켓이 떨어지면 보관해 두었다가 가능한 빨리 내원해 재부착하세요." }
+      ],
+      pros: ["거의 모든 부정교합에 적용 가능", "치아 이동 조절력이 가장 강함", "다른 장치보다 비용 부담이 상대적으로 적은 편"],
+      cons: ["금속이 눈에 띄어 심미성이 낮음", "초기 이물감·구내염이 생길 수 있음", "음식물이 잘 껴 구강위생 관리에 신경 써야 함"],
+      faq: [
+        { q: "통증은 얼마나 가나요?", a: "장치를 처음 붙였을 때와 매 조정 후 2~3일 정도 씹을 때 불편감이 흔합니다. 진통제로 조절 가능하며 시간이 지나며 점차 적응됩니다." },
+        { q: "식사는 언제부터 평소대로 할 수 있나요?", a: "장치 부착 초기 며칠은 부드러운 음식 위주로 드시고, 이후에는 딱딱하거나 끈적한 음식만 피하면 대부분 평소처럼 식사할 수 있습니다." }
+      ]
+    },
+    {
+      id: "ceramic",
+      name: "세라믹 브라켓 교정",
+      tagline: "치아색 재질로 눈에 덜 띄는 고정식 장치",
+      icon: ICONS.ceramic,
+      stat: { aesthetics: "중간", cooperation: "낮음(고정식)", visit: "4~6주", duration: "18~30개월" },
+      summary: "브라켓을 치아색과 비슷한 세라믹(또는 사파이어) 재질로 제작해 심미성을 높인 고정식 장치입니다. 작동 원리와 관리 방법은 메탈 브라켓과 거의 같습니다.",
+      goodFor: [
+        "심미적 요구가 있지만 고정식 장치의 강한 이동력이 필요한 청소년·성인",
+        "대외 활동이 많아 눈에 덜 띄는 장치를 원하는 경우"
+      ],
+      rules: [
+        { text: "커피, 카레, 김치 국물, 레드와인, 흡연 등 착색이 강한 음식·습관은 결찰링 변색을 유발할 수 있어 주의하세요." },
+        { text: "딱딱하거나 끈적한 음식은 메탈 브라켓과 동일하게 피하세요.", warn: true },
+        { text: "강한 충격(운동, 딱딱한 것 씹기)에 브라켓이 깨질 수 있어 특히 조심하세요.", warn: true },
+        { text: "교정용 칫솔·치간칫솔로 세심하게 관리하세요." }
+      ],
+      pros: ["메탈보다 눈에 덜 띔", "이동 조절력은 메탈 브라켓과 비슷하게 강함"],
+      cons: ["충격에 깨지기 쉬움", "재질 특성상 마찰력이 커 치료 기간이 다소 늘어날 수 있음", "메탈보다 비용이 높은 경우가 많음"],
+      faq: [
+        { q: "세라믹 브라켓도 깨질 수 있나요?", a: "네, 메탈보다 강도가 약해 딱딱한 음식이나 강한 충격에 파절될 수 있습니다. 깨진 경우 방치하지 말고 바로 병원에 알려주세요." },
+        { q: "착색은 어떻게 관리하나요?", a: "브라켓 자체보다는 투명 결찰링(와이어 고정 고무링)이 착색되기 쉬우므로, 착색이 강한 음식·음료 섭취 후 바로 양치하는 습관이 도움이 됩니다." }
+      ]
+    },
+    {
+      id: "lingual",
+      name: "설측교정 (인사이드 교정)",
+      tagline: "치아 안쪽에 부착해 겉으로 보이지 않는 장치",
+      icon: ICONS.lingual,
+      stat: { aesthetics: "매우 높음", cooperation: "낮음(고정식)", visit: "4~6주", duration: "20~32개월" },
+      summary: "브라켓과 와이어를 치아 안쪽(혀쪽) 면에 부착해 밖에서는 전혀 보이지 않는 완전 심미형 고정식 장치입니다. 술자의 숙련도에 따라 결과 차이가 클 수 있습니다.",
+      goodFor: [
+        "심미성이 매우 중요한 성인(대외 활동, 방송·영업 등)",
+        "장치 적응을 위한 협조도가 좋은 환자"
+      ],
+      rules: [
+        { text: "초반에는 혀가 장치에 쓸려 궤양이 생기기 쉬우니 구강연고·왁스를 활용하세요.", warn: true },
+        { text: "치찰음(ㅅ, ㅆ 등) 발음이 어색해질 수 있으며, 소리 내어 읽는 연습이 적응에 도움이 됩니다." },
+        { text: "혀로 장치를 계속 건드리는 습관은 통증과 궤양을 악화시킬 수 있습니다." },
+        { text: "안쪽 면은 육안 확인이 어려워 워터픽 등 보조 도구로 더 꼼꼼히 관리하세요." }
+      ],
+      pros: ["장치가 겉으로 전혀 보이지 않음", "이동 조절력은 일반 브라켓과 유사"],
+      cons: ["초반 발음·이물감 적응이 가장 어려운 편", "혀 궤양 빈도가 높음", "장치 종류 중 비용이 가장 높은 편", "조정 시간이 길어질 수 있음"],
+      faq: [
+        { q: "발음은 언제쯤 좋아지나요?", a: "개인차가 있지만 대체로 2~4주 정도 지나면서 점차 자연스러워지는 경우가 많습니다. 소리 내어 책을 읽는 연습이 도움이 됩니다." },
+        { q: "혀에 상처가 자꾸 나는데 어떻게 하나요?", a: "치과용 왁스나 구강 보호용 연고를 상처 부위에 발라 마찰을 줄이고, 심하면 병원에 알려 장치 표면을 다듬는 조치를 받을 수 있습니다." }
+      ]
+    },
+    {
+      id: "aligner",
+      name: "투명교정장치",
+      tagline: "투명한 마우스피스를 교체하며 이동시키는 탈착식 장치",
+      icon: ICONS.aligner,
+      stat: { aesthetics: "높음", cooperation: "매우 높음(하루 20~22시간)", visit: "6~10주", duration: "6~24개월" },
+      summary: "투명한 플라스틱 트레이(얼라이너)를 1~2주 간격으로 교체하며 치아를 서서히 이동시키는 탈착식 장치입니다. 하루 착용 시간을 잘 지키는 것이 치료 성패를 좌우합니다.",
+      goodFor: [
+        "경도~중등도 부정교합",
+        "심미성과 식사·양치 시 탈착 편의성을 중시하는 경우",
+        "하루 20~22시간 착용 지침을 스스로 지킬 수 있는 환자"
+      ],
+      rules: [
+        { text: "식사와 양치할 때를 제외하고는 하루 20~22시간 이상 반드시 착용하세요.", warn: true },
+        { text: "착용 시간을 지키지 않으면 치료가 지연되거나 트레이를 다시 제작해야 할 수 있습니다.", warn: true },
+        { text: "트레이를 착용한 채로 뜨거운 음료를 마시면 변형될 수 있으니 피하세요." },
+        { text: "매 식후 반드시 칫솔질을 한 뒤 트레이를 재장착하세요." },
+        { text: "치아에 붙이는 작은 돌기(어태치먼트)가 떨어지면 병원에 알려주세요." }
+      ],
+      pros: ["탈착이 가능해 식사·양치·구강위생 관리가 편함", "장치가 거의 눈에 띄지 않음", "정기적으로 트레이를 교체해 예상 치아 이동을 시뮬레이션 가능"],
+      cons: ["착용 시간 준수(협조도)에 결과가 크게 좌우됨", "회전이 큰 치아나 복잡한 발치 공간 폐쇄 등에는 한계가 있을 수 있음", "트레이 분실·파손 시 추가 비용이 발생할 수 있음"],
+      faq: [
+        { q: "정말 하루 종일 껴야 하나요?", a: "식사·양치 시간을 제외한 하루 20~22시간 착용이 원칙입니다. 착용 시간이 부족하면 치아가 계획대로 이동하지 않아 전체 치료 기간이 늘어날 수 있습니다." },
+        { q: "트레이를 잃어버리면 어떻게 하나요?", a: "바로 병원에 알려주세요. 다음 단계 트레이를 먼저 착용하거나 분실된 트레이를 재제작하는 방식으로 대응합니다." }
+      ]
+    },
+    {
+      id: "child",
+      name: "조기교정 (소아·성장기 1차 교정)",
+      tagline: "성장기 골격 문제를 조기에 유도·개선하는 교정",
+      icon: ICONS.child,
+      stat: { aesthetics: "케이스별 상이", cooperation: "아동 협조 필요", visit: "4~8주", duration: "6개월~2년(1차)" },
+      summary: "유치열~혼합치열기(대략 7~10세)에 시행하며, 성장을 이용해 골격적 부조화나 나쁜 구강 습관을 조기에 개선하는 것을 목표로 합니다. 이후 영구치열이 완성되면 본교정(2차 교정) 필요 여부를 다시 평가합니다.",
+      goodFor: [
+        "반대교합(주걱턱 의심)",
+        "심한 총생·공간 부족이 예상되는 경우",
+        "손가락 빨기 등 구강 습관으로 인한 부정교합",
+        "안면 비대칭이 의심되는 경우"
+      ],
+      rules: [
+        { text: "가철식(탈착식) 장치는 지시된 시간만큼 반드시 착용해야 효과가 있습니다.", warn: true },
+        { text: "아이가 장치를 임의로 빼두는 경우가 많아 보호자의 확인과 격려가 중요합니다." },
+        { text: "정기 관찰 약속을 놓치지 않도록 해주세요 — 영구치 맹출 상태를 지속적으로 확인해야 합니다." }
+      ],
+      pros: ["성장을 이용해 골격 문제를 유리한 방향으로 유도 가능", "심한 부정교합이 더 커지는 것을 예방하는 데 도움이 될 수 있음"],
+      cons: ["모든 아이에게 반드시 필요한 것은 아니며 과잉진료가 되지 않도록 신중한 진단이 필요", "아이의 협조도에 따라 결과 차이가 큼", "이후 2차(본)교정이 추가로 필요할 수 있음"],
+      faq: [
+        { q: "우리 아이가 꼭 지금 교정을 시작해야 하나요?", a: "반대교합이나 뚜렷한 골격 문제, 심한 구강 습관이 있는 경우가 아니라면 급하게 시작할 필요는 없는 경우도 많습니다. 정기 검진을 통해 시기를 판단하는 것이 안전합니다." },
+        { q: "1차 교정을 하면 2차 교정은 안 해도 되나요?", a: "1차 교정은 골격적 문제를 미리 개선하는 목적이며, 영구치가 모두 나온 뒤 치아 배열을 위한 2차(본) 교정이 필요한 경우가 많습니다. 필요 여부는 성장 경과를 지켜보며 재평가합니다." }
+      ]
+    },
+    {
+      id: "surgery",
+      name: "악교정수술 동반 교정",
+      tagline: "턱뼈 수술과 함께 진행하는 외과적 교정",
+      icon: ICONS.surgery,
+      stat: { aesthetics: "최종적으로 높음", cooperation: "높음(수술 전후 관리)", visit: "4~6주(수술 전후 상이)", duration: "총 2~3년 이상" },
+      summary: "골격적 부조화(심한 주걱턱, 무턱, 안면 비대칭 등)가 커서 치아 이동만으로는 해결되지 않는 경우, 턱뼈 수술(악교정수술)과 교정치료를 함께 진행합니다. 성장이 끝난 성인에게 적용됩니다.",
+      goodFor: [
+        "치아 이동만으로 해결되지 않는 골격성 부정교합",
+        "씹기·발음·심미 문제가 뚜렷한 경우",
+        "안면 비대칭이 뚜렷한 경우"
+      ],
+      rules: [
+        { text: "수술 전 교정 기간(통상 12~18개월)은 수술을 위해 치아를 배열하는 준비 과정으로, 일시적으로 교합이 더 불편하게 느껴질 수 있습니다." },
+        { text: "수술 직후에는 유동식·연식 등 식이 제한이 있으니 병원 지침을 따르세요.", warn: true },
+        { text: "수술 전후 구강위생 관리가 감염 예방에 특히 중요합니다.", warn: true },
+        { text: "구강악안면외과와 교정과의 정기적인 협진 일정을 꼭 지켜주세요." }
+      ],
+      pros: ["치아 이동만으로 해결 안 되는 골격 문제를 근본적으로 개선 가능", "씹기·발음 기능과 안모 균형이 함께 개선되는 경우가 많음"],
+      cons: ["수술에 따른 회복 기간·통증·비용 부담이 있음", "전체 치료 기간이 가장 긺(수술 전후 교정 포함 통상 2~3년 이상)", "정밀한 진단(세팔로 방사선 분석 등)과 협진이 필수"],
+      faq: [
+        { q: "수술이 꼭 필요한지는 어떻게 판단하나요?", a: "방사선 분석(세팔로 등)과 모델 분석을 통해 치아 이동만으로 개선 가능한 범위인지, 골격 자체의 수술적 교정이 필요한 범위인지를 교정과·구강악안면외과가 함께 평가합니다." },
+        { q: "수술 전 교정 기간이 왜 이렇게 긴가요?", a: "수술로 턱뼈를 이동시켰을 때 치아가 정확히 맞물리도록, 수술 전에 치아를 목표한 위치로 미리 배열해두는 과정이 필요하기 때문입니다." }
+      ]
+    }
+  ];
+
+  var compareTable = document.getElementById("compareTable");
+  compareTable.innerHTML =
+    "<thead><tr><th>종류</th><th>심미성</th><th>협조도</th><th>통원 주기</th><th>평균 치료기간</th></tr></thead>" +
+    "<tbody>" +
+    TYPES.map(function (t) {
+      return "<tr><td>" + t.name + "</td><td>" + t.stat.aesthetics + "</td><td>" + t.stat.cooperation + "</td><td>" + t.stat.visit + "</td><td>" + t.stat.duration + "</td></tr>";
+    }).join("") +
+    "</tbody>";
+
+  var typeGrid = document.getElementById("typeGrid");
+  var guidePanel = document.getElementById("guidePanel");
+  var activeId = null;
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function renderCards() {
+    typeGrid.innerHTML = "";
+    TYPES.forEach(function (t) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "type-card" + (t.id === activeId ? " active" : "");
+      btn.setAttribute("aria-pressed", t.id === activeId ? "true" : "false");
+      btn.innerHTML =
+        '<div class="icon">' + t.icon + "</div>" +
+        "<h3>" + escapeHtml(t.name) + "</h3>" +
+        "<p>" + escapeHtml(t.tagline) + "</p>" +
+        '<span class="pick"></span>';
+      btn.addEventListener("click", function () { selectType(t.id); });
+      typeGrid.appendChild(btn);
+    });
+  }
+
+  function renderGuide(t) {
+    var rulesHtml = t.rules.map(function (r) {
+      return '<li class="' + (r.warn ? "warn" : "") + '">' + escapeHtml(r.text) + "</li>";
+    }).join("");
+    var faqHtml = t.faq.map(function (f) {
+      return '<div class="faq-item"><p class="q">Q. ' + escapeHtml(f.q) + '</p><p class="a">' + escapeHtml(f.a) + "</p></div>";
+    }).join("");
+
+    guidePanel.innerHTML =
+      '<div class="guide-head">' +
+        '<div class="icon">' + t.icon + "</div>" +
+        "<div><h3>" + escapeHtml(t.name) + "</h3><p>" + escapeHtml(t.tagline) + "</p></div>" +
+      "</div>" +
+      '<p class="guide-summary">' + escapeHtml(t.summary) + "</p>" +
+      '<div class="stat-row">' +
+        '<span class="stat-pill">심미성 · ' + escapeHtml(t.stat.aesthetics) + "</span>" +
+        '<span class="stat-pill">협조도 · ' + escapeHtml(t.stat.cooperation) + "</span>" +
+        '<span class="stat-pill">통원 주기 · ' + escapeHtml(t.stat.visit) + "</span>" +
+        '<span class="stat-pill">평균 기간 · ' + escapeHtml(t.stat.duration) + "</span>" +
+      "</div>" +
+      '<p class="guide-sub">이런 경우에 추천됩니다</p>' +
+      '<ul class="plain">' + t.goodFor.map(function (g) { return "<li>" + escapeHtml(g) + "</li>"; }).join("") + "</ul>" +
+      '<p class="guide-sub">착용 중 생활 수칙</p>' +
+      '<ul class="plain">' + rulesHtml + "</ul>" +
+      '<p class="guide-sub">장점과 단점</p>' +
+      '<div class="pc-grid">' +
+        '<div class="pc-box good"><h4>장점</h4><ul>' + t.pros.map(function (p) { return "<li>" + escapeHtml(p) + "</li>"; }).join("") + "</ul></div>" +
+        '<div class="pc-box bad"><h4>단점</h4><ul>' + t.cons.map(function (c) { return "<li>" + escapeHtml(c) + "</li>"; }).join("") + "</ul></div>" +
+      "</div>" +
+      '<p class="guide-sub">자주 묻는 질문</p>' +
+      faqHtml;
+  }
+
+  function selectType(id) {
+    activeId = id;
+    renderCards();
+    var t = TYPES.filter(function (x) { return x.id === id; })[0];
+    renderGuide(t);
+    guidePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  renderCards();
+  selectTypeInitial();
+
+  function selectTypeInitial() {
+    activeId = TYPES[0].id;
+    renderCards();
+    renderGuide(TYPES[0]);
+  }
+
+  /* ================= Chat ================= */
+  var QA = [
+    { q: "교정 치료는 얼마나 걸리나요?", a: "장치 종류와 부정교합의 난이도에 따라 다르지만, 고정식 브라켓(메탈·세라믹·설측)은 통상 18~30개월, 투명교정장치는 6~24개월 정도가 흔한 범위입니다. 조기교정(1차 교정)은 6개월~2년이며 이후 2차 교정이 추가될 수 있습니다. 정확한 예상 기간은 진단 후 상담을 통해 확인하세요.", src: "대한치과교정학회 · AAO", kw: ["기간","얼마나 걸리","치료기간","몇 개월","몇 년"] },
+    { q: "교정 중 통증은 얼마나 가나요?", a: "장치를 처음 부착했을 때와 매 조정 후 2~3일 정도 씹을 때 불편감이나 통증이 흔합니다. 일반 진통제로 조절되는 경우가 대부분이며, 시간이 지나며 점차 적응됩니다.", src: "AAO · Mayo Clinic", kw: ["통증","아파요","아픈가요","아프나요","불편감"] },
+    { q: "발치는 꼭 해야 하나요?", a: "모든 환자가 발치를 하는 것은 아닙니다. 치아 크기와 턱뼈 공간의 부조화(총생) 정도, 옆모습(측모) 개선 필요성 등을 정밀 분석(세팔로, 모델 분석)한 뒤 담당 교정전문의가 결정합니다. 소구치 발치가 흔하지만 비발치 교정도 많이 시행됩니다.", src: "대한치과교정학회", kw: ["발치","이빨 뽑","치아 뽑","뽑아야"] },
+    { q: "교정 유지장치는 얼마나 껴야 하나요?", a: "장치를 제거한 직후 치아는 원래 위치로 되돌아가려는 경향(후퇴)이 있어 유지장치 착용이 필수입니다. 초기 몇 개월은 대부분 시간 착용을 권장하고, 이후 야간 착용으로 전환해 장기적으로(수년 이상) 유지하는 경우가 많습니다. 정확한 스케줄은 담당의 지시를 따르세요.", src: "NHS · AAO", kw: ["유지장치","리테이너","유지 기간","계속 껴야"] },
+    { q: "교정 중 음식은 어떻게 먹어야 하나요?", a: "얼음, 견과류, 딱딱한 과자 등 딱딱한 음식과 엿, 캐러멜, 껌 등 끈적한 음식은 장치 손상 위험이 있어 피하세요. 질긴 고기나 바게트 등은 작게 잘라 드시면 좋습니다. 투명교정장치는 식사 시 트레이를 제거한 뒤 식사하고, 식후 반드시 양치 후 재장착하세요.", src: "MouthHealthy(ADA) · Mayo Clinic", kw: ["음식","먹으면 안","식단","딱딱한","끈적"] },
+    { q: "교정 중 양치질은 어떻게 하나요?", a: "교정용 칫솔, 치간칫솔, 워터픽 등을 활용해 브라켓 주변과 와이어 아래를 꼼꼼히 닦아야 합니다. 고정식 장치는 음식물이 자주 끼어 충치·잇몸염 위험이 높아지므로 매 식후 양치를 권장합니다.", src: "MouthHealthy(ADA)", kw: ["양치","칫솔질","구강위생","치아관리","이 닦"] },
+    { q: "와이어가 튀어나와 볼을 찔러요, 어떻게 하나요?", a: "교정용 왁스로 튀어나온 부분을 덮어 임시로 완화할 수 있습니다. 상처가 심하거나 왁스로 해결되지 않으면 병원에 연락해 조기 내원하세요.", src: "AAO", kw: ["와이어 찔러","와이어가 튀어나","볼 찔림","왁스"] },
+    { q: "브라켓이 떨어졌어요, 어떻게 해야 하나요?", a: "응급 상황은 아니지만 방치하면 치아 이동 계획에 영향을 줄 수 있습니다. 떨어진 브라켓을 보관해 병원에 가져가고, 가능한 빨리 예약해 재부착받으세요.", src: "AAO", kw: ["브라켓 떨어","장치 빠졌","브라켓 탈락"] },
+    { q: "성인도 교정할 수 있나요?", a: "네, 나이 제한은 없습니다. 다만 성인은 잇몸·치조골 등 치주 상태를 먼저 평가하며, 골격 문제가 크면 악교정수술이 동반되는 교정이 필요한 경우도 있습니다.", src: "대한치과교정학회 · Cleveland Clinic", kw: ["성인교정","나이 제한","어른도","나이 많아도"] },
+    { q: "교정 치료는 몇 살부터 시작하나요?", a: "본교정(영구치 배열)은 대개 영구치가 대부분 나온 만 11~13세 전후 시작이 흔하지만, 반대교합이나 심한 부정교합은 7~10세 무렵 조기교정으로 먼저 개입하기도 합니다. 성인의 경우 시작 나이 제한은 없습니다.", src: "대한치과교정학회 · AAO", kw: ["시작 나이","몇살","언제 시작","적정 나이"] },
+    { q: "교정 후 다시 삐뚤어질 수 있나요?", a: "유지장치를 제대로 착용하지 않으면 치아가 서서히 원래 위치로 되돌아가는 재발(relapse)이 발생할 수 있습니다. 정기적인 유지장치 착용과 검진이 재발 예방에 중요합니다.", src: "NHS · AAO", kw: ["재발","다시 삐뚤","되돌아가","벌어져요"] },
+    { q: "교정 비용은 얼마나 되나요?", a: "장치 종류, 부정교합의 난이도, 병원에 따라 차이가 커 일률적으로 안내드리기 어렵습니다. 정확한 비용은 정밀 진단 후 상담을 통해 확인해주세요.", src: "병원 상담 안내", kw: ["비용","가격","얼마","돈"] },
+    { q: "발음이나 이물감은 언제 좋아지나요?", a: "대개 장치 부착 후 1~2주 내에 적응되는 경우가 많습니다. 설측교정(안쪽 장치)은 발음 적응에 조금 더 시간(2~4주)이 걸릴 수 있습니다.", src: "AAO", kw: ["발음","이물감","적응기간","말이 어눌"] },
+    { q: "교정 중 정기검진은 왜 중요한가요?", a: "계획대로 치아가 이동하는지 확인하고 와이어·트레이를 조정하며, 충치나 잇몸 문제를 조기에 발견하기 위해 정기 내원이 중요합니다. 내원을 임의로 미루면 치료 기간이 길어지거나 예상치 못한 문제가 생길 수 있습니다.", src: "대한치과교정학회", kw: ["정기검진","내원 주기","조정 주기","왜 병원 가야"] },
+    { q: "투명교정과 브라켓 중 뭐가 더 나은가요?", a: "부정교합의 종류와 난이도, 생활 패턴(협조도), 심미적 요구에 따라 다릅니다. 회전이 큰 치아나 넓은 발치 공간 폐쇄 등 복잡한 이동은 브라켓이 유리한 경우가 많고, 착용 시간을 잘 지킬 수 있는 경중등도 케이스는 투명교정장치도 좋은 선택입니다. 상담을 통해 본인 케이스에 맞는 장치를 추천받으세요.", src: "Mayo Clinic · 대한치과교정학회", kw: ["투명교정 브라켓 비교","뭐가 나은지","어떤게 좋은지","차이"] },
+    { q: "교정 상담은 어떻게 준비하면 되나요?", a: "특별한 준비물은 없으며, 평소 궁금한 점(치료 기간, 발치 여부, 비용, 통증)을 미리 메모해가면 상담이 수월합니다. 파노라마·세팔로 방사선 사진, 구강 스캔 등 정밀 검사가 함께 진행되는 경우가 많습니다.", src: "대한치과교정학회", kw: ["상담 준비","첫 상담","초진"] }
+  ];
+
+  var QUICK = [0, 2, 3, 8, 11, 14].map(function (i) { return QA[i]; });
+
+  var log = document.getElementById("chatLog");
+  var chipRow = document.getElementById("chipRow");
+  var form = document.getElementById("chatForm");
+  var input = document.getElementById("chatInput");
+
+  function addMsg(role, html) {
+    var msg = document.createElement("div");
+    msg.className = "msg " + role;
+    var avatar = document.createElement("div");
+    avatar.className = "avatar";
+    avatar.textContent = role === "bot" ? "교정" : "나";
+    var bubble = document.createElement("div");
+    bubble.className = "bubble";
+    bubble.innerHTML = html;
+    msg.appendChild(avatar);
+    msg.appendChild(bubble);
+    log.appendChild(msg);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  function formatAnswer(item) {
+    var body = escapeHtml(item.a).replace(/\n/g, "<br>");
+    return body + '<span class="src">출처: ' + escapeHtml(item.src) + "</span>";
+  }
+
+  function renderChips() {
+    chipRow.innerHTML = "";
+    QUICK.forEach(function (item) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip";
+      b.textContent = item.q;
+      b.addEventListener("click", function () { ask(item.q); });
+      chipRow.appendChild(b);
+    });
+  }
+
+  var PARTICLES = ["에서", "에게", "까지", "부터", "처럼", "보다", "라도", "이나", "은는", "은", "는", "이", "가", "을", "를", "의", "에", "도", "만", "과", "와", "나"];
+  function stripParticle(w) {
+    for (var i = 0; i < PARTICLES.length; i++) {
+      var p = PARTICLES[i];
+      if (w.length > p.length && w.slice(-p.length) === p) return w.slice(0, -p.length);
+    }
+    return w;
+  }
+  function corpusOf(item) {
+    return (item.q + " " + item.a).toLowerCase().replace(/\s+/g, "");
+  }
+  function kwScore(norm, item) {
+    var s = 0;
+    item.kw.forEach(function (k) {
+      var words = k.toLowerCase().split(/\s+/).filter(Boolean);
+      var allFound = words.every(function (w) { return norm.indexOf(w) !== -1; });
+      if (allFound) s += words.length;
+    });
+    if (norm.indexOf(item.q.toLowerCase().replace(/\s+/g, "").slice(0, 6)) !== -1) s += 1;
+    return s;
+  }
+  function docFreq(word) {
+    var c = 0;
+    QA.forEach(function (item) { if (corpusOf(item).indexOf(word) !== -1) c++; });
+    return c;
+  }
+  function fuzzyScore(text, item) {
+    var words = text.toLowerCase().replace(/[?!.,]/g, " ").split(/\s+/)
+      .map(stripParticle)
+      .filter(function (w) { return w.length >= 2; });
+    var c = corpusOf(item);
+    var s = 0;
+    words.forEach(function (w) {
+      if (c.indexOf(w) === -1) return;
+      if (docFreq(w) > 3) return;
+      s += 1;
+    });
+    return s;
+  }
+  function score(text, item) {
+    var norm = text.toLowerCase().replace(/\s+/g, "");
+    return kwScore(norm, item) * 5 + fuzzyScore(text, item);
+  }
+
+  function findAnswer(text) {
+    var best = null, bestScore = 0;
+    QA.forEach(function (item) {
+      var s = score(text, item);
+      if (s > bestScore) { bestScore = s; best = item; }
+    });
+    return bestScore > 0 ? best : null;
+  }
+
+  function ask(text) {
+    addMsg("user", escapeHtml(text));
+    var hit = findAnswer(text);
+    setTimeout(function () {
+      if (hit) {
+        addMsg("bot", formatAnswer(hit));
+      } else {
+        addMsg("bot", "죄송해요, 정확히 이해하지 못했어요. 아래 예시 질문 중 비슷한 것을 눌러보시거나, 다른 표현으로 다시 질문해 주세요. 답변이 어려운 개인적인 증상은 반드시 담당 진료팀에 직접 문의해 주세요.");
+      }
+    }, 260);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = input.value.trim();
+    if (!v) return;
+    ask(v);
+    input.value = "";
+  });
+
+  renderChips();
+  addMsg("bot", "안녕하세요, 조선대병원 교정과입니다. 위에서 교정 장치 종류를 선택하시면 안내서를 볼 수 있고, 이 채팅창에는 교정 전반에 대해 궁금하신 점을 입력하시거나 아래 예시 질문을 눌러보세요. 이 챗봇은 공신력 있는 자료로 준비된 답변만 안내하며, 담당 의료진의 개별 진료를 대신하지 않습니다.");
+})();
+</script>
