@@ -1,0 +1,1005 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>방광암 수술 후 식이 가이드 · 충북대학교 비뇨의학과</title>
+<style>
+  :root {
+    --ink: #16221f;
+    --ink-soft: #43524d;
+    --paper: #eff2ed;
+    --paper-raised: #ffffff;
+    --pine: #24534a;
+    --pine-strong: #163b34;
+    --pine-soft: #dbe7e1;
+    --gold: #93691f;
+    --gold-soft: #f1e3c4;
+    --brick: #8a3d32;
+    --brick-soft: #f3ddd8;
+    --mist: #6e7c77;
+    --line: #d3ddd6;
+    --shadow: 0 1px 2px rgba(22,34,31,0.06), 0 8px 24px -12px rgba(22,34,31,0.18);
+    --radius: 14px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e9efec;
+      --ink-soft: #b3c1bb;
+      --paper: #101815;
+      --paper-raised: #16211d;
+      --pine: #74ab9c;
+      --pine-strong: #a7cdc0;
+      --pine-soft: #1c2f29;
+      --gold: #dcb15c;
+      --gold-soft: #33291a;
+      --brick: #e0897b;
+      --brick-soft: #35211d;
+      --mist: #8ba098;
+      --line: #26332d;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.6);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e9efec; --ink-soft: #b3c1bb; --paper: #101815; --paper-raised: #16211d;
+    --pine: #74ab9c; --pine-strong: #a7cdc0; --pine-soft: #1c2f29; --gold: #dcb15c;
+    --gold-soft: #33291a; --brick: #e0897b; --brick-soft: #35211d; --mist: #8ba098; --line: #26332d;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.6);
+    color-scheme: dark;
+  }
+  :root[data-theme="light"] {
+    --ink: #16221f; --ink-soft: #43524d; --paper: #eff2ed; --paper-raised: #ffffff;
+    --pine: #24534a; --pine-strong: #163b34; --pine-soft: #dbe7e1; --gold: #93691f;
+    --gold-soft: #f1e3c4; --brick: #8a3d32; --brick-soft: #f3ddd8; --mist: #6e7c77; --line: #d3ddd6;
+    --shadow: 0 1px 2px rgba(22,34,31,0.06), 0 8px 24px -12px rgba(22,34,31,0.18);
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+  html { font-size: 125%; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", "Noto Sans KR", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* ---------- Header ---------- */
+  header.top {
+    background: linear-gradient(180deg, var(--pine-strong) 0%, var(--pine) 100%);
+    color: #f4f8f6;
+    padding: 36px 20px 44px;
+  }
+  header.top .wrap { padding-bottom: 0; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: #cfe7dc;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold-soft);
+    display: inline-block;
+  }
+  h1.title {
+    font-size: clamp(1.7rem, 4.2vw, 2.3rem);
+    line-height: 1.3;
+    margin: 0 0 12px;
+    font-weight: 800;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  header.top p.lede {
+    margin: 0;
+    font-size: 1.02rem;
+    color: #dcece5;
+    max-width: 52ch;
+  }
+
+  /* ---------- Page tabs ---------- */
+  .pagenav { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; }
+  .pagenav a {
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 100px;
+    border: 1px solid rgba(244,248,246,0.4);
+    color: #dcece5;
+  }
+  .pagenav a[aria-current="page"] {
+    background: #f4f8f6;
+    color: var(--pine-strong);
+    border-color: #f4f8f6;
+  }
+  .pagenav a:hover:not([aria-current]) { background: rgba(244,248,246,0.14); }
+
+  /* ---------- Disclaimer banner ---------- */
+  .disclaimer {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: -24px 0 32px;
+    box-shadow: var(--shadow);
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .disclaimer strong { color: var(--ink); }
+  .disclaimer svg { flex: none; margin-top: 2px; color: var(--gold); }
+
+  /* ---------- Section headings ---------- */
+  section { margin-top: 52px; }
+  .section-head { margin-bottom: 22px; }
+  .section-kicker {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--pine);
+    margin: 0 0 6px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 6px;
+    font-weight: 800;
+    text-wrap: balance;
+  }
+  .section-sub { margin: 0; color: var(--ink-soft); font-size: 0.98rem; max-width: 58ch; }
+
+  /* ---------- Surgery-type cards ---------- */
+  .paths { display: grid; gap: 12px; }
+  .path {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .path h3 { margin: 0 0 4px; font-size: 1.02rem; font-weight: 700; }
+  .path .tag {
+    display: inline-block;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+    color: var(--gold); background: var(--gold-soft);
+    padding: 2px 9px; border-radius: 100px; margin-bottom: 8px;
+  }
+  .path p { margin: 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .path p + p { margin-top: 6px; }
+  .path .applies { color: var(--pine); font-weight: 600; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { position: relative; padding-left: 30px; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 9px; top: 6px; bottom: 6px;
+    width: 2px;
+    background: linear-gradient(var(--pine), var(--line));
+    opacity: 0.5;
+  }
+  .stage { position: relative; padding-bottom: 28px; }
+  .stage:last-child { padding-bottom: 0; }
+  .stage::before {
+    content: "";
+    position: absolute;
+    left: -30px; top: 4px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--paper-raised);
+    border: 3px solid var(--pine);
+  }
+  .stage-card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .stage-when {
+    display: inline-block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--pine-strong);
+    background: var(--pine-soft);
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-bottom: 8px;
+  }
+  .stage-card h3 { margin: 0 0 8px; font-size: 1.06rem; font-weight: 700; }
+  .stage-card ul { margin: 0; padding-left: 1.1em; color: var(--ink-soft); font-size: 0.94rem; }
+  .stage-card li + li { margin-top: 4px; }
+  .stage-card .flag { color: var(--brick); font-weight: 600; }
+
+  /* ---------- Principle cards grid ---------- */
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+  .p-card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow);
+  }
+  .p-card .icon {
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    background: var(--pine-soft);
+    color: var(--pine-strong);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px;
+  }
+  .p-card h3 { margin: 0 0 6px; font-size: 1rem; font-weight: 700; }
+  .p-card p { margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .p-card.warn .icon { background: var(--brick-soft); color: var(--brick); }
+
+  /* ---------- Food do / avoid columns ---------- */
+  .foods { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 560px) { .foods { grid-template-columns: 1fr; } }
+  .food-col {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .food-col h3 { margin: 0 0 10px; font-size: 0.98rem; font-weight: 700; display: flex; align-items: center; gap: 7px; }
+  .food-col.ok h3 { color: var(--pine-strong); }
+  .food-col.no h3 { color: var(--brick); }
+  .food-col ul { margin: 0; padding-left: 1.1em; font-size: 0.9rem; color: var(--ink-soft); }
+  .food-col li + li { margin-top: 4px; }
+
+  /* ---------- Caveat note ---------- */
+  .note {
+    margin-top: 14px;
+    background: var(--gold-soft);
+    border-radius: var(--radius);
+    padding: 13px 16px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .note strong { color: var(--ink); }
+
+  /* ---------- Alert box ---------- */
+  .alert {
+    background: var(--brick-soft);
+    border: 1px solid var(--brick);
+    border-radius: var(--radius);
+    padding: 18px;
+  }
+  .alert h3 { margin: 0 0 10px; font-size: 1rem; color: var(--brick); font-weight: 800; }
+  .alert ul { margin: 0; padding-left: 1.1em; font-size: 0.93rem; color: var(--ink-soft); }
+  .alert li + li { margin-top: 5px; }
+  .alert .after { margin: 12px 0 0; font-size: 0.88rem; color: var(--ink-soft); }
+
+  /* ---------- Transition banner ---------- */
+  .bridge {
+    margin-top: 56px;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: var(--radius);
+    background: var(--pine-soft);
+    border: 1px dashed var(--pine);
+  }
+  .bridge h2 { margin: 0 0 8px; }
+  .bridge p { margin: 0; color: var(--ink-soft); }
+
+  /* ---------- Chat ---------- */
+  .chat-shell {
+    margin-top: 24px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .chat-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    background: var(--pine-strong);
+    color: #f4f8f6;
+  }
+  .chat-head .dot { width: 9px; height: 9px; border-radius: 50%; background: #7fe0b8; }
+  .chat-head strong { font-size: 0.96rem; }
+  .chat-head span { font-size: 0.8rem; color: #cfe7dc; }
+  .chat-log {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 480px;
+    overflow-y: auto;
+  }
+  .msg { display: flex; gap: 10px; max-width: 92%; }
+  .msg.bot { align-self: flex-start; }
+  .msg.user { align-self: flex-end; flex-direction: row-reverse; }
+  .avatar {
+    flex: none; width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.78rem; font-weight: 700;
+  }
+  .msg.bot .avatar { background: var(--pine-soft); color: var(--pine-strong); }
+  .msg.user .avatar { background: var(--gold-soft); color: var(--gold); }
+  .bubble {
+    padding: 11px 14px;
+    border-radius: 14px;
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+  .msg.bot .bubble { background: var(--paper); border: 1px solid var(--line); border-top-left-radius: 4px; }
+  .msg.user .bubble { background: var(--pine); color: #f4f8f6; border-top-right-radius: 4px; }
+  .bubble .src {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    color: var(--mist);
+    border-top: 1px solid var(--line);
+    padding-top: 6px;
+  }
+  .chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 0 18px 16px;
+  }
+  .chip {
+    border: 1px solid var(--pine);
+    color: var(--pine-strong);
+    background: transparent;
+    border-radius: 100px;
+    padding: 7px 13px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .chip:hover, .chip:focus-visible { background: var(--pine); color: #fff; }
+  .chat-input {
+    display: flex;
+    gap: 8px;
+    padding: 14px 16px;
+    border-top: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .chat-input input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 11px 16px;
+    font-size: 0.95rem;
+    background: var(--paper-raised);
+    color: var(--ink);
+    font-family: inherit;
+  }
+  .chat-input input:focus-visible { outline: 2px solid var(--pine); outline-offset: 1px; }
+  .chat-input button {
+    border: none;
+    flex: none;
+    white-space: nowrap;
+    background: var(--pine);
+    color: #fff;
+    border-radius: 100px;
+    padding: 0 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .chat-input button:hover { background: var(--pine-strong); }
+  .chat-input button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ---------- Sources ---------- */
+  details.sources {
+    margin-top: 44px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 4px 18px;
+  }
+  details.sources summary {
+    cursor: pointer;
+    padding: 14px 0;
+    font-weight: 700;
+    font-size: 0.98rem;
+    list-style: none;
+  }
+  details.sources summary::-webkit-details-marker { display: none; }
+  details.sources summary::before { content: "＋ "; color: var(--pine); }
+  details.sources[open] summary::before { content: "－ "; }
+  .source-list { padding: 0 0 16px; margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .source-list li { margin-bottom: 6px; }
+  .source-list a { color: var(--pine-strong); }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--mist);
+    font-size: 0.85rem;
+  }
+  footer strong { color: var(--ink-soft); }
+  footer a { color: var(--pine-strong); }
+
+  .table-wrap { overflow-x: auto; margin-top: 10px; }
+  table.consensus { border-collapse: collapse; width: 100%; font-size: 0.88rem; min-width: 480px; }
+  table.consensus th, table.consensus td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+  table.consensus th { color: var(--mist); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  table.consensus td { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  table.consensus td:first-child { color: var(--ink); font-weight: 600; }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">충북대학교 비뇨의학과 · 환자 교육 자료</p>
+    <h1 class="title">방광암 수술 후,<br>무엇을 어떻게 먹을까요?</h1>
+    <p class="lede">경요도 방광종양절제술(TURBT)과 근치적 방광절제술(요루·인공방광)을 받으신 분들의 식사·수분 섭취 관련 질문을 국내외 공신력 있는 의료기관 자료를 바탕으로 정리했습니다.</p>
+    <nav class="pagenav" aria-label="자료 목록">
+      <a href="index.html">전립선암 수술 후 운동</a>
+      <a href="bladder-diet.html" aria-current="page">방광암 수술 후 식이</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="disclaimer">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div><strong>이 자료는 일반적인 안내이며 진료를 대신하지 않습니다.</strong> 특히 식사 진행 속도는 병원마다 차이가 크고, 신장·심장 질환이 있으면 수분 목표가 달라집니다. 실제 식사 시작 시점과 수분량은 반드시 담당 의료진의 지시를 따라주세요.</div>
+  </div>
+
+  <!-- ===== WHICH SURGERY ===== -->
+  <section id="paths" style="margin-top:0;">
+    <div class="section-head">
+      <p class="section-kicker">먼저 확인</p>
+      <h2>내가 받은 수술은 어느 쪽인가요?</h2>
+      <p class="section-sub">방광암 수술은 종류에 따라 식사 주의사항이 크게 다릅니다. 아래에서 본인에게 해당하는 부분을 먼저 확인하세요.</p>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <span class="tag">방광을 남기는 수술</span>
+        <h3>경요도 방광종양절제술 (TURBT)</h3>
+        <p>요도로 내시경을 넣어 종양만 제거합니다. 장을 건드리지 않으므로 <strong>식사 제한은 거의 없습니다.</strong> 핵심은 충분한 수분 섭취로 소변을 묽게 유지해 혈전(피떡)이 생기지 않게 하는 것입니다.</p>
+        <p class="applies">→ 이 페이지의 "TURBT 후 식사", "방광 자극 물질", "장기 식습관" 부분을 보세요.</p>
+      </div>
+      <div class="path">
+        <span class="tag">방광을 제거하는 수술</span>
+        <h3>근치적 방광절제술 + 회장도관 (요루·유로스토미)</h3>
+        <p>방광을 제거하고 소장(회장) 일부로 소변이 나오는 통로를 만들어 복벽에 요루(스토마)를 만듭니다. <strong>장을 잘라 이어붙였기 때문에</strong> 회복 초기에 단계적인 식사 진행과 저섬유식이 필요합니다.</p>
+        <p class="applies">→ 이 페이지 전체가 해당됩니다. 특히 "요루 생활과 식사"를 보세요.</p>
+      </div>
+      <div class="path">
+        <span class="tag">방광을 제거하는 수술</span>
+        <h3>근치적 방광절제술 + 인공방광 (신방광)</h3>
+        <p>소장으로 방광 모양의 주머니를 만들어 요도에 연결합니다. 요루와 마찬가지로 장 수술을 동반하며, 여기에 더해 <strong>점액·대사성 산증·시간에 맞춘 배뇨</strong>라는 고유한 관리 사항이 있습니다.</p>
+        <p class="applies">→ 이 페이지 전체가 해당됩니다. 특히 "인공방광 생활과 식사"를 보세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
+  <section id="timeline">
+    <div class="section-head">
+      <p class="section-kicker">회복 로드맵</p>
+      <h2>근치적 방광절제술 후 식사 진행</h2>
+      <p class="section-sub">아래는 방광절제술(요루·인공방광)을 받은 분 기준입니다. TURBT만 받으신 분은 이 단계를 거치지 않습니다.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="stage">
+        <div class="stage-card">
+          <span class="stage-when">수술 후 몇 시간 ~ 1일째</span>
+          <h3>물 한 모금부터</h3>
+          <ul>
+            <li>요즘은 오래 굶기지 않습니다. 수술 후 몇 시간 안에 물을 조금씩 마셔보고, 잘 견디면 양을 늘려갑니다.</li>
+            <li>일찍 먹기 시작해도 장 봉합 부위가 터지는 위험이 늘지 않는다는 것이 회복증진(ERAS) 지침의 결론입니다. 다만 <strong>메스꺼움·구토는 더 흔해질 수 있습니다.</strong></li>
+            <li>껌 씹기가 가스 배출과 첫 배변을 앞당긴다는 연구가 있습니다(입원 기간을 줄이지는 못했습니다).</li>
+            <li>일찍 걷는 것이 장운동 회복에 도움이 됩니다.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-card">
+          <span class="stage-when">대략 1~3일째 (병원마다 다름)</span>
+          <h3>맑은 유동식 → 미음·죽</h3>
+          <ul>
+            <li>물·맑은 국물·연한 차 같은 맑은 유동식부터 시작해 미음, 죽으로 넘어갑니다.</li>
+            <li>한 번에 많이 먹지 말고 <strong>조금씩 자주(하루 6끼 정도)</strong> 나눠 드세요.</li>
+            <li><span class="flag">주의:</span> 장이 아직 깨어나지 않는 장마비(이레우스)는 이 수술의 대표적인 합병증입니다. 배가 부풀고 토하면 즉시 알리세요.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-card">
+          <span class="stage-when">퇴원 후 몇 주 (자료에 따라 4~6주)</span>
+          <h3>부드러운 저섬유식 유지</h3>
+          <ul>
+            <li>잘라 이은 장이 부어 있어 섬유질이 많은 음식은 소화가 어렵고 가스·막힘을 일으킬 수 있습니다.</li>
+            <li>견과류·씨앗·팝콘·생채소·껍질·말린 과일·잡곡을 피합니다.</li>
+            <li>기간은 자료마다 다릅니다 — 미국 자료는 대개 4~6주, 영국 자료는 "회복되면 제한 없음"에 가깝습니다. 담당팀 지시를 우선하세요.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-card">
+          <span class="stage-when">4~6주 이후</span>
+          <h3>섬유질을 하나씩 되돌리기</h3>
+          <ul>
+            <li>한 번에 여러 가지를 늘리지 말고 <strong>한 가지씩 소량으로</strong> 시도해 장의 반응을 확인하세요.</li>
+            <li>탈이 나면 그 음식을 잠시 미루고 나중에 다시 시도합니다.</li>
+            <li>회장도관·인공방광은 소장을 짧게만 사용하므로, 대부분 <strong>결국에는 특별한 식사 제한 없이</strong> 드실 수 있게 됩니다.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-card">
+          <span class="stage-when">회복 이후 · 평생</span>
+          <h3>장기 식습관과 정기 검사</h3>
+          <ul>
+            <li>채소·과일 하루 400g 이상, 섬유질 하루 30g 목표(WCRF/AICR 권고).</li>
+            <li>요로전환술을 받은 분은 <strong>비타민 B12 결핍</strong> 가능성이 있어 장기간 정기 혈액검사가 권장됩니다.</li>
+            <li>식사보다 <strong>금연</strong>이 훨씬 더 중요합니다. 방광암에서 가장 강력한 관리 가능 요인입니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>솔직하게 말씀드리면:</strong> "며칠째에 무엇을 먹는다"는 고정된 국제 표준 일정은 없습니다. 회복증진(ERAS) 프로토콜을 쓰는 병원은 훨씬 빨리 식사를 시작하고, 전통적 방식의 병원은 가스가 나온 뒤에 시작합니다. 두 방식 모두 현재 사용 중이므로, <strong>본인 병원의 지시가 이 페이지보다 우선합니다.</strong>
+    </div>
+  </section>
+
+  <!-- ===== PRINCIPLE CARDS ===== -->
+  <section id="principles">
+    <div class="section-head">
+      <p class="section-kicker">핵심 원칙</p>
+      <h2>꼭 기억해야 할 4가지</h2>
+    </div>
+    <div class="grid-cards">
+      <div class="p-card">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.5 6 10.5a6 6 0 0 1-12 0C6 9.5 12 3 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>수분은 넉넉하게</h3>
+        <p>대략 하루 1.5~2.5L(8컵 안팎)를 권하는 자료가 많습니다. 소변을 묽게 유지해 요로감염·결석·점액 막힘을 줄이기 위해서입니다. 신장·심장 질환이 있으면 반드시 조정이 필요합니다.</p>
+      </div>
+      <div class="p-card">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 4v16M5 9h5M10 4v16M15 20v-7a4 4 0 0 1 4-4V4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>단백질과 열량이 상처를 아물게</h3>
+        <p>암 환자 기준 하루 체중 1kg당 단백질 1.0~1.5g이 권장됩니다(60kg이면 60~90g). 매 끼니 두부·계란·생선·살코기 같은 단백질을 조금씩이라도 챙기세요.</p>
+      </div>
+      <div class="p-card warn">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M7 7l-4 5 4 5M17 7l4 5-4 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>섬유질은 처음엔 적게, 나중엔 많이</h3>
+        <p>장을 잘라 이은 초기에는 저섬유식, 회복 후에는 오히려 고섬유식이 목표입니다. 순서를 반대로 하면 막힘이나 복통이 생길 수 있습니다.</p>
+      </div>
+      <div class="p-card warn">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3 2 20h20L12 3Zm0 6v5m0 3h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>요루에서 소변이 안 나오면 응급</h3>
+        <p>요루는 방광처럼 소변을 모아두지 않아 계속 흘러나오는 것이 정상입니다. 소변이 멈추고 배가 부풀거나 토하면 즉시 병원에 연락하세요.</p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="consensus">
+        <thead><tr><th>항목</th><th>기준(보수적으로 정리)</th></tr></thead>
+        <tbody>
+          <tr><td>수술 전 맑은 물</td><td>마취 2시간 전까지 가능 (병원 지시 우선)</td></tr>
+          <tr><td>물 한 모금 시작</td><td>수술 후 몇 시간 이내 ~ 24시간 이내</td></tr>
+          <tr><td>유동식 → 죽</td><td>대략 1~3일째 (병원차 큼)</td></tr>
+          <tr><td>저섬유식 유지</td><td>수술 후 몇 주 ~ 4~6주 (자료마다 다름)</td></tr>
+          <tr><td>일반식·섬유질 복귀</td><td>4~6주 이후 한 가지씩 서서히</td></tr>
+          <tr><td>하루 수분</td><td>대략 1.5~2.5L (신장·심장 질환 시 조정)</td></tr>
+          <tr><td>단백질</td><td>체중 1kg당 1.0~1.5g/일</td></tr>
+          <tr><td>비타민 B12 혈액검사</td><td>요로전환술 후 장기간, 대개 연 1회</td></tr>
+          <tr><td>술</td><td>회복 후에도 마시지 않는 것이 권장</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== LOW FIBER, KOREAN FOOD ===== -->
+  <section id="lowfiber">
+    <div class="section-head">
+      <p class="section-kicker">저섬유식 실전</p>
+      <h2>한식으로 저섬유식 하기</h2>
+      <p class="section-sub">한국 식단은 잡곡·나물·깨·해조류 때문에 서양 식단보다 섬유질이 많습니다. 방광절제술 후 초기 몇 주 동안 참고하세요.</p>
+    </div>
+    <div class="foods">
+      <div class="food-col ok">
+        <h3>초기에 편한 음식</h3>
+        <ul>
+          <li>흰쌀밥, 흰죽, 미음, 부드러운 국수</li>
+          <li>두부, 계란찜, 흰살생선, 껍질 벗긴 닭고기</li>
+          <li>껍질·씨를 제거하고 푹 익힌 애호박·무·당근·감자</li>
+          <li>맑은 국물(된장국은 건더기 없이 국물 위주로)</li>
+          <li>바나나, 통조림 복숭아, 껍질 벗긴 사과 익힌 것</li>
+          <li>부드러운 빵(통밀 아닌 흰빵), 카스텔라</li>
+        </ul>
+      </div>
+      <div class="food-col no">
+        <h3>초기에 피할 음식</h3>
+        <ul>
+          <li>잡곡밥·현미밥·보리밥, 통밀빵, 시리얼</li>
+          <li>생나물, 겉절이, 쌈채소 등 익히지 않은 채소</li>
+          <li>깨·들깨·참깨가 많이 들어간 무침</li>
+          <li>견과류, 콩자반, 옥수수, 팝콘, 말린 과일</li>
+          <li>김치·깍두기(질긴 섬유질 + 높은 나트륨)</li>
+          <li>미역·다시마·김을 많이 먹는 것</li>
+          <li>껍질째 먹는 과일, 씨 있는 토마토소스</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <strong>기준이 궁금하다면:</strong> 한 자료(MSKCC)는 저섬유식을 "1회 제공량당 식이섬유 2g 이하"로 정의합니다. 회복 후 장기 목표는 반대로 <strong>하루 25~35g</strong>이니, 시기를 혼동하지 마세요. 김치는 영영 못 먹는 것이 아니라 <strong>초기 몇 주만</strong> 쉬어가는 것입니다.
+    </div>
+  </section>
+
+  <!-- ===== UROSTOMY ===== -->
+  <section id="urostomy">
+    <div class="section-head">
+      <p class="section-kicker">요루(회장도관)</p>
+      <h2>요루 생활과 식사</h2>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <h3>냄새는 물로 관리하는 것이 가장 확실합니다</h3>
+        <p>아스파라거스·생선·양파·마늘·달걀·콩·옥수수·양배추·브로콜리, 그리고 커민 같은 향신료가 소변 냄새를 강하게 만든다고 알려져 있습니다. 다만 사람마다 차이가 크고, <strong>물을 충분히 마셔 소변을 묽게 하는 것</strong>이 가장 근거가 확실한 방법입니다.</p>
+      </div>
+      <div class="path">
+        <h3>크랜베리 주스·비타민C로 소변을 산성화한다는 조언은 근거가 약합니다</h3>
+        <p>예전에는 소변을 산성으로 만들어 세균을 억제한다고 설명했지만, 크랜베리가 소변 pH를 낮추는 정도와 지속시간은 세균을 억제하기에 부족하고 비타민C의 산성화 효과도 대부분 근거가 없습니다. 냄새에 도움이 된다고 느끼면 마셔도 되지만 <strong>감염 예방 수단으로 믿지는 마세요.</strong></p>
+      </div>
+      <div class="path">
+        <h3>가스가 차도 소변주머니에는 영향이 없습니다</h3>
+        <p>대장루·회장루와 달리 요루 주머니에는 가스가 차지 않습니다. 콩·양배추·양파·탄산음료로 생기는 가스는 장(항문) 쪽 문제이므로 소변주머니가 부풀 걱정은 하지 않으셔도 됩니다.</p>
+      </div>
+      <div class="path">
+        <h3>소금을 일부러 더 먹을 필요는 없습니다</h3>
+        <p>영어권 장루 자료에는 "소금을 더 드세요"라는 조언이 자주 나오지만, 이는 대장을 쓰지 않는 <strong>회장루(ileostomy)</strong> 환자 기준입니다. 회장도관은 대장이 그대로 남아 있어 같은 방식으로 적용되지 않습니다. 한국인의 평균 나트륨 섭취는 이미 WHO 권고(하루 2,000mg)의 약 두 배입니다.</p>
+        <p>대신 <strong>더운 날씨, 운동, 발열, 설사·구토가 있을 때는 수분을 늘리세요.</strong> 요루는 소변을 모아두지 못해 탈수에 더 취약합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEOBLADDER ===== -->
+  <section id="neobladder">
+    <div class="section-head">
+      <p class="section-kicker">인공방광(신방광)</p>
+      <h2>인공방광 생활과 식사</h2>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <h3>점액은 물로 묽게, 그리고 세척으로</h3>
+        <p>인공방광을 만든 장 점막은 계속 점액을 분비하고, 이 점액이 뭉치면 배뇨를 막거나 결석의 원인이 됩니다. 퇴원 전에 배운 <strong>생리식염수 세척</strong>을 지시받은 대로 시행하고, 물을 충분히 마셔 점액을 묽게 유지하세요.</p>
+      </div>
+      <div class="path">
+        <h3>대사성 산증 — 피로·무력감·식욕저하·심한 갈증</h3>
+        <p>장 점막이 소변 성분을 흡수하면서 몸이 산성 쪽으로 기울 수 있습니다. 수술 초기에 흔하고 1~2년에 걸쳐 대개 좋아집니다. 증상이 없어도 뼈가 약해질 수 있어 의료진이 <strong>중탄산나트륨</strong>을 처방하기도 하며, 정기 혈액검사로 확인합니다. 위 증상이 있으면 진료 때 꼭 말씀하세요.</p>
+      </div>
+      <div class="path">
+        <h3>배뇨는 요의가 아니라 시계를 보고</h3>
+        <p>인공방광은 "마렵다"는 감각이 없습니다. 정해진 간격(예: 3시간마다, 이후 3~4시간마다)으로 비우고 <strong>밤에도 두 번 정도 일어나</strong> 비우도록 안내받게 됩니다. 구체적 간격은 담당팀 지시를 따르세요.</p>
+      </div>
+      <div class="path">
+        <h3>밤에 새는 것과 수분 섭취를 어떻게 맞출까</h3>
+        <p>저녁에 물을 많이 마시면 야간 실금이 늘고, 그렇다고 하루 수분을 줄이면 점액과 산증에 불리합니다. <strong>하루 총량은 유지하되 낮 시간에 앞당겨 마시고 저녁에는 많은 양을 한꺼번에 마시지 않는 것</strong>이 현실적인 절충입니다. "몇 시간 전부터 금지"라는 정해진 기준은 없습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TURBT & IRRITANTS ===== -->
+  <section id="turbt">
+    <div class="section-head">
+      <p class="section-kicker">TURBT · 자극 물질</p>
+      <h2>내시경 수술 후 식사와 '방광 자극 물질'</h2>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <h3>TURBT 후에는 물이 핵심입니다</h3>
+        <p>식사는 대체로 평소대로 하시면 됩니다. 대신 물을 충분히(자료에 따라 하루 4~6컵 또는 6~8컵) 마셔 소변을 묽게 유지하세요. <strong>소변에 피가 섞여 나올수록 물을 더 마시는 것이 원칙</strong>입니다 — 핏덩어리가 요도를 막는 것을 예방합니다.</p>
+        <p>또한 힘주는 배변이 불편하므로, 이때는 오히려 <strong>채소·수분을 늘려 변비를 막는 것</strong>이 권장됩니다. (방광절제술 후 초기 저섬유식과 정반대이니 혼동하지 마세요.)</p>
+      </div>
+      <div class="path">
+        <h3>카페인·술·탄산·매운 음식 — 근거는 생각보다 약합니다</h3>
+        <p>거의 모든 환자 안내문에 나오는 목록이지만, 실제 연구 근거는 약합니다. 그중 <strong>카페인만이 비교적 일관되게</strong> 방광 증상을 악화시키는 것으로 보고됩니다. 인공감미료와 매운 음식은 연구 결과가 엇갈립니다.</p>
+        <p>가장 확실한 방법은 <strong>본인에게 맞는지 직접 확인하는 것</strong>입니다. 의심되는 음식을 1~2주 끊었다가 하나씩 다시 먹어보며 증상 변화를 살펴보세요.</p>
+        <p>다만 <strong>술</strong>은 자극 여부와 관계없이 암 예방 관점에서 마시지 않는 것이 권장되고, <strong>탄산음료·단 음료</strong>는 복부 수술 후 가스·설사 문제로 초기에 피하는 것이 좋습니다.</p>
+      </div>
+      <div class="path">
+        <h3>변비는 섬유질이 아니라 물·움직임·약으로</h3>
+        <p>수술 후 변비는 마약성 진통제와 활동량 감소 때문에 매우 흔합니다. 저섬유식 기간에는 섬유질을 늘릴 수 없으므로 <strong>수분 섭취, 짧게 자주 걷기, 처방받은 대변연화제</strong>로 관리합니다. 이틀 이상 배변이 없으면 의료진에게 알리고, <strong>하제는 임의로 복용하지 말고 반드시 상의</strong>하세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LONG TERM ===== -->
+  <section id="longterm">
+    <div class="section-head">
+      <p class="section-kicker">장기 관리</p>
+      <h2>회복 후, 앞으로의 식습관</h2>
+      <p class="section-sub">미국암학회(ACS 2022)와 세계암연구기금(WCRF/AICR 2018) 권고를 기준으로 정리했습니다.</p>
+    </div>
+    <div class="grid-cards">
+      <div class="p-card">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21c5-3 8-7 8-11a4 4 0 0 0-8-1 4 4 0 0 0-8 1c0 4 3 8 8 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>금연이 식사보다 중요합니다</h3>
+        <p>흡연자의 방광암 위험은 비흡연자의 약 6배이고, 방광암의 절반가량이 흡연과 관련됩니다. 진단 후에도 계속 피우면 재발·진행 위험이 높아집니다. 이 페이지의 어떤 음식보다 우선합니다.</p>
+      </div>
+      <div class="p-card">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 20c4-2 6-5 6-9V5l-6-2-6 2v6c0 4 2 7 6 9Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>채소·과일 중심 식단</h3>
+        <p>하루 400g 이상의 채소·과일, 섬유질 30g 이상이 목표입니다. 방광암 진단 후 이 권고를 잘 지킨 분들에서 재발이 적었다는 연구가 있습니다(관찰 연구).</p>
+      </div>
+      <div class="p-card">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 18h16M6 14h12M8 10h8M10 6h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>붉은 고기·가공육은 줄이기</h3>
+        <p>붉은 고기는 조리 후 무게로 주 350~500g 이내, 햄·소시지·베이컨 같은 가공육은 "가능한 한 아주 적게"가 권고입니다. 단 음료와 패스트푸드도 제한하세요.</p>
+      </div>
+      <div class="p-card">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>체중과 근육을 지키기</h3>
+        <p>비만을 피하고 근육량을 유지하는 것이 권고됩니다. 방광절제술 환자의 21~55%가 영양불량 상태라는 보고가 있어, 체중이 계속 줄면 영양 상담을 요청하세요.</p>
+      </div>
+    </div>
+    <div class="note">
+      <strong>과장된 이야기 걸러내기.</strong>
+      ① <em>"물을 많이 마시면 재발을 씻어낸다"</em> — 근거가 없습니다. 오히려 2025년 연구에서는 수분 섭취가 많은 군에서 재발·진행 위험이 더 높게 나왔습니다. 수분은 <strong>탈수·감염·결석·점액 예방</strong> 때문에 중요한 것이지 재발 예방 때문이 아닙니다.
+      ② <em>"브로콜리가 재발을 44% 줄인다"</em> — 생 십자화과 채소와 재발 감소를 연관지은 관찰 연구가 있지만, BCG 치료를 받은 표재성 방광암 환자 대상이며 인과관계는 아직 확인되지 않았습니다(현재 임상시험 진행 중). 채소를 많이 드시는 것은 좋지만 치료 효과로 기대하지는 마세요.
+      ③ <em>"녹차가 방광암을 막는다"</em> — 12개 코호트를 모은 분석에서 남성·흡연자에서는 위험 감소가 관찰됐지만 여성·비흡연자에서는 그렇지 않았습니다. 즐기는 정도면 충분합니다.
+      ④ 미국암학회도 <strong>"방광암과 식이에 대해서는 확실한 결론을 내리기에 근거가 더 필요하다"</strong>고 명시하고 있습니다.
+    </div>
+  </section>
+
+  <!-- ===== WARNING SIGNS ===== -->
+  <section id="warning">
+    <div class="section-head">
+      <p class="section-kicker">경고 신호</p>
+      <h2>이럴 땐 즉시 병원에 연락하세요</h2>
+    </div>
+    <div class="alert">
+      <h3>먹는 것·배설과 관련된 응급 신호</h3>
+      <ul>
+        <li><strong>요루에서 소변이 나오지 않음</strong> — 요루는 소변이 계속 흘러나오는 것이 정상입니다. 막히면 신장이 손상될 수 있어 응급 상황입니다. (기준은 자료마다 8시간·12시간으로 다르니 담당팀 지시를 우선하세요.)</li>
+        <li><strong>구토, 배가 부풀어 오름, 쥐어짜는 복통</strong> — 장폐색·장마비 의심</li>
+        <li><strong>소변량이 급격히 줄거나 색이 진해짐</strong> — 탈수 또는 막힘</li>
+        <li><strong>탈수 증상</strong> — 입마름, 심한 갈증, 어지럼, 근육경련, 소변이 진한 노랑·주황색</li>
+        <li><strong>인공방광: 심한 피로·무력감·식욕저하·과도한 갈증</strong> — 대사성 산증 가능, 혈액검사 필요</li>
+        <li><strong>발열, 상처 부위 발적·고름·벌어짐</strong></li>
+        <li><strong>이틀 이상 배변이 없고 복부 불편감이 심해짐</strong></li>
+      </ul>
+      <p class="after">위 기준은 장루 환자 단체와 의료기관 안내문을 종합한 것으로, 국제 진료지침에 확립된 시간 기준은 없습니다. <strong>담당 수술팀이 알려드린 기준이 항상 우선합니다.</strong></p>
+    </div>
+  </section>
+
+  <!-- ===== BRIDGE ===== -->
+  <div class="bridge">
+    <h2>더 궁금한 점이 있으신가요?</h2>
+    <p>아래 채팅창에 자유롭게 질문을 입력해 보세요. 준비된 자료 안에서 답을 찾아드립니다.</p>
+  </div>
+
+  <!-- ===== CHAT ===== -->
+  <section id="chat" aria-label="식이 관련 질문 챗봇">
+    <div class="chat-shell">
+      <div class="chat-head">
+        <span class="dot"></span>
+        <div>
+          <strong>비뇨의학과 식이 안내 챗봇</strong><br>
+          <span>공신력 있는 자료 기반 · 진료를 대신하지 않습니다</span>
+        </div>
+      </div>
+      <div class="chat-log" id="chatLog" role="log" aria-live="polite"></div>
+      <div class="chips" id="chipRow"></div>
+      <form class="chat-input" id="chatForm">
+        <input id="chatInput" type="text" autocomplete="off" placeholder="예: 김치는 언제부터 먹을 수 있나요?" aria-label="질문 입력" />
+        <button type="submit">보내기</button>
+      </form>
+    </div>
+  </section>
+
+  <details class="sources">
+    <summary>이 자료의 근거가 된 출처 보기</summary>
+    <ul class="source-list">
+      <li>ERAS® Society — 근치적 방광절제술 수술 후 회복증진 지침 (Cerantola et al., <em>Clinical Nutrition</em> 2013)</li>
+      <li>Memorial Sloan Kettering Cancer Center — <a href="https://www.mskcc.org" target="_blank" rel="noopener">mskcc.org</a> (회장도관·인공방광 관리, 저섬유식)</li>
+      <li>Cleveland Clinic — <a href="https://my.clevelandclinic.org" target="_blank" rel="noopener">clevelandclinic.org</a> (요루 생활 안내)</li>
+      <li>Cancer Research UK — <a href="https://www.cancerresearchuk.org" target="_blank" rel="noopener">cancerresearchuk.org</a> (방광암 수술 후 관리, 요루 생활)</li>
+      <li>Macmillan Cancer Support — <a href="https://www.macmillan.org.uk" target="_blank" rel="noopener">macmillan.org.uk</a> (요루와 식사)</li>
+      <li>Bladder Cancer Advocacy Network (BCAN) — <a href="https://bcan.org" target="_blank" rel="noopener">bcan.org</a> (방광암과 영양)</li>
+      <li>United Ostomy Associations of America (UOAA) — <a href="https://www.ostomy.org" target="_blank" rel="noopener">ostomy.org</a> (요루 식사, 막힘 증상, 수분)</li>
+      <li>American Cancer Society — <a href="https://www.cancer.org" target="_blank" rel="noopener">cancer.org</a> (암 생존자 영양·신체활동 지침 2022, 방광암 위험요인)</li>
+      <li>WCRF / AICR — <a href="https://www.aicr.org" target="_blank" rel="noopener">aicr.org</a> (암 예방 권고 2018)</li>
+      <li>ESPEN — 외과 임상영양 실무 지침 (단백질 권장량)</li>
+      <li>EAU Patient Information — <a href="https://patients.uroweb.org" target="_blank" rel="noopener">patients.uroweb.org</a> (방광절제술 후 요로전환)</li>
+      <li>국민건강영양조사(KNHANES) 기반 한국인 나트륨 섭취 연구 (<em>Nutrition Research and Practice</em> 2021)</li>
+    </ul>
+    <p style="font-size:0.85rem;color:var(--mist);padding-bottom:14px;">기관마다 권장 기간과 수치가 달라 이 자료는 더 안전한(보수적인) 값을 기본으로 정리했고, 근거가 엇갈리는 부분은 본문에 그대로 밝혀두었습니다. 특히 식사 진행 일정·수분량·저섬유식 기간에는 국제적으로 통일된 기준이 없습니다. 개인별 계획은 반드시 집도의·주치의 진료를 통해 확인하세요.</p>
+  </details>
+
+  <footer>
+    <p><strong>충북대학교 비뇨의학과</strong> 환자 교육 자료 · 정기적으로 업데이트됩니다.</p>
+    <p>함께 보기: <a href="index.html">전립선암 수술 후 운동 가이드</a></p>
+    <p>식사 중 이상 증상이 있거나 궁금한 점은 챗봇 답변과 관계없이 언제든 담당 진료팀에 문의해 주세요.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var QA = [
+    { q: "수술 후 언제부터 먹을 수 있나요?", a: "요즘은 수술 후 오래 굶기지 않습니다. 회복증진(ERAS) 지침은 가능한 한 빨리 입으로 먹기 시작할 것을 권하며, 대개 수술 후 몇 시간 안에 물을 조금씩 마셔보고 잘 견디면 양을 늘려갑니다.\n다만 '며칠째에 무엇을 먹는다'는 고정된 국제 표준은 없습니다. 회복증진 프로토콜을 쓰는 병원은 훨씬 빨리 시작하고, 전통적 방식의 병원은 가스가 나온 뒤에 시작합니다. 두 방식 모두 현재 사용 중이므로 담당팀 지시를 따라주세요.", src: "ERAS Society · Cancer Research UK · BCAN", kw: ["수술 언제 먹","수술 언제 식사","식사 시작","먹기 시작","금식","언제부터 먹을 수","식사 언제 시작"] },
+    { q: "식사는 어떤 순서로 진행되나요?", a: "일반적으로 ① 물 한 모금 → ② 맑은 유동식(물·맑은 국물·연한 차) → ③ 미음·죽 → ④ 부드러운 저섬유식 → ⑤ 일반식 순서로 진행합니다.\n한 번에 많이 드시지 말고 하루 6끼 정도로 조금씩 자주 나눠 드시는 것이 좋습니다. 각 단계에 머무는 기간은 병원과 회복 속도에 따라 크게 다릅니다.", src: "Cancer Research UK · MSKCC · UOAA", kw: ["유동식","미음","식사 순서","물부터","단계","진행 순서"] },
+    { q: "물은 하루에 얼마나 마셔야 하나요?", a: "자료마다 차이가 있습니다. 영국 자료는 하루 1,500~2,000mL(6~8컵), 미국 자료는 8~12컵(약 1,900~2,800mL)을 권합니다. 대략 하루 1.5~2.5L를 목표로 보시면 무리가 없습니다.\n충분히 마셔야 하는 이유는 ① 요로감염 예방 ② 결석 예방 ③ 점액을 묽게 해 막힘 예방 ④ 탈수 예방입니다.\n주의: 신장 기능이 떨어져 있거나 심부전이 있으면 오히려 수분을 제한해야 할 수 있으니, 목표량은 반드시 담당 의료진과 확인하세요.", src: "Macmillan · UOAA · Cleveland Clinic · BCAN", kw: ["물 얼마나","수분 섭취","하루 물","수분량","몇 리터","물을 얼마","마셔야"] },
+    { q: "물을 많이 마시면 재발을 예방할 수 있나요?", a: "아닙니다. '물을 많이 마셔 암세포를 씻어낸다'는 말은 근거가 없습니다. 표재성 방광암 환자를 대상으로 한 연구에서 수분 섭취량과 재발 사이에 관련이 없었고, 2025년 발표된 분석에서는 오히려 수분 섭취가 많았던 군에서 재발·진행 위험이 더 높게 나왔습니다.\n그렇다고 물을 적게 드시라는 뜻은 아닙니다. 수분 섭취는 탈수·요로감염·결석·점액 막힘을 막기 위해 여전히 중요합니다. 이유가 '재발 예방'이 아닐 뿐입니다.", src: "BJU International 2025 · 표재성 방광암 코호트 연구", kw: ["재발 예방 물","물 재발","씻어","재발 막","물 마시면 재발"] },
+    { q: "저섬유식(저잔사식)은 무엇이고 얼마나 해야 하나요?", a: "저섬유식은 소화되지 않고 장에 남는 섬유질을 줄인 식사입니다. 방광을 제거하고 소장으로 요로를 만든 경우, 잘라 이은 장이 부어 있어 섬유질이 많은 음식은 소화가 어렵고 가스·막힘을 일으킬 수 있습니다.\n기간은 자료마다 다릅니다. 미국 장루 단체(UOAA)는 약 4~6주, MSKCC는 '수술 후 첫 몇 주'라고만 표현하며, 영국 Macmillan은 요루 환자에게 '회복되면 특별한 음식 제한은 없다'고 안내합니다. 실제 기간은 담당팀 지시를 따르세요.\n한 자료는 저섬유식을 '1회 제공량당 식이섬유 2g 이하'로 정의합니다.", src: "UOAA · MSKCC · Macmillan · ACS", kw: ["저섬유","저잔사","섬유질 제한","섬유 언제","섬유질 얼마","섬유식"] },
+    { q: "저섬유식 기간에 한식에서 무엇을 피해야 하나요?", a: "한국 식단은 잡곡·나물·깨·해조류 때문에 섬유질이 많은 편입니다.\n[피할 것] 잡곡밥·현미밥·보리밥, 통밀빵, 생나물·겉절이·쌈채소, 깨와 들깨가 많은 무침, 견과류, 콩자반, 옥수수, 팝콘, 말린 과일, 김치·깍두기, 미역·다시마를 많이 먹는 것, 껍질째 먹는 과일, 씨 있는 토마토소스.\n[편한 것] 흰쌀밥·흰죽·미음, 부드러운 국수, 두부·계란찜·흰살생선·닭고기, 껍질과 씨를 제거하고 푹 익힌 애호박·무·당근·감자, 건더기 없는 맑은 국, 바나나·통조림 복숭아, 흰빵.", src: "MSKCC · UOAA · ACS · Mayo Clinic (저섬유식 목록 적용)", kw: ["한식","잡곡","나물","반찬","현미","보리밥","미역","다시마","해조","쌈채소","한국 음식","무엇을 피"] },
+    { q: "김치는 언제부터 먹을 수 있나요?", a: "영영 못 드시는 것이 아니라 회복 초기 몇 주만 쉬어가는 것입니다. 김치는 배추 줄기의 질긴 섬유질이 많아 저섬유식 기간에는 피하는 것이 안전하고, 나트륨도 높은 편입니다.\n담당팀이 일반식을 허용한 뒤 소량부터 시도해 보시고, 배가 아프거나 가스가 심하면 조금 더 미뤘다가 다시 드셔 보세요. 잘 익어 부드러운 김치를 잘게 썰어 드시는 것이 처음에는 편합니다.\n참고로 한국인 평균 나트륨 섭취는 WHO 권고의 약 두 배이고 김치는 그중 하루 약 500mg을 차지합니다. 다만 국·찌개·면류 국물의 기여도 그에 못지않으니 김치만 문제 삼을 필요는 없습니다.", src: "저섬유식 일반 원칙 적용 · KNHANES 나트륨 연구", kw: ["김치","김치 언제","김치 먹","깍두기","배추김치"] },
+    { q: "견과류나 씨앗은 먹으면 안 되나요?", a: "저섬유식 기간에는 피하세요. 견과류, 씨앗, 참깨·들깨, 팝콘, 옥수수, 말린 과일, 씨가 들어간 토마토소스는 여러 기관 자료에서 공통적으로 제한 목록에 올라 있습니다. 소화되지 않은 채로 남아 새로 만든 장 통로를 막을 수 있기 때문입니다.\n4~6주 이후 담당팀이 허용하면 한 번에 여러 가지를 늘리지 말고 한 가지씩 소량으로 시도해 보세요.", src: "UOAA · MSKCC · ACS · Mayo Clinic", kw: ["견과","땅콩","씨앗","팝콘","호두","아몬드"] },
+    { q: "단백질은 얼마나 먹어야 하나요?", a: "유럽 임상영양학회(ESPEN)는 암 환자에게 하루 체중 1kg당 단백질 1.0~1.5g을 권합니다. 체중 60kg이면 하루 60~90g입니다. 수술 직후에는 더 많이 필요할 수 있습니다.\n매 끼니에 두부, 계란, 흰살생선, 껍질 벗긴 닭고기, 살코기, 유제품 같은 단백질을 조금씩이라도 포함하세요. 한 번에 많이 드시기 어려우면 하루 6끼로 나누는 방법이 권장됩니다.", src: "ESPEN 외과 임상영양 지침 · MSKCC", kw: ["단백질","고기 먹어도","회복 음식","무엇을 먹어야","좋은 음식"] },
+    { q: "입맛이 없고 체중이 계속 줄어요", a: "방광절제술을 받는 환자의 21~55%가 영양불량 상태라는 보고가 있을 만큼 흔한 문제입니다. 근육량이 줄면 합병증과 회복 지연 위험이 높아지므로 가볍게 넘기지 마세요.\n① 하루 3끼 대신 6끼로 나눠 조금씩 자주 드세요.\n② 매번 단백질을 조금이라도 포함하세요.\n③ 물로 배를 채우지 말고 식사 사이에 수분을 드세요.\n④ 체중이 계속 줄면 담당팀에 알리고 영양 상담이나 경구영양보충음료 처방이 가능한지 문의하세요. 영양 위험이 있는 환자에게는 보충음료 사용이 권장됩니다.", src: "ERAS Society · ESPEN · 방광절제술 영양 문헌고찰", kw: ["입맛","식욕","못 먹","살이 빠","체중 감소","영양보충","마르"] },
+    { q: "요루에서 소변 냄새가 나는데 어떻게 하나요?", a: "아스파라거스, 생선, 양파, 마늘, 달걀, 콩, 옥수수, 양배추, 브로콜리, 커민 같은 향신료가 냄새를 강하게 만든다고 알려져 있습니다. 다만 개인차가 크므로 본인에게 해당되는지 하나씩 확인해 보세요.\n가장 근거가 확실한 방법은 물을 충분히 마셔 소변을 묽게 만드는 것입니다. 요구르트, 파슬리 등이 도움이 된다는 이야기도 있으나 근거는 약합니다.", src: "Cleveland Clinic · UOAA · Mayo Clinic", kw: ["냄새","소변 냄새","요루 냄새","악취"] },
+    { q: "크랜베리 주스나 비타민C를 먹으면 감염 예방이 되나요?", a: "그렇게 믿지 마세요. 예전에는 소변을 산성으로 만들어 세균을 억제한다고 설명했지만, 크랜베리가 소변 pH를 낮추는 정도와 지속시간은 세균을 억제하기에 부족하고, 비타민C가 소변을 의미 있게 산성화한다는 것도 대부분 근거가 없습니다.\n또한 경요도 수술(TURBT) 후 안내문 중에는 크랜베리 주스가 너무 산성이라며 피하라는 것도 있어, 자료 간에 조언이 엇갈립니다. 냄새 관리에 도움이 된다고 느끼시면 마셔도 되지만 감염 예방 수단으로는 기대하지 마시고, 감염이 의심되면 진료를 받으세요.", src: "근거 엇갈림 — Cleveland Clinic(구 권고) vs 최신 검토", kw: ["크랜베리","비타민c","산성화","비타민 c"] },
+    { q: "가스가 차면 소변주머니가 부풀지 않나요?", a: "요루(회장도관) 주머니에는 가스가 차지 않습니다. 대장루·회장루와 달리 요루는 소변만 나오기 때문입니다. 콩, 양배추, 양파, 탄산음료, 맥주 등으로 생기는 가스는 항문으로 나오는 장 가스이므로 소변주머니와는 무관합니다.\n다만 복부 수술 직후에는 가스로 인한 복부 팽만이 불편할 수 있어 초기에는 탄산음료를 피하는 것이 좋습니다.", src: "UOAA · Cleveland Clinic", kw: ["가스","방귀","주머니 부","팽만"] },
+    { q: "소금을 더 먹어야 한다던데 맞나요?", a: "요루(회장도관) 환자에게는 그대로 적용되지 않습니다. 영어권 장루 자료의 '소금을 더 드세요'라는 조언은 대장을 쓰지 않는 회장루(ileostomy) 환자 기준입니다. 회장도관은 대장이 그대로 남아 있어 같은 방식의 염분 손실이 일어나지 않으며, 회장도관 환자를 위한 별도의 소금 섭취 권장량은 확인된 바가 없습니다.\n한국인 평균 나트륨 섭취는 하루 약 3,500~3,900mg으로 WHO 권고(2,000mg)의 약 두 배입니다. 일부러 짜게 드실 필요는 없습니다.\n대신 더운 날씨, 운동, 발열, 설사·구토가 있을 때는 수분을 늘리세요. 요루는 소변을 모아두지 못해 탈수에 취약합니다.", src: "UOAA(회장루 기준) · KNHANES · WHO", kw: ["소금","나트륨","짜게","염분","싱겁게"] },
+    { q: "인공방광에서 점액이 나오는데 정상인가요?", a: "정상입니다. 인공방광을 만든 장 점막은 계속 점액을 분비합니다. 다만 점액이 뭉치면 배뇨를 막거나 결석의 원인이 될 수 있습니다.\n관리 방법은 두 가지입니다. ① 퇴원 전에 배운 생리식염수 세척을 지시받은 대로 시행합니다(맑아질 때까지 반복하도록 안내하는 경우가 많고, 빈도는 병원마다 다릅니다). ② 물을 충분히 마셔 점액을 묽게 유지합니다.\n세척 빈도와 방법은 반드시 담당팀 지시를 따르세요.", src: "MSKCC · 인공방광 임상문헌", kw: ["점액","세척","인공방광 점액","끈적"] },
+    { q: "인공방광 후 대사성 산증이 무엇인가요?", a: "인공방광을 만든 장 점막이 소변 성분을 흡수하면서 몸이 산성 쪽으로 기우는 현상입니다. 수술 초기에 흔하고(한 연구에서 1개월 시점 약 52%), 대개 1~2년에 걸쳐 좋아집니다.\n증상은 피로, 무력감, 식욕저하, 심한 갈증입니다. 증상이 없어도 오래 지속되면 뼈가 약해질 수 있어, 의료진이 중탄산나트륨을 처방하는 경우가 있습니다.\n신장 기능이 떨어져 있거나 당뇨가 있으면 더 잘 생깁니다. 정기 혈액검사로 확인하니 진료 일정을 거르지 마세요.", src: "인공방광 대사합병증 문헌 (PLOS One 외)", kw: ["산증","대사성","무력감","중탄산","피곤"] },
+    { q: "인공방광인데 밤에 소변이 새요. 저녁에 물을 줄여야 하나요?", a: "인공방광은 요의가 없어 초기 야간 실금이 흔하며, 대부분 패드를 사용합니다. 저녁에 마시는 양을 줄이면 야간 사고를 줄이는 데 도움이 된다는 안내가 있습니다.\n다만 하루 총 수분량을 줄이면 점액과 대사성 산증에 불리합니다. 현실적인 절충은 하루 총량은 유지하되 낮 시간에 앞당겨 마시고, 저녁에 한꺼번에 많은 양을 마시지 않는 것입니다.\n'취침 몇 시간 전부터 금지'라는 확립된 기준은 없습니다. 또한 배뇨는 요의가 아니라 시계를 보고 하며, 밤에도 두 번 정도 일어나 비우도록 안내받게 됩니다.", src: "Cancer Research UK · 인공방광 임상문헌", kw: ["밤에 새","야간","저녁 물","자기 전","밤에 소변","야간 실금"] },
+    { q: "비타민 B12는 왜 챙겨야 하나요?", a: "비타민 B12는 소장의 끝부분(원위 회장)에서만 흡수되는데, 요루나 인공방광을 만들 때 바로 그 부위를 사용하기 때문입니다.\n간에 저장된 양이 있어 수술 직후에는 문제가 없고 수년이 지나서야 부족해질 수 있습니다. 한 연구에서는 회장도관 수술 후 중앙값 9.1년 뒤에 결핍이 나타났습니다. 발생률은 자료마다 0%에서 5년에 33%까지 편차가 커서 '아직 명확하지 않다'고 기술됩니다.\n결핍이 오래되면 되돌리기 어려운 신경 손상이 생길 수 있어, 대개 연 1회 혈액검사와 필요시 보충이 권장됩니다.", src: "요로전환 대사합병증 문헌 검토", kw: ["b12","비타민b12","비타민 부족","비타민 검사","엽산"] },
+    { q: "커피를 마셔도 되나요?", a: "방광 자극 물질 목록 중에서 카페인은 그나마 비교적 일관되게 방광 증상을 악화시키는 것으로 보고되는 항목입니다. 증상이 신경 쓰이면 줄여보시고, 특히 저녁 시간 섭취를 피해보세요.\n다만 완전히 끊어야 한다는 근거는 없습니다. 1~2주 끊었다가 다시 마셔보며 본인에게 실제로 영향이 있는지 확인하는 방법이 가장 확실합니다.", src: "University of Iowa Health Care · Brigham and Women's (근거 수준 낮음)", kw: ["커피","카페인","에스프레소"] },
+    { q: "술은 마셔도 되나요?", a: "권장하지 않습니다. 방광 자극 물질로서의 근거와는 별개로, 미국암학회와 세계암연구기금 모두 암 예방과 생존자 관리 관점에서 '술은 마시지 않는 것이 가장 좋다'고 권고합니다.\n또한 회복 초기에는 수분·영양 상태와 약물 상호작용 문제도 있으니, 재개 여부는 담당 의료진과 상의하세요.", src: "American Cancer Society 2022 · WCRF/AICR 2018", kw: ["술","음주","맥주","알코올","소주","와인"] },
+    { q: "탄산음료나 단 음료는 어떤가요?", a: "회복 초기에는 피하시는 것이 좋습니다. 탄산은 복부 수술 후 가스와 팽만을 늘리고, 단 음료는 큰 수술 후 위장 증상과 설사를 유발할 수 있어 방광암 환자 단체(BCAN)도 피하도록 안내합니다.\n장기적으로도 세계암연구기금은 가당 음료 제한을 권고합니다. 수분은 물, 연한 차, 맑은 국물로 채우세요.", src: "BCAN · WCRF/AICR", kw: ["탄산","사이다","콜라","단 음료","주스","음료수"] },
+    { q: "매운 음식은 먹어도 되나요?", a: "근거는 생각보다 약합니다. 매운 음식이 방광을 자극한다는 것은 대부분 환자 안내문 수준의 조언이고, 인구 집단 연구에서는 일관된 연관성이 확인되지 않았습니다.\n다만 복부 수술 후 초기에는 소화 부담과 설사 문제로 자극적이고 기름진 음식을 줄이는 것이 권장됩니다. 회복 후에는 본인이 불편함을 느끼지 않는다면 굳이 끊을 필요는 없습니다.", src: "UOAA(수술 후 초기) · 방광 자극 물질 문헌 (근거 약함)", kw: ["매운","고추","자극적","맵게","고춧가루"] },
+    { q: "변비가 심한데 어떻게 하나요?", a: "수술 후 변비는 마약성 진통제와 활동량 감소 때문에 매우 흔합니다.\n저섬유식 기간에는 섬유질을 늘릴 수 없으므로 ① 수분을 충분히 마시고 ② 짧게 자주 걷고 ③ 처방받은 대변연화제를 규칙적으로 복용하는 방식으로 관리합니다.\n이틀 이상 배변이 없으면 의료진에게 알리세요. 하제는 임의로 복용하지 마시고 반드시 담당팀과 상의하세요 — 요로전환술 후 장 관리는 집도의 지시에 따라야 합니다.", src: "수술 후 회복 일반 지침 · 의료기관 안내문", kw: ["변비","대변","배변","화장실","응가","막힌 느낌"] },
+    { q: "설사나 묽은 변이 계속돼요", a: "소장 일부를 잘라냈기 때문에 초기에는 배변 습관이 달라질 수 있습니다. 대체로 시간이 지나면서 안정됩니다.\n초기에는 자극적이고 기름진 음식, 단 음료, 탄산음료를 줄이고 조금씩 자주 드세요. 설사가 심하면 탈수와 전해질 손실 위험이 커지므로 수분을 늘리고, 지속되거나 심해지면 담당팀에 알리세요.\n설사·구토가 있을 때는 요루·인공방광 환자에게 탈수가 특히 위험합니다.", src: "UOAA · 의료기관 수술 후 안내", kw: ["설사","묽은 변","배탈","무른 변"] },
+    { q: "경요도 수술(TURBT)만 받았는데 식사를 조심해야 하나요?", a: "식사 제한은 거의 없습니다. 장을 건드리지 않았기 때문에 평소대로 드시면 되고, 오히려 채소와 수분을 늘려 변비를 예방하는 것이 권장됩니다(힘주는 배변이 불편하기 때문입니다).\n가장 중요한 것은 수분입니다. 자료에 따라 하루 4~6컵 또는 6~8컵을 권하며, 소변에 피가 섞여 나올수록 더 많이 마셔야 합니다. 소변을 묽게 유지해 핏덩어리가 요도를 막는 것을 예방하기 위해서입니다.\n회복 기간에는 술, 매우 매운 음식, 카페인, 산성 음료를 잠시 줄이라는 안내가 흔하지만 근거 수준은 낮은 편입니다.", src: "비뇨의학과 수술 후 안내문 (수분은 근거 중간, 자극물질은 근거 약함)", kw: ["경요도","turbt","내시경 수술","방광경","종양절제","방광 보존"] },
+    { q: "언제 바로 병원에 연락해야 하나요?", a: "다음 증상이 있으면 즉시 병원에 연락하세요.\n① 요루에서 소변이 나오지 않음 — 요루는 소변이 계속 흘러나오는 것이 정상이며, 막히면 신장 손상 위험이 있는 응급 상황입니다(기준은 자료마다 8시간·12시간으로 다릅니다).\n② 구토, 배가 부풀어 오름, 쥐어짜는 복통 — 장폐색·장마비 의심\n③ 소변량이 급격히 줄거나 색이 진해짐\n④ 입마름·심한 갈증·어지럼·근육경련 등 탈수 증상\n⑤ 인공방광: 심한 피로·무력감·식욕저하·과도한 갈증 — 대사성 산증 가능\n⑥ 발열, 상처 부위 발적·고름·벌어짐\n⑦ 이틀 이상 배변이 없고 복부 불편감이 심해짐", src: "UOAA · Colostomy UK · 의료기관 안내 (시간 기준은 지침이 아님)", kw: ["응급","위험","병원 연락","이상 증상","구토","막힌","경고","즉시"] },
+    { q: "탈수인지 어떻게 알 수 있나요?", a: "소변 색이 진한 노랑이나 주황색으로 보이면 탈수 가능성이 높습니다. 그 외에 입마름, 심한 갈증, 어지럼, 근육경련, 소변량 감소가 신호입니다.\n요루나 인공방광이 있으면 소변을 저장하지 못해 탈수에 더 취약합니다. 더운 날씨, 운동, 발열, 설사·구토가 있을 때는 평소보다 수분을 늘리세요.", src: "Macmillan · UOAA", kw: ["탈수","어지럼","진한 소변","소변 색","목 마","갈증"] },
+    { q: "브로콜리나 양배추가 재발 예방에 좋다던데 사실인가요?", a: "'생 십자화과 채소를 월 2.4회분 이상 먹은 환자에서 재발 위험이 44% 낮았다'는 연구가 자주 인용됩니다. 다만 이 연구는 ① 관찰 연구이고 ② BCG 치료를 받은 표재성 방광암 환자가 대상이며 ③ 생채소 기준이라, 방광절제술을 받은 분께 그대로 적용되지 않습니다. 현재 인과관계를 확인하는 임상시험이 진행 중입니다.\n채소를 충분히 드시는 것은 좋은 일이지만 치료 효과로 기대하지는 마세요. 참고로 김치는 발효·염장된 형태라 연구에서 말한 '생 십자화과 채소'와 같지 않습니다.\n미국암학회도 방광암과 식이에 대해서는 확실한 결론을 내리기에 근거가 더 필요하다고 밝히고 있습니다.", src: "Kaiser Permanente 관찰연구 · American Cancer Society", kw: ["브로콜리","십자화과","양배추","채소가 좋","좋다던데"] },
+    { q: "녹차는 도움이 되나요?", a: "12개 국제 코호트를 모은 분석에서 차 섭취와 방광암 위험 감소의 연관성이 관찰됐지만, 남성과 흡연·과거 흡연자에서만 통계적으로 유의했고 여성이나 비흡연자에서는 그렇지 않았습니다.\n결과가 집단에 따라 엇갈리므로 치료 목적으로 많이 드실 필요는 없습니다. 평소 즐기시는 정도면 충분하고, 수분 섭취에도 도움이 됩니다. 다만 카페인이 방광 증상에 영향을 준다면 연하게 드세요.", src: "BLEND 통합분석 (Clinical Nutrition)", kw: ["녹차","차 마셔","홍차"] },
+    { q: "회복 후 장기적으로 어떤 식단이 좋은가요?", a: "미국암학회(2022)와 세계암연구기금(WCRF/AICR 2018) 권고를 기준으로 하시면 됩니다.\n① 채소·과일 하루 400g 이상, 식이섬유 하루 30g 이상\n② 붉은 고기는 조리 후 무게로 주 350~500g 이내\n③ 햄·소시지·베이컨 같은 가공육은 가능한 한 아주 적게\n④ 가당 음료와 패스트푸드 제한\n⑤ 술은 마시지 않는 것이 권장\n⑥ 적정 체중 유지와 규칙적인 신체활동, 근육량 보존\n방광암 진단 후 이 권고를 잘 지킨 분들에서 재발이 적었다는 관찰 연구가 있습니다. 다만 초기 저섬유식 기간이 끝난 뒤에 적용하는 목표라는 점을 기억하세요.", src: "American Cancer Society 2022 · WCRF/AICR 2018 · Am J Clin Nutr", kw: ["장기","앞으로 어떻게","평소 식단","재발 낮추","붉은 고기","가공육","식단 관리","좋은 식단"] },
+    { q: "담배는 꼭 끊어야 하나요?", a: "네, 이 페이지의 어떤 식사 조언보다 중요합니다. 미국암학회에 따르면 흡연자의 방광암 위험은 비흡연자의 약 6배이고, 방광암의 절반가량이 흡연 때문에 발생합니다.\n진단 후에도 흡연을 계속하면 재발과 진행 위험이 높아집니다. 금연이 어려우시면 금연클리닉이나 약물 치료를 담당 의료진과 상의하세요.", src: "American Cancer Society", kw: ["담배","흡연","금연","니코틴","전자담배"] },
+    { q: "건강기능식품이나 영양제를 먹어도 되나요?", a: "방광암에 효과가 입증된 건강기능식품은 없습니다. 미국암학회도 방광암과 식이에 관해서는 확실한 결론을 내리기에 근거가 부족하다고 밝히고 있습니다.\n다만 요로전환술 후에는 비타민 B12처럼 의학적 이유로 보충이 필요한 경우가 있고, 이는 혈액검사 결과에 따라 의료진이 판단합니다.\n일부 보충제는 항암제나 다른 약과 상호작용할 수 있으므로, 드시고 계신 것이 있다면 진료 때 목록을 그대로 보여주시고 상의하세요.", src: "American Cancer Society · 요로전환 대사합병증 문헌", kw: ["영양제","보조식품","홍삼","건강기능식품","보충제","즙","한약"] },
+    { q: "체중이 늘어도 괜찮나요?", a: "미국암학회는 암 생존자에게 비만을 피하고 근육량을 유지할 것을 권고합니다. 다만 수술 직후 회복기에는 체중이 줄지 않게 하는 것이 더 급한 목표입니다.\n순서를 이렇게 보시면 됩니다 — 회복기에는 충분한 열량과 단백질로 체중과 근육을 지키고, 완전히 회복한 뒤에는 적정 체중과 규칙적인 신체활동을 목표로 합니다.", src: "American Cancer Society 2022 · WCRF/AICR", kw: ["체중","비만","살이 찌","몸무게","다이어트"] },
+    { q: "방광암 수술 후 식사에 대해 전반적으로 알려주세요", a: "수술 종류에 따라 다릅니다.\n\n[경요도 수술(TURBT)] 식사 제한은 거의 없습니다. 물을 충분히 마셔 소변을 묽게 유지하고, 변비를 막기 위해 채소와 수분을 늘리세요.\n\n[방광절제술 + 요루/인공방광] 장을 잘라 이었기 때문에 단계적으로 진행합니다.\n① 수술 후 몇 시간 안에 물 한 모금부터 시작합니다(요즘은 오래 굶기지 않습니다).\n② 맑은 유동식 → 미음·죽으로 넘어가며, 하루 6끼로 조금씩 자주 드세요.\n③ 퇴원 후 몇 주(자료에 따라 4~6주)는 저섬유식 — 잡곡·생나물·깨·견과·김치를 피합니다.\n④ 이후 한 가지씩 서서히 섬유질을 되돌립니다.\n⑤ 회복 후에는 반대로 채소·과일 400g, 섬유질 30g이 목표입니다.\n\n[공통] 하루 수분 1.5~2.5L, 단백질은 체중 1kg당 1.0~1.5g, 술은 권장하지 않으며, 금연이 가장 중요합니다.\n\n수분량, 김치, 저섬유식, 요루 냄새, 인공방광 점액, 비타민 B12, 장기 식단 등 구체적으로 물어보시면 자세히 답해드릴게요.", src: "ERAS Society · MSKCC · ACS · WCRF/AICR · UOAA", kw: ["전반","전체적","알려주세요","요약","정리해"] }
+  ];
+
+  var QUICK = [33, 0, 2, 5, 6, 14, 24, 25].map(function (i) { return QA[i]; });
+
+  var log = document.getElementById("chatLog");
+  var chipRow = document.getElementById("chipRow");
+  var form = document.getElementById("chatForm");
+  var input = document.getElementById("chatInput");
+
+  function addMsg(role, html) {
+    var msg = document.createElement("div");
+    msg.className = "msg " + role;
+    var avatar = document.createElement("div");
+    avatar.className = "avatar";
+    avatar.textContent = role === "bot" ? "비뇨" : "나";
+    var bubble = document.createElement("div");
+    bubble.className = "bubble";
+    bubble.innerHTML = html;
+    msg.appendChild(avatar);
+    msg.appendChild(bubble);
+    log.appendChild(msg);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function formatAnswer(item) {
+    var body = escapeHtml(item.a).replace(/\n/g, "<br>");
+    return body + '<span class="src">출처: ' + escapeHtml(item.src) + "</span>";
+  }
+
+  function renderChips() {
+    chipRow.innerHTML = "";
+    QUICK.forEach(function (item) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip";
+      b.textContent = item.q;
+      b.addEventListener("click", function () { ask(item.q); });
+      chipRow.appendChild(b);
+    });
+  }
+
+  var PARTICLES = ["에서","에게","까지","부터","처럼","보다","라도","이나","은는","은","는","이","가","을","를","의","에","도","만","과","와","나"];
+  function stripParticle(w) {
+    for (var i = 0; i < PARTICLES.length; i++) {
+      var p = PARTICLES[i];
+      if (w.length > p.length && w.slice(-p.length) === p) return w.slice(0, -p.length);
+    }
+    return w;
+  }
+  function corpusOf(item) {
+    return (item.q + " " + item.a).toLowerCase().replace(/\s+/g, "");
+  }
+  function kwScore(norm, item) {
+    var s = 0;
+    item.kw.forEach(function (k) {
+      var words = k.toLowerCase().split(/\s+/).filter(Boolean);
+      var allFound = words.every(function (w) { return norm.indexOf(w) !== -1; });
+      if (allFound) s += words.length;
+    });
+    if (norm.indexOf(item.q.toLowerCase().replace(/\s+/g, "").slice(0, 6)) !== -1) s += 1;
+    return s;
+  }
+  function docFreq(word) {
+    var c = 0;
+    QA.forEach(function (item) { if (corpusOf(item).indexOf(word) !== -1) c++; });
+    return c;
+  }
+  function fuzzyScore(text, item) {
+    var words = text.toLowerCase().replace(/[?!.,]/g, " ").split(/\s+/)
+      .map(stripParticle)
+      .filter(function (w) { return w.length >= 2; });
+    var c = corpusOf(item);
+    var s = 0;
+    words.forEach(function (w) {
+      if (c.indexOf(w) === -1) return;
+      if (docFreq(w) > 3) return; // too generic (appears in most answers) — not a useful signal
+      s += 1;
+    });
+    return s;
+  }
+  function score(text, item) {
+    var norm = text.toLowerCase().replace(/\s+/g, "");
+    return kwScore(norm, item) * 5 + fuzzyScore(text, item);
+  }
+
+  function findAnswer(text) {
+    var best = null, bestScore = 0;
+    QA.forEach(function (item) {
+      var s = score(text, item);
+      if (s > bestScore) { bestScore = s; best = item; }
+    });
+    return bestScore > 0 ? best : null;
+  }
+
+  function ask(text) {
+    addMsg("user", escapeHtml(text));
+    var hit = findAnswer(text);
+    setTimeout(function () {
+      if (hit) {
+        addMsg("bot", formatAnswer(hit));
+      } else {
+        addMsg("bot", "죄송해요, 정확히 이해하지 못했어요. 아래 예시 질문 중 비슷한 것을 눌러보시거나, 다른 표현으로 다시 질문해 주세요. 답변이 어려운 개인적인 증상은 반드시 담당 진료팀에 직접 문의해 주세요.");
+      }
+    }, 260);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = input.value.trim();
+    if (!v) return;
+    ask(v);
+    input.value = "";
+  });
+
+  renderChips();
+  addMsg("bot", "안녕하세요, 충북대학교 비뇨의학과입니다. 방광암 수술 후 식사에 대해 궁금하신 점을 입력하시거나 아래 예시 질문을 눌러보세요. 수술 종류(경요도 수술 / 요루 / 인공방광)에 따라 답이 달라지니 함께 알려주시면 더 정확합니다. 이 챗봇은 공신력 있는 의료기관 자료로 준비된 답변만 안내하며, 담당 의료진의 개별 진료를 대신하지 않습니다.");
+})();
+</script>
