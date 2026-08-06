@@ -119,24 +119,6 @@
     max-width: 52ch;
   }
 
-  /* ---------- Page tabs ---------- */
-  .pagenav { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; }
-  .pagenav a {
-    font-size: 0.86rem;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 7px 14px;
-    border-radius: 100px;
-    border: 1px solid rgba(244,248,246,0.4);
-    color: var(--on-brand-soft);
-  }
-  .pagenav a[aria-current="page"] {
-    background: var(--on-brand);
-    color: var(--brand-dark);
-    border-color: var(--on-brand);
-  }
-  .pagenav a:hover:not([aria-current]) { background: rgba(244,248,246,0.14); }
-
   /* ---------- Disclaimer banner ---------- */
   .disclaimer {
     display: flex;
@@ -466,10 +448,6 @@
     <p class="eyebrow">충북대학교 비뇨의학과 · 환자 교육 자료</p>
     <h1 class="title">방광암 진단 후,<br>가장 중요한 것은 금연입니다</h1>
     <p class="lede">방광암 환자분들이 궁금해하시는 식이·생활습관을 실제 연구 근거의 강도에 따라 구분해 정리했습니다. 어떤 것이 확실하고 어떤 것이 아직 모르는 일인지 그대로 밝혔습니다.</p>
-    <nav class="pagenav" aria-label="자료 목록">
-      <a href="index.html">전립선암 수술 후 운동</a>
-      <a href="bladder-diet.html" aria-current="page">방광암 금연·식이</a>
-    </nav>
   </div>
 </header>
 
@@ -808,7 +786,6 @@
 
   <footer>
     <p><strong>충북대학교 비뇨의학과</strong> 환자 교육 자료 · 정기적으로 업데이트됩니다.</p>
-    <p>함께 보기: <a href="index.html">전립선암 수술 후 운동 가이드</a></p>
     <p>금연을 시작하고 싶으시면 진료 때 말씀해 주세요. 금연상담전화 1544-9030, 보건소 금연클리닉을 이용하실 수 있습니다.</p>
   </footer>
 </div>
