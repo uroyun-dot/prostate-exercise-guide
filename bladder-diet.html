@@ -1,0 +1,951 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>방광암 환자의 금연과 식이 가이드 · 충북대학교 비뇨의학과</title>
+<style>
+  :root {
+    --ink: #16221f;
+    --ink-soft: #43524d;
+    --paper: #eff2ed;
+    --paper-raised: #ffffff;
+    --pine: #24534a;
+    --pine-strong: #163b34;
+    --pine-soft: #dbe7e1;
+    --gold: #93691f;
+    --gold-soft: #f1e3c4;
+    --brick: #8a3d32;
+    --brick-soft: #f3ddd8;
+    --mist: #6e7c77;
+    --line: #d3ddd6;
+    --shadow: 0 1px 2px rgba(22,34,31,0.06), 0 8px 24px -12px rgba(22,34,31,0.18);
+    --radius: 14px;
+    color-scheme: light;
+
+    /* Brand surfaces stay dark green in both themes — the theme blocks below
+       never redefine these, so white text on them keeps its contrast. */
+    --brand-dark: #163b34;
+    --brand-mid: #24534a;
+    --on-brand: #f4f8f6;
+    --on-brand-soft: #cfe7dc;
+    --chip-bg: #f1e3c4;
+    --chip-ink: #6b4a12;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e9efec;
+      --ink-soft: #b3c1bb;
+      --paper: #101815;
+      --paper-raised: #16211d;
+      --pine: #74ab9c;
+      --pine-strong: #a7cdc0;
+      --pine-soft: #1c2f29;
+      --gold: #dcb15c;
+      --gold-soft: #33291a;
+      --brick: #e0897b;
+      --brick-soft: #35211d;
+      --mist: #8ba098;
+      --line: #26332d;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.6);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e9efec; --ink-soft: #b3c1bb; --paper: #101815; --paper-raised: #16211d;
+    --pine: #74ab9c; --pine-strong: #a7cdc0; --pine-soft: #1c2f29; --gold: #dcb15c;
+    --gold-soft: #33291a; --brick: #e0897b; --brick-soft: #35211d; --mist: #8ba098; --line: #26332d;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.6);
+    color-scheme: dark;
+  }
+  :root[data-theme="light"] {
+    --ink: #16221f; --ink-soft: #43524d; --paper: #eff2ed; --paper-raised: #ffffff;
+    --pine: #24534a; --pine-strong: #163b34; --pine-soft: #dbe7e1; --gold: #93691f;
+    --gold-soft: #f1e3c4; --brick: #8a3d32; --brick-soft: #f3ddd8; --mist: #6e7c77; --line: #d3ddd6;
+    --shadow: 0 1px 2px rgba(22,34,31,0.06), 0 8px 24px -12px rgba(22,34,31,0.18);
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+  html { font-size: 125%; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", "Noto Sans KR", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* ---------- Header ---------- */
+  header.top {
+    background: linear-gradient(180deg, var(--brand-dark) 0%, var(--brand-mid) 100%);
+    color: var(--on-brand);
+    padding: 36px 20px 44px;
+  }
+  header.top .wrap { padding-bottom: 0; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--on-brand-soft);
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold-soft);
+    display: inline-block;
+  }
+  h1.title {
+    font-size: clamp(1.7rem, 4.2vw, 2.3rem);
+    line-height: 1.3;
+    margin: 0 0 12px;
+    font-weight: 800;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  header.top p.lede {
+    margin: 0;
+    font-size: 1.02rem;
+    color: #dcece5;
+    max-width: 52ch;
+  }
+
+  /* ---------- Disclaimer banner ---------- */
+  .disclaimer {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: -24px 0 32px;
+    box-shadow: var(--shadow);
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .disclaimer strong { color: var(--ink); }
+  .disclaimer svg { flex: none; margin-top: 2px; color: var(--gold); }
+
+  /* ---------- Section headings ---------- */
+  section { margin-top: 52px; }
+  .section-head { margin-bottom: 22px; }
+  .section-kicker {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--pine);
+    margin: 0 0 6px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 6px;
+    font-weight: 800;
+    text-wrap: balance;
+  }
+  .section-sub { margin: 0; color: var(--ink-soft); font-size: 0.98rem; max-width: 58ch; }
+
+  /* ---------- Smoking hero ---------- */
+  .hero-quit {
+    background: linear-gradient(160deg, var(--brand-dark), var(--brand-mid));
+    color: var(--on-brand);
+    border-radius: 18px;
+    padding: 26px 24px;
+    box-shadow: var(--shadow);
+  }
+  .hero-quit .rank {
+    display: inline-block;
+    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.09em;
+    background: var(--chip-bg); color: var(--chip-ink);
+    padding: 3px 11px; border-radius: 100px; margin-bottom: 12px;
+  }
+  .hero-quit h2 { margin: 0 0 10px; font-size: clamp(1.35rem, 3.6vw, 1.7rem); }
+  .hero-quit p { margin: 0 0 14px; color: #dcece5; font-size: 0.97rem; }
+  .hero-quit p:last-child { margin-bottom: 0; }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 18px 0;
+  }
+  @media (max-width: 520px) { .hero-stats { grid-template-columns: 1fr; } }
+  .hero-stat {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 12px;
+    padding: 13px 14px;
+  }
+  .hero-stat .num { display: block; font-size: 1.5rem; font-weight: 800; line-height: 1.2; }
+  .hero-stat .cap { display: block; font-size: 0.8rem; color: #cfe7dc; margin-top: 3px; }
+
+  /* ---------- Evidence table ---------- */
+  .table-wrap { overflow-x: auto; margin-top: 10px; }
+  table.consensus { border-collapse: collapse; width: 100%; font-size: 0.88rem; min-width: 520px; }
+  table.consensus th, table.consensus td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.consensus th { color: var(--mist); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  table.consensus td { color: var(--ink-soft); }
+  table.consensus td:first-child { color: var(--ink); font-weight: 600; }
+  .ev {
+    display: inline-block; white-space: nowrap;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.02em;
+    padding: 2px 9px; border-radius: 100px;
+  }
+  .ev-strong { background: var(--pine-soft); color: var(--pine-strong); }
+  .ev-maybe  { background: var(--gold-soft); color: var(--gold); }
+  .ev-weak   { background: var(--line); color: var(--mist); }
+  .ev-none   { background: var(--brick-soft); color: var(--brick); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; font-size: 0.82rem; color: var(--ink-soft); }
+  .legend span.item { display: inline-flex; align-items: center; gap: 6px; }
+
+  /* ---------- Principle cards grid ---------- */
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+  .p-card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow);
+  }
+  .p-card .icon {
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    background: var(--pine-soft);
+    color: var(--pine-strong);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px;
+  }
+  .p-card h3 { margin: 0 0 6px; font-size: 1rem; font-weight: 700; }
+  .p-card p { margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
+  .p-card.warn .icon { background: var(--brick-soft); color: var(--brick); }
+
+  /* ---------- Info cards ---------- */
+  .paths { display: grid; gap: 12px; }
+  .path {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .path h3 { margin: 0 0 8px; font-size: 1.02rem; font-weight: 700; }
+  .path p { margin: 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .path p + p { margin-top: 8px; }
+  .path ul { margin: 8px 0 0; padding-left: 1.1em; font-size: 0.92rem; color: var(--ink-soft); }
+  .path li + li { margin-top: 5px; }
+  .path .myth { color: var(--brick); font-weight: 600; }
+  .path .fact { color: var(--pine); font-weight: 600; }
+
+  /* ---------- Food do / avoid columns ---------- */
+  .foods { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 560px) { .foods { grid-template-columns: 1fr; } }
+  .food-col {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .food-col h3 { margin: 0 0 10px; font-size: 0.98rem; font-weight: 700; }
+  .food-col.ok h3 { color: var(--pine-strong); }
+  .food-col.no h3 { color: var(--brick); }
+  .food-col ul { margin: 0; padding-left: 1.1em; font-size: 0.9rem; color: var(--ink-soft); }
+  .food-col li + li { margin-top: 5px; }
+
+  /* ---------- Caveat note ---------- */
+  .note {
+    margin-top: 14px;
+    background: var(--gold-soft);
+    border-radius: var(--radius);
+    padding: 13px 16px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .note strong { color: var(--ink); }
+
+  /* ---------- Alert box ---------- */
+  .alert {
+    background: var(--brick-soft);
+    border: 1px solid var(--brick);
+    border-radius: var(--radius);
+    padding: 18px;
+  }
+  .alert h3 { margin: 0 0 10px; font-size: 1rem; color: var(--brick); font-weight: 800; }
+  .alert ul { margin: 0; padding-left: 1.1em; font-size: 0.93rem; color: var(--ink-soft); }
+  .alert li + li { margin-top: 5px; }
+  .alert .after { margin: 12px 0 0; font-size: 0.88rem; color: var(--ink-soft); }
+
+  /* ---------- Transition banner ---------- */
+  .bridge {
+    margin-top: 56px;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: var(--radius);
+    background: var(--pine-soft);
+    border: 1px dashed var(--pine);
+  }
+  .bridge h2 { margin: 0 0 8px; }
+  .bridge p { margin: 0; color: var(--ink-soft); }
+
+  /* ---------- Chat ---------- */
+  .chat-shell {
+    margin-top: 24px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .chat-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    background: var(--brand-dark);
+    color: var(--on-brand);
+  }
+  .chat-head .dot { width: 9px; height: 9px; border-radius: 50%; background: #7fe0b8; }
+  .chat-head strong { font-size: 0.96rem; }
+  .chat-head span { font-size: 0.8rem; color: var(--on-brand-soft); }
+  .chat-log {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 480px;
+    overflow-y: auto;
+  }
+  .msg { display: flex; gap: 10px; max-width: 92%; }
+  .msg.bot { align-self: flex-start; }
+  .msg.user { align-self: flex-end; flex-direction: row-reverse; }
+  .avatar {
+    flex: none; width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.78rem; font-weight: 700;
+  }
+  .msg.bot .avatar { background: var(--pine-soft); color: var(--pine-strong); }
+  .msg.user .avatar { background: var(--gold-soft); color: var(--gold); }
+  .bubble {
+    padding: 11px 14px;
+    border-radius: 14px;
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+  .msg.bot .bubble { background: var(--paper); border: 1px solid var(--line); border-top-left-radius: 4px; }
+  .msg.user .bubble { background: var(--pine); color: #f4f8f6; border-top-right-radius: 4px; }
+  .bubble .src {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    color: var(--mist);
+    border-top: 1px solid var(--line);
+    padding-top: 6px;
+  }
+  .chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 0 18px 16px;
+  }
+  .chip {
+    border: 1px solid var(--pine);
+    color: var(--pine-strong);
+    background: transparent;
+    border-radius: 100px;
+    padding: 7px 13px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .chip:hover, .chip:focus-visible { background: var(--pine); color: #fff; }
+  .chat-input {
+    display: flex;
+    gap: 8px;
+    padding: 14px 16px;
+    border-top: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .chat-input input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 11px 16px;
+    font-size: 0.95rem;
+    background: var(--paper-raised);
+    color: var(--ink);
+    font-family: inherit;
+  }
+  .chat-input input:focus-visible { outline: 2px solid var(--pine); outline-offset: 1px; }
+  .chat-input button {
+    border: none;
+    flex: none;
+    white-space: nowrap;
+    background: var(--pine);
+    color: #fff;
+    border-radius: 100px;
+    padding: 0 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .chat-input button:hover { background: var(--pine-strong); }
+  .chat-input button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ---------- Sources ---------- */
+  details.sources {
+    margin-top: 44px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 4px 18px;
+  }
+  details.sources summary {
+    cursor: pointer;
+    padding: 14px 0;
+    font-weight: 700;
+    font-size: 0.98rem;
+    list-style: none;
+  }
+  details.sources summary::-webkit-details-marker { display: none; }
+  details.sources summary::before { content: "＋ "; color: var(--pine); }
+  details.sources[open] summary::before { content: "－ "; }
+  .source-list { padding: 0 0 8px; margin: 0; font-size: 0.88rem; color: var(--ink-soft); }
+  .source-list li { margin-bottom: 9px; }
+  .source-list a { color: var(--pine-strong); word-break: break-all; }
+  .source-list .jr { color: var(--mist); font-style: italic; }
+  .src-group { margin: 14px 0 6px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--pine); }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--mist);
+    font-size: 0.85rem;
+  }
+  footer strong { color: var(--ink-soft); }
+  footer a { color: var(--pine-strong); }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">충북대학교 비뇨의학과 · 환자 교육 자료</p>
+    <h1 class="title">방광암 진단 후,<br>가장 중요한 것은 금연입니다</h1>
+    <p class="lede">방광암 환자분들이 궁금해하시는 식이·생활습관을 실제 연구 근거의 강도에 따라 구분해 정리했습니다. 어떤 것이 확실하고 어떤 것이 아직 모르는 일인지 그대로 밝혔습니다.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="disclaimer">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div><strong>이 자료는 일반적인 안내이며 진료를 대신하지 않습니다.</strong> 방광암의 병기·치료 방법·동반 질환에 따라 권고가 달라질 수 있습니다. 특히 신장 기능이 떨어져 있거나 당뇨·심장 질환이 있으면 식사와 수분 계획을 반드시 담당 의료진과 상의하세요.</div>
+  </div>
+
+  <!-- ===== SMOKING HERO ===== -->
+  <section id="quit" style="margin-top:0;">
+    <div class="hero-quit">
+      <span class="rank">1순위 · 다른 모든 것보다 먼저</span>
+      <h2>담배를 끊는 것이 식단을 바꾸는 것보다 훨씬 중요합니다</h2>
+      <p>담배 연기 속 발암물질은 폐에서 흡수되어 혈액을 타고 신장으로 갑니다. 신장이 이를 걸러 소변으로 내보내면, 그 소변이 방광에 고이면서 <strong>방광 점막이 발암물질에 직접, 오랜 시간 노출</strong>됩니다. 방광이 담배의 표적이 되는 이유입니다.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="num">3배 이상</span>
+          <span class="cap">흡연자의 방광암 위험 (비흡연자 대비, 미국암학회)</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">약 절반</span>
+          <span class="cap">흡연이 원인인 방광암의 비율 (미국암학회)</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">45% → 70%</span>
+          <span class="cap">3년 무재발 생존율: 계속 흡연 vs 진단 즈음 금연 (대만 265명 연구)</span>
+        </div>
+      </div>
+      <p><strong>이미 진단을 받으셨어도 늦지 않았습니다.</strong> 진단 전후로 담배를 끊은 분들의 3년 무재발 생존율은 70%로, 계속 피운 분들(45%)보다 뚜렷하게 높았습니다. 일본의 634명 연구에서는 금연 기간이 15년 미만인 것 자체가 재발의 독립적 위험 요인이었습니다(위험비 2.20).</p>
+      <p>다만 솔직하게 덧붙이면, 미국 카이저 재단의 1,472명 연구에서는 <strong>흡연 기간과 총 흡연량</strong>은 재발 위험을 뚜렷하게 높였지만(40년 이상 흡연 위험비 2.36, 40갑년 이상 1.97) 금연 이후 경과한 햇수와 재발 사이에는 뚜렷한 관계가 나타나지 않았습니다. 금연의 이득 크기는 연구마다 다르지만, <strong>흡연을 계속하는 것이 나쁘다는 점에는 이견이 없습니다.</strong></p>
+    </div>
+  </section>
+
+  <!-- ===== HOW TO QUIT ===== -->
+  <section id="howtoquit">
+    <div class="section-head">
+      <p class="section-kicker">금연 실천</p>
+      <h2>"끊으세요"라는 말만으로는 부족합니다</h2>
+      <p class="section-sub">의지만으로 끊기는 매우 어렵습니다. 실제로 도움이 되는 방법을 정리했습니다.</p>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <h3>금연 상담과 약물치료를 함께 받으세요</h3>
+        <p>포르투갈의 한 조사에서 진단 당시 흡연 중이던 환자의 <strong>83.1%가 담당 비뇨의로부터 금연 권고를 받았지만, 실제로 구체적인 금연 지원을 제공받은 사람은 1.7%에 불과</strong>했습니다. 권고와 실행 사이의 이 간극이 금연 실패의 큰 이유입니다.</p>
+        <p>국내에서는 보건소 금연클리닉, 병원 금연치료 지원사업, 금연상담전화(1544-9030)를 이용할 수 있고 니코틴 보조제와 금연 보조 약물도 처방받을 수 있습니다. <strong>진료 때 "금연 도움을 받고 싶다"고 먼저 말씀해 주세요.</strong></p>
+      </div>
+      <div class="path">
+        <h3>같이 사는 사람이 피우면 훨씬 어렵습니다</h3>
+        <p>같은 조사에서 진단 후에도 계속 흡연한 환자는 가구 내에 다른 흡연자가 있는 비율이 40%였던 반면, 금연에 성공한 환자는 4.2%였습니다. <strong>가족이 함께 끊는 것이 성공률을 크게 높입니다.</strong> 최소한 집 안에서는 피우지 않도록 정하세요.</p>
+      </div>
+      <div class="path">
+        <h3>금연은 치료 효과에도 영향을 줍니다</h3>
+        <p>흡연은 방광내 주입치료(BCG 등)의 효과를 떨어뜨리는 것과 연관이 있다고 보고됩니다. 근치적 수술 이후의 영향에 대해서는 아직 결론이 명확하지 않습니다.</p>
+        <p>참고로 <strong>비뇨의학과 진료실에서의 5분 상담만으로도 금연율이 유의하게 올라간다</strong>는 것이 문헌의 결론입니다. 짧은 대화라도 시작해 보세요.</p>
+      </div>
+      <div class="path">
+        <h3>전자담배로 바꾸는 것은 대안이 아닙니다</h3>
+        <p>카이저 연구에서 전자담배 사용과 재발 사이에 뚜렷한 연관은 관찰되지 않았지만, 이는 <strong>전자담배가 안전하다는 뜻이 아니라 아직 충분히 연구되지 않았다는 뜻</strong>입니다. 방광암 환자에서 전자담배의 장기 안전성을 보여주는 근거는 없습니다. 목표는 담배 종류를 바꾸는 것이 아니라 니코틴 사용 자체를 끝내는 것입니다.</p>
+      </div>
+    </div>
+    <div class="note">
+      <strong>한국 상황.</strong> 2020년 국민건강영양조사 기준 우리나라 성인 남성 흡연율은 34.0%로, 1998년의 67.0%에서 크게 줄었지만 여전히 높습니다. 방광암은 국내 남성에서 발생률이 높은 암 중 하나입니다.
+    </div>
+  </section>
+
+  <!-- ===== EVIDENCE TABLE ===== -->
+  <section id="evidence">
+    <div class="section-head">
+      <p class="section-kicker">근거의 강도</p>
+      <h2>무엇이 밝혀졌고 무엇이 아직 모르는 일인가</h2>
+      <p class="section-sub">방광암 환자의 재발·진행과 관련해 지금까지 연구된 내용을 근거 수준별로 나눴습니다. 대부분의 항목이 아래쪽에 몰려 있다는 사실 자체가 중요한 정보입니다.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="consensus">
+        <thead><tr><th>항목</th><th>근거</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td>금연</td><td><span class="ev ev-strong">확실</span></td><td>발생·재발·진행 모두와 관련. 가장 중요한 관리 가능 요인</td></tr>
+          <tr><td>적정 체중 유지</td><td><span class="ev ev-strong">확실</span></td><td>유전 정보를 이용한 분석에서도 높은 체질량지수가 방광암 위험을 높이는 것으로 나타남</td></tr>
+          <tr><td>제2형 당뇨 관리</td><td><span class="ev ev-strong">확실</span></td><td>당뇨 예방·치료가 예후와 관련</td></tr>
+          <tr><td>비소 오염 식수 피하기</td><td><span class="ev ev-strong">확실</span></td><td>세계암연구기금이 강력한 근거로 인정. 국내 상수도보다 사설 지하수에서 문제될 수 있음</td></tr>
+          <tr><td>가공육 줄이기</td><td><span class="ev ev-maybe">가능성</span></td><td>하루 50g 늘어날 때마다 위험 20% 증가(상대위험도 1.20). 붉은 고기는 코호트 연구에서는 연관이 확인되지 않음</td></tr>
+          <tr><td>규칙적인 신체활동</td><td><span class="ev ev-maybe">가능성</span></td><td>144만 명 분석에서 활동량 상위군의 방광암 발생 위험이 13% 낮음(위험비 0.87)</td></tr>
+          <tr><td>암 예방 권고 전반 준수</td><td><span class="ev ev-maybe">가능성</span></td><td>진단 3개월 후 세계암연구기금 권고 준수 상위군에서 첫 재발 위험 26% 감소(위험비 0.74). 다발 재발·진행에서는 유의하지 않음</td></tr>
+          <tr><td>채소·과일, 차</td><td><span class="ev ev-maybe">가능성</span></td><td>위험을 낮출 가능성이 있으나 확실한 결론을 내리기엔 근거 부족(세계암연구기금)</td></tr>
+          <tr><td>익히지 않은 십자화과 채소</td><td><span class="ev ev-weak">근거 부족</span></td><td>개별 관찰 연구 수준. 재발을 결과로 본 무작위 임상시험은 아직 없음</td></tr>
+          <tr><td>유산균(프로바이오틱스)</td><td><span class="ev ev-weak">근거 부족</span></td><td>재발을 줄일 가능성이 제기됐으나 확립되지 않음</td></tr>
+          <tr><td>튀긴 음식 위주 서구식 식단</td><td><span class="ev ev-weak">근거 부족</span></td><td>해로울 가능성을 시사하는 개별 연구 수준</td></tr>
+          <tr><td>수분을 많이 마시기</td><td><span class="ev ev-none">효과 없음</span></td><td>재발을 줄이지 못함. 오히려 섭취량이 가장 많았던 군에서 재발·진행 위험이 높게 나온 연구가 있음</td></tr>
+          <tr><td>셀레늄·비타민 A·C·B6 보충제</td><td><span class="ev ev-none">효과 없음</span></td><td>재발과 연관 확인되지 않음</td></tr>
+          <tr><td>엽산(비타민 B9) 보충제</td><td><span class="ev ev-none">주의</span></td><td>오히려 피하도록 제안된 개별 연구가 있음. 임의 복용 전 상의 필요</td></tr>
+          <tr><td>커피·녹차·콜라·술 등 개별 음료</td><td><span class="ev ev-none">효과 없음</span></td><td>재발과의 연관이 확인되지 않음(술은 별도로 암 예방 관점에서 권고되지 않음)</td></tr>
+          <tr><td>스타틴·혈당강하제 등</td><td><span class="ev ev-none">효과 없음</span></td><td>방광암 재발 목적으로는 연관 확인되지 않음(원래 질환 치료 목적의 복용은 계속하세요)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span class="item"><span class="ev ev-strong">확실</span> 여러 연구가 일관되게 뒷받침</span>
+      <span class="item"><span class="ev ev-maybe">가능성</span> 관찰 연구 수준, 인과관계 미확정</span>
+      <span class="item"><span class="ev ev-weak">근거 부족</span> 개별 연구뿐</span>
+      <span class="item"><span class="ev ev-none">효과 없음</span> 연관이 확인되지 않음</span>
+      <span class="item"><span class="ev ev-none">주의</span> 오히려 해로울 가능성 제기</span>
+    </div>
+    <div class="note">
+      <strong>표를 이렇게 읽어주세요.</strong> "효과 없음"은 그 음식이 나쁘다는 뜻이 아니라, <strong>방광암 재발을 줄이는 수단으로 삼을 근거가 없다</strong>는 뜻입니다. 커피나 녹차를 즐기시는 것은 문제없습니다. 다만 재발을 막기 위해 억지로 드시거나 끊으실 필요는 없다는 의미입니다.
+    </div>
+  </section>
+
+  <!-- ===== PRINCIPLE CARDS ===== -->
+  <section id="principles">
+    <div class="section-head">
+      <p class="section-kicker">실천 원칙</p>
+      <h2>그래서 무엇을 하면 되나요</h2>
+    </div>
+    <div class="grid-cards">
+      <div class="p-card warn">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 3l18 18M8 12h9a2 2 0 0 1 2 2v2M5 12h1M4 16h13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>1. 담배를 끊습니다</h3>
+        <p>이 페이지의 나머지를 전부 합친 것보다 중요합니다. 혼자 하지 마시고 금연클리닉·약물 도움을 받으세요.</p>
+      </div>
+      <div class="p-card">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>2. 체중과 혈당을 관리합니다</h3>
+        <p>적정 체중 유지와 제2형 당뇨 관리는 식품 하나하나보다 근거가 확실합니다. 주 150분 이상의 중강도 신체활동을 함께 하세요.</p>
+      </div>
+      <div class="p-card">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 20c4-2 6-5 6-9V5l-6-2-6 2v6c0 4 2 7 6 9Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>3. 식물성 식품 위주로 먹습니다</h3>
+        <p>채소·과일 하루 400g 이상, 식이섬유 30g 이상. 특정 슈퍼푸드를 찾기보다 전체 식단의 방향을 바꾸는 편이 근거에 맞습니다.</p>
+      </div>
+      <div class="p-card warn">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 18h16M6 14h12M8 10h8M10 6h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>4. 가공육과 술을 줄입니다</h3>
+        <p>햄·소시지·베이컨은 가능한 한 적게. 술은 암 예방 관점에서 마시지 않는 것이 권고됩니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOD LISTS ===== -->
+  <section id="foods">
+    <div class="section-head">
+      <p class="section-kicker">식탁에서</p>
+      <h2>한식 기준 실천 가이드</h2>
+      <p class="section-sub">특정 음식을 금지하는 목록이 아니라, 전체 식단의 무게중심을 어디에 둘지에 대한 안내입니다.</p>
+    </div>
+    <div class="foods">
+      <div class="food-col ok">
+        <h3>늘리면 좋은 쪽</h3>
+        <ul>
+          <li>나물·쌈채소·샐러드 등 채소 반찬을 매 끼니</li>
+          <li>배추·무·열무·갓 등 십자화과 채소 (생으로 먹는 형태도 함께)</li>
+          <li>잡곡밥, 통곡물, 콩·두부</li>
+          <li>제철 과일 (주스 대신 통째로)</li>
+          <li>생선·닭고기 등 붉은 고기가 아닌 단백질</li>
+          <li>녹차·보리차 등 당분 없는 음료</li>
+        </ul>
+      </div>
+      <div class="food-col no">
+        <h3>줄이면 좋은 쪽</h3>
+        <ul>
+          <li>햄·소시지·베이컨·통조림햄 등 가공육</li>
+          <li>술 (종류를 불문하고)</li>
+          <li>튀김·전 등 기름에 튀긴 음식 위주의 식사</li>
+          <li>가당 음료, 패스트푸드</li>
+          <li>붉은 고기 과다 (조리 후 무게로 주 350~500g 이내)</li>
+          <li>짠 국물·찌개를 매 끼니 국물째 다 드시는 습관</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <strong>십자화과 채소에 대해 한 가지.</strong> 배추·무·브로콜리에 든 아이소싸이오싸이아네이트라는 성분이 주목받고 있고, 이 성분은 <strong>가열하면 상당 부분 파괴</strong>됩니다. 그래서 연구들은 주로 "생" 십자화과 채소를 봅니다. 다만 김치는 발효·염장된 형태라 연구에서 말하는 생채소와 같지 않고, 나트륨이 높다는 점도 함께 고려해야 합니다. 쌈채소나 생채 형태로 드시는 것이 연구 상황에 더 가깝습니다.
+    </div>
+  </section>
+
+  <!-- ===== MYTHS ===== -->
+  <section id="myths">
+    <div class="section-head">
+      <p class="section-kicker">자주 듣는 이야기</p>
+      <h2>널리 퍼졌지만 근거가 없는 조언들</h2>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <h3><span class="myth">"물을 많이 마셔서 씻어내야 한다"</span></h3>
+        <p>방광암에서 가장 흔한 오해입니다. 716명을 추적한 연구와 1,322명을 추적한 연구 모두에서 <strong>수분 섭취량과 재발 사이에 이로운 관계가 나타나지 않았습니다.</strong> 오히려 2025년 발표된 후자의 연구에서는 진단 전 수분 섭취가 가장 많았던 군(하루 2,300mL 이상)의 첫 재발 위험이 38% 더 높았고, 진행 위험도 하루 150mL 늘어날 때마다 조금씩 높아졌습니다. 연구자들은 <strong>"환자에게 수분 섭취를 늘리라고 권고할 근거가 없다"</strong>고 결론지었습니다.</p>
+        <p><span class="fact">그럼 물은 어떻게?</span> 탈수되지 않을 만큼 평소대로 드시면 됩니다. 갈증이 나면 마시고, 소변 색이 진하면 늘리세요. 다만 <strong>경요도 수술 직후 출혈이 있을 때, 요로전환술을 받으신 경우, 요로감염이나 결석이 있을 때는 이야기가 다릅니다</strong> — 이때는 담당 의료진이 안내하는 수분량을 따르세요.</p>
+      </div>
+      <div class="path">
+        <h3><span class="myth">"브로콜리를 먹으면 재발이 44% 줄어든다"</span></h3>
+        <p>자주 인용되는 숫자지만, 이는 관찰 연구에서 나온 것이고 특정 치료를 받은 환자군에 한정됩니다. 2024년에 발표된 무작위 임상시험은 <strong>식이 교육으로 십자화과 채소 섭취와 소변 내 성분 농도를 실제로 올릴 수 있는지</strong>를 확인한 단계였고, 재발이나 진행이 줄었는지는 <strong>아직 확인되지 않았습니다.</strong> 연구진 스스로 "향후 임상시험이 필요하다"고 밝히고 있습니다.</p>
+        <p><span class="fact">결론:</span> 채소를 많이 드시는 것은 좋은 일이고 권장합니다. 다만 치료 효과로 기대하거나, 다른 관리를 소홀히 하는 근거로 삼지는 마세요.</p>
+      </div>
+      <div class="path">
+        <h3><span class="myth">"암에 좋다는 건강기능식품을 먹어야 한다"</span></h3>
+        <p>방광암 재발을 줄이는 것으로 입증된 보충제는 없습니다. 셀레늄, 비타민 A·C·B6 보충제는 재발과 연관이 확인되지 않았고, <strong>엽산(비타민 B9) 보충제는 오히려 피하도록 제안된 연구가 있습니다.</strong></p>
+        <p>또한 일부 보충제는 항암제나 다른 약과 상호작용할 수 있습니다. 드시는 것이 있다면 <strong>제품을 그대로 가져오시거나 사진을 찍어 진료 때 보여주세요.</strong> 영양 상태나 검사 결과에 따라 실제로 필요한 보충(예: 요로전환술 후 비타민 B12)은 의료진이 판단합니다.</p>
+      </div>
+      <div class="path">
+        <h3><span class="myth">"커피와 녹차는 방광에 자극이 되니 끊어야 한다"</span></h3>
+        <p>방광 자극 물질 목록(카페인·술·탄산·인공감미료·매운 음식·신 과일)은 거의 모든 환자 안내문에 실려 있지만, 연구 근거는 약합니다. 방광암 재발과 관련해서는 커피, 녹차, 콜라, 술 등 개별 음료 모두 <strong>연관이 확인되지 않았습니다.</strong></p>
+        <p><span class="fact">이렇게 해보세요.</span> 배뇨 증상이 실제로 불편하시다면, 의심되는 것을 1~2주 끊었다가 하나씩 다시 드셔보며 본인에게 해당되는지 확인하는 것이 가장 확실합니다. 사람마다 다르고, 일률적으로 끊을 이유는 없습니다.</p>
+      </div>
+      <div class="path">
+        <h3><span class="myth">"항염증 식단을 하면 재발을 막을 수 있다"</span></h3>
+        <p>2026년에 발표된 1,300여 명 대상 연구에서, 항염증 정도로 점수화한 생활습관·식이와 혈중 염증 지표(hsCRP)는 <strong>모두 방광암 재발이나 진행과 관계가 없었습니다.</strong> 생활습관 점수는 염증 지표를 실제로 변화시켰지만, 그것이 암 결과로 이어지지는 않았습니다.</p>
+        <p>식이가 전혀 무의미하다는 뜻은 아닙니다. 다만 <strong>특정 식단 이름을 좇는 것보다 금연·체중·혈당 같은 큰 항목이 훨씬 중요하다</strong>는 근거로 읽는 것이 맞습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DURING TREATMENT ===== -->
+  <section id="treatment">
+    <div class="section-head">
+      <p class="section-kicker">치료 시기별</p>
+      <h2>치료를 받는 동안의 식사</h2>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <h3>방광내 주입치료(BCG·항암제)를 받는 동안</h3>
+        <p>주입 전후 수분 섭취는 <strong>병원 지시를 그대로 따르세요.</strong> 약물이 방광에 머무는 시간을 확보하기 위해 주입 전 수분을 제한하고, 배출 후에는 충분히 마시도록 안내하는 것이 일반적입니다. 이 시기 수분 조절은 재발 예방이 아니라 <strong>치료 효과와 안전을 위한 것</strong>이므로 이 페이지의 일반적인 설명보다 병원 안내가 우선합니다.</p>
+        <p>흡연은 방광내 주입치료의 효과를 떨어뜨리는 것과 연관이 있다고 보고됩니다. 치료를 시작하시는 시점이 금연하기에 가장 좋은 때입니다.</p>
+      </div>
+      <div class="path">
+        <h3>항암화학요법을 받는 동안</h3>
+        <p>식욕 저하, 구내염, 메스꺼움으로 잘 못 드시는 시기가 옵니다. 이때는 "무엇이 암에 좋은가"보다 <strong>충분한 열량과 단백질을 확보하는 것</strong>이 우선입니다. 조금씩 자주 드시고, 체중이 계속 줄면 영양 상담을 요청하세요.</p>
+        <p>시스플라틴 계열 항암제는 신장 기능에 영향을 줄 수 있어 <strong>수분 섭취와 신장 보호를 위한 별도의 지침</strong>이 있습니다. 반드시 담당 종양내과·비뇨의학과의 안내를 따르세요.</p>
+      </div>
+      <div class="path">
+        <h3>수술을 받으신 경우</h3>
+        <p>경요도 방광종양절제술(TURBT) 후에는 대개 식사 제한이 없고, 출혈이 있는 동안 핏덩어리가 요도를 막지 않도록 수분을 늘리라는 안내를 받습니다.</p>
+        <p>방광을 제거하고 소장으로 요로를 만드는 수술(요루·인공방광)을 받으신 경우에는 <strong>장을 잘라 이었기 때문에 회복 초기 몇 주간 저섬유식 등 별도의 관리</strong>가 필요하고, 장기적으로는 비타민 B12 검사도 필요합니다. 이 부분은 수술받으신 병원의 개별 안내를 따라주세요.</p>
+      </div>
+      <div class="path">
+        <h3>치료가 끝난 뒤</h3>
+        <p>정기 방광경 검사와 영상 검사를 <strong>거르지 않는 것</strong>이 어떤 식이보다 중요합니다. 방광암은 재발이 흔하고, 조기에 발견하면 대응이 훨씬 수월합니다.</p>
+        <p>세계암연구기금 권고를 잘 지킨 분들에서 첫 재발이 26% 적었다는 연구가 있습니다. 다만 이는 관찰 연구이고 다발 재발이나 진행에서는 유의하지 않았으므로, <strong>식이는 검진과 금연을 대신하는 것이 아니라 보태는 것</strong>으로 생각해 주세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WARNING ===== -->
+  <section id="warning">
+    <div class="section-head">
+      <p class="section-kicker">경고 신호</p>
+      <h2>이럴 땐 예약을 기다리지 말고 연락하세요</h2>
+    </div>
+    <div class="alert">
+      <h3>즉시 진료가 필요한 증상</h3>
+      <ul>
+        <li><strong>소변에 피가 섞여 나옴</strong> — 통증이 없어도, 한 번뿐이어도 반드시 알리세요. 방광암의 가장 대표적인 신호입니다.</li>
+        <li><strong>소변이 나오지 않거나 핏덩어리가 나옴</strong></li>
+        <li><strong>배뇨 시 심한 통증, 갑자기 심해진 빈뇨·절박뇨</strong></li>
+        <li><strong>38도 이상의 발열, 오한</strong> — 특히 방광내 주입치료 직후</li>
+        <li><strong>옆구리·허리 통증</strong> — 요관 폐색이나 신장 문제 가능</li>
+        <li><strong>이유 없는 체중 감소, 지속되는 피로</strong></li>
+        <li><strong>다리 부종</strong></li>
+      </ul>
+      <p class="after">식사나 영양제 때문에 생긴 문제인지 스스로 판단하려 하지 마시고, 먼저 연락하세요. 원인을 가리는 것은 진료의 몫입니다.</p>
+    </div>
+  </section>
+
+  <!-- ===== BRIDGE ===== -->
+  <div class="bridge">
+    <h2>더 궁금한 점이 있으신가요?</h2>
+    <p>아래 채팅창에 자유롭게 질문을 입력해 보세요. 준비된 자료 안에서 답을 찾아드립니다.</p>
+  </div>
+
+  <!-- ===== CHAT ===== -->
+  <section id="chat" aria-label="방광암 금연·식이 질문 챗봇">
+    <div class="chat-shell">
+      <div class="chat-head">
+        <span class="dot"></span>
+        <div>
+          <strong>비뇨의학과 금연·식이 안내 챗봇</strong><br>
+          <span>연구 근거 기반 · 진료를 대신하지 않습니다</span>
+        </div>
+      </div>
+      <div class="chat-log" id="chatLog" role="log" aria-live="polite"></div>
+      <div class="chips" id="chipRow"></div>
+      <form class="chat-input" id="chatForm">
+        <input id="chatInput" type="text" autocomplete="off" placeholder="예: 지금 담배를 끊어도 도움이 되나요?" aria-label="질문 입력" />
+        <button type="submit">보내기</button>
+      </form>
+    </div>
+  </section>
+
+  <details class="sources">
+    <summary>이 자료의 근거가 된 연구와 출처 보기</summary>
+
+    <p class="src-group">금연</p>
+    <ul class="source-list">
+      <li>American Cancer Society — 방광암 위험요인 (흡연자 위험 3배 이상, 방광암의 약 절반이 흡연 관련). <a href="https://www.cancer.org/cancer/types/bladder-cancer/causes-risks-prevention/risk-factors.html" target="_blank" rel="noopener">cancer.org</a></li>
+      <li>Chen CH 외. Stopping smoking might reduce tumour recurrence in nonmuscle-invasive bladder cancer. <span class="jr">BJU Int. 2007;100(2):281-6.</span> <a href="https://doi.org/10.1111/j.1464-410X.2007.06873.x" target="_blank" rel="noopener">doi:10.1111/j.1464-410X.2007.06873.x</a></li>
+      <li>Ogihara K 외. Refraining from Smoking for 15 Years or More Reduced the Risk of Tumor Recurrence in Non-muscle Invasive Bladder Cancer Patients. <span class="jr">Ann Surg Oncol. 2016;23(5):1752-9.</span> <a href="https://doi.org/10.1245/s10434-015-5016-z" target="_blank" rel="noopener">doi:10.1245/s10434-015-5016-z</a></li>
+      <li>Kwan ML 외. Smoking Behaviors and Prognosis in Patients With Non-Muscle-Invasive Bladder Cancer in the Be-Well Study. <span class="jr">JAMA Netw Open. 2022;5(11):e2244430.</span> <a href="https://doi.org/10.1001/jamanetworkopen.2022.44430" target="_blank" rel="noopener">doi:10.1001/jamanetworkopen.2022.44430</a></li>
+      <li>Soria F 외. Prevention of bladder cancer incidence and recurrence: tobacco use. <span class="jr">Curr Opin Urol. 2018;28(1):80-87.</span> <a href="https://doi.org/10.1097/MOU.0000000000000453" target="_blank" rel="noopener">doi:10.1097/MOU.0000000000000453</a></li>
+      <li>Mota P 외. Smoking Cessation after Bladder Cancer Diagnosis. <span class="jr">Acta Med Port. 2018;31(2):101-108.</span> <a href="https://doi.org/10.20344/amp.9106" target="_blank" rel="noopener">doi:10.20344/amp.9106</a></li>
+      <li>국민건강영양조사 흡연 통계 · 국가암정보센터. <a href="https://www.cancer.go.kr/lay1/S1T204C225/contents.do" target="_blank" rel="noopener">cancer.go.kr</a></li>
+    </ul>
+
+    <p class="src-group">식이·생활습관과 방광암 예후</p>
+    <ul class="source-list">
+      <li>Zuniga KB 외. Lifestyle and Non-muscle Invasive Bladder Cancer Recurrence, Progression, and Mortality: Available Research and Future Directions. <span class="jr">Bladder Cancer. 2020;6(1):9-23.</span> <a href="https://doi.org/10.3233/blc-190249" target="_blank" rel="noopener">doi:10.3233/blc-190249</a> — 이 페이지 근거 표의 뼈대가 된 종합 검토</li>
+      <li>van Zutphen M 외. Adherence to lifestyle recommendations after non-muscle invasive bladder cancer diagnosis and risk of recurrence. <span class="jr">Am J Clin Nutr. 2023;117(4):681-690.</span> <a href="https://doi.org/10.1016/j.ajcnut.2022.12.022" target="_blank" rel="noopener">doi:10.1016/j.ajcnut.2022.12.022</a></li>
+      <li>Kiebach J 외. Lifestyle and dietary inflammation scores and risks of recurrence and progression among patients with non-muscle invasive bladder cancer. <span class="jr">Nutrition. 2026;151:113354.</span> <a href="https://doi.org/10.1016/j.nut.2026.113354" target="_blank" rel="noopener">doi:10.1016/j.nut.2026.113354</a></li>
+    </ul>
+
+    <p class="src-group">수분 섭취</p>
+    <ul class="source-list">
+      <li>Beeren I 외. Fluid intake and recurrence and progression risk of patients with non-muscle-invasive bladder cancer. <span class="jr">BJU Int. 2025;136(3):429-438.</span> <a href="https://doi.org/10.1111/bju.16665" target="_blank" rel="noopener">doi:10.1111/bju.16665</a></li>
+      <li>Jochems SHJ 외. Total Fluid Intake and the Risk of Recurrence in Patients With Non-Muscle Invasive Bladder Cancer. <span class="jr">Bladder Cancer. 2018;4(3):303-310.</span> <a href="https://doi.org/10.3233/BLC-180172" target="_blank" rel="noopener">doi:10.3233/BLC-180172</a></li>
+    </ul>
+
+    <p class="src-group">십자화과 채소</p>
+    <ul class="source-list">
+      <li>Yeary KHK 외. Outcomes of a Dietary Intervention to Reduce Bladder Cancer Recurrence and Progression in Survivors of Non-Muscle-Invasive Bladder Cancer. <span class="jr">J Natl Compr Canc Netw. 2024;22(2).</span> <a href="https://doi.org/10.6004/jnccn.2023.7086" target="_blank" rel="noopener">doi:10.6004/jnccn.2023.7086</a></li>
+      <li>Mastuo T 외. Molecular Mechanisms of the Anti-Cancer Effects of Isothiocyanates from Cruciferous Vegetables in Bladder Cancer. <span class="jr">Molecules. 2020;25(3):575.</span> <a href="https://doi.org/10.3390/molecules25030575" target="_blank" rel="noopener">doi:10.3390/molecules25030575</a></li>
+    </ul>
+
+    <p class="src-group">가공육·체중·신체활동</p>
+    <ul class="source-list">
+      <li>Crippa A 외. Red and processed meat consumption and risk of bladder cancer: a dose-response meta-analysis. <span class="jr">Eur J Nutr. 2018;57(2):689-701.</span> <a href="https://doi.org/10.1007/s00394-016-1356-0" target="_blank" rel="noopener">doi:10.1007/s00394-016-1356-0</a></li>
+      <li>Grosso G 외. Total, red and processed meat consumption and human health: an umbrella review. <span class="jr">Int J Food Sci Nutr. 2022;73(6):726-737.</span> <a href="https://doi.org/10.1080/09637486.2022.2050996" target="_blank" rel="noopener">doi:10.1080/09637486.2022.2050996</a></li>
+      <li>Larsson SC, Burgess S. Causal role of high body mass index in multiple chronic diseases: a systematic review and meta-analysis of Mendelian randomization studies. <span class="jr">BMC Med. 2021;19(1):320.</span> <a href="https://doi.org/10.1186/s12916-021-02188-x" target="_blank" rel="noopener">doi:10.1186/s12916-021-02188-x</a></li>
+      <li>Moore SC 외. Association of Leisure-Time Physical Activity With Risk of 26 Types of Cancer in 1.44 Million Adults. <span class="jr">JAMA Intern Med. 2016;176(6):816-25.</span> <a href="https://doi.org/10.1001/jamainternmed.2016.1548" target="_blank" rel="noopener">doi:10.1001/jamainternmed.2016.1548</a></li>
+    </ul>
+
+    <p class="src-group">기관 권고</p>
+    <ul class="source-list">
+      <li>World Cancer Research Fund / AICR — Diet, nutrition, physical activity and bladder cancer (2018). <a href="https://www.wcrf.org/diet-activity-and-cancer/cancer-types/bladder-cancer/" target="_blank" rel="noopener">wcrf.org</a> — 비소 오염 식수는 강력한 근거, 채소·과일·차는 가능성 수준</li>
+      <li>American Cancer Society — Nutrition and Physical Activity Guideline for Cancer Survivors (2022). <a href="https://www.cancer.org" target="_blank" rel="noopener">cancer.org</a></li>
+      <li>EAU Patient Information — 방광암. <a href="https://patients.uroweb.org" target="_blank" rel="noopener">patients.uroweb.org</a></li>
+    </ul>
+
+    <p style="font-size:0.85rem;color:var(--mist);padding-bottom:14px;">위 논문 정보는 PubMed에서 확인했습니다. 이 자료는 근거의 강도를 있는 그대로 표시하는 것을 원칙으로 했으며, 관찰 연구에서 나온 수치는 인과관계가 아니라는 점을 본문에 함께 밝혔습니다. 개인별 권고는 반드시 담당 의료진의 진료를 통해 확인하세요.</p>
+  </details>
+
+  <footer>
+    <p><strong>충북대학교 비뇨의학과</strong> 환자 교육 자료 · 정기적으로 업데이트됩니다.</p>
+    <p>금연을 시작하고 싶으시면 진료 때 말씀해 주세요. 금연상담전화 1544-9030, 보건소 금연클리닉을 이용하실 수 있습니다.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var QA = [
+    { q: "방광암에서 금연이 왜 그렇게 중요한가요?", a: "담배 연기 속 발암물질은 폐에서 흡수되어 혈액을 타고 신장으로 갑니다. 신장이 이를 걸러 소변으로 내보내면 그 소변이 방광에 고이는데, 이때 방광 점막이 발암물질에 직접, 오랜 시간 노출됩니다. 방광이 담배의 표적이 되는 이유입니다.\n미국암학회에 따르면 흡연자의 방광암 위험은 비흡연자의 3배 이상이고, 방광암의 약 절반이 흡연 때문에 발생합니다. 식이나 영양제를 포함한 어떤 생활습관 요인보다 영향이 큽니다.", src: "American Cancer Society", kw: ["금연 왜","담배 왜","흡연 위험","금연 중요","왜 중요","담배 방광"] },
+    { q: "이미 진단을 받았는데 지금 끊어도 도움이 되나요?", a: "네, 늦지 않았습니다.\n대만에서 265명을 추적한 연구에서 3년 무재발 생존율은 계속 흡연 45%, 비흡연 57%, 과거 흡연 62%, 진단 전후로 금연한 군 70%였습니다.\n일본의 634명 연구에서는 금연 기간이 15년 미만인 것 자체가 재발의 독립적 위험 요인이었습니다(위험비 2.20).\n다만 솔직히 말씀드리면, 미국 카이저 재단의 1,472명 연구에서는 흡연 기간과 총 흡연량은 재발 위험을 뚜렷하게 높였지만(40년 이상 흡연 위험비 2.36) 금연 후 경과 햇수와 재발 사이의 관계는 뚜렷하지 않았습니다. 금연 이득의 크기는 연구마다 다르지만, 계속 피우는 것이 나쁘다는 데에는 이견이 없습니다.", src: "BJU Int 2007 · Ann Surg Oncol 2016 · JAMA Netw Open 2022", kw: ["지금 끊어","이미 진단","늦지","지금 금연","도움이 되나","소용"] },
+    { q: "금연을 하고 싶은데 어떻게 시작하나요?", a: "의지만으로 끊는 것은 매우 어렵습니다. 상담과 약물치료를 함께 받는 것이 성공률이 높습니다.\n① 진료 때 \"금연 도움을 받고 싶다\"고 먼저 말씀해 주세요. 한 조사에서 방광암 진단 시 흡연자의 83.1%가 금연 권고를 받았지만 실제 금연 지원을 제공받은 사람은 1.7%뿐이었습니다. 먼저 요청하시는 것이 중요합니다.\n② 보건소 금연클리닉, 병원 금연치료 지원사업을 이용할 수 있습니다.\n③ 금연상담전화 1544-9030\n④ 니코틴 보조제와 금연 보조 약물을 처방받을 수 있습니다.\n비뇨의학과 진료실에서의 5분 상담만으로도 금연율이 유의하게 올라간다는 것이 문헌의 결론입니다.", src: "Acta Med Port 2018 · Curr Opin Urol 2018", kw: ["금연 어떻게","금연 방법","금연클리닉","끊는 방법","담배 끊는","끊는 법","끊고 싶","금연하려면","금연 시작","금연 약"] },
+    { q: "전자담배로 바꾸면 괜찮나요?", a: "대안이 되지 않습니다. 카이저 연구에서 전자담배 사용과 재발 사이에 뚜렷한 연관이 관찰되지 않았지만, 이는 전자담배가 안전하다는 뜻이 아니라 방광암 환자에서 충분히 연구되지 않았다는 뜻입니다.\n목표는 담배 종류를 바꾸는 것이 아니라 니코틴 사용 자체를 끝내는 것입니다. 궐련형 전자담배도 마찬가지입니다.", src: "JAMA Netw Open 2022 (Be-Well Study)", kw: ["전자담배","궐련형","아이코스","베이핑","액상"] },
+    { q: "가족이 담배를 피우는데 괜찮을까요?", a: "금연 성공에 큰 영향을 줍니다. 한 조사에서 진단 후에도 계속 흡연한 환자는 가구 내 다른 흡연자가 있는 비율이 40%였던 반면, 금연에 성공한 환자는 4.2%에 불과했습니다.\n가족이 함께 끊는 것이 가장 좋고, 어렵다면 최소한 집 안에서는 피우지 않도록 정하세요. 간접흡연 자체도 피해야 할 노출입니다.", src: "Acta Med Port 2018", kw: ["가족 담배","간접흡연","같이 사는","배우자 담배","집에서 담배"] },
+    { q: "물을 많이 마시면 재발을 막을 수 있나요?", a: "아닙니다. 이것이 방광암에서 가장 흔한 오해입니다.\n716명을 추적한 연구와 1,322명을 추적한 연구 모두에서 수분 섭취량과 재발 사이에 이로운 관계가 나타나지 않았습니다. 오히려 2025년 발표된 연구에서는 진단 전 수분 섭취가 가장 많았던 군(하루 2,300mL 이상)의 첫 재발 위험이 38% 더 높았고, 진행 위험도 하루 150mL 늘어날 때마다 조금씩 높아졌습니다.\n연구자들은 \"환자에게 수분 섭취를 늘리라고 권고할 근거가 없다\"고 결론지었습니다. 다만 이것이 물을 적게 마시라는 뜻은 아닙니다.", src: "BJU Int 2025 · Bladder Cancer 2018", kw: ["물 재발","재발 예방 물","씻어","물 많이 마시면","수분 재발"] },
+    { q: "그럼 물은 하루에 얼마나 마셔야 하나요?", a: "탈수되지 않을 만큼 평소대로 드시면 됩니다. 갈증이 나면 마시고, 소변 색이 진하면 늘리세요. 특정 목표량을 억지로 채우실 필요는 없습니다.\n단, 다음 경우에는 이야기가 다르므로 병원 지시를 따르세요.\n① 경요도 수술 직후 소변에 피가 섞여 나올 때 — 핏덩어리가 요도를 막지 않도록 수분을 늘립니다.\n② 방광내 주입치료 전후 — 약물이 방광에 머물도록 주입 전에는 제한하고 배출 후에 늘립니다.\n③ 요루·인공방광 등 요로전환술을 받은 경우\n④ 요로감염이나 결석이 있을 때\n⑤ 시스플라틴 항암치료 중 — 신장 보호를 위한 별도 지침이 있습니다.", src: "BJU Int 2025 · 각 치료별 병원 안내", kw: ["물 얼마나","하루 물","수분량","몇 리터","물 마셔야","수분 섭취"] },
+    { q: "브로콜리나 십자화과 채소가 정말 효과가 있나요?", a: "먹는 것은 좋지만 치료 효과로 기대하지는 마세요.\n배추·무·브로콜리에 든 아이소싸이오싸이아네이트 성분이 주목받아 왔고, \"재발이 44% 줄었다\"는 숫자가 자주 인용됩니다. 그러나 이는 관찰 연구에서 나온 것이고 특정 치료를 받은 환자군에 한정됩니다.\n2024년 발표된 무작위 임상시험은 식이 교육으로 섭취량과 소변 내 성분 농도를 실제로 올릴 수 있는지를 확인한 단계였고, 재발이나 진행이 줄었는지는 아직 확인되지 않았습니다. 연구진도 \"향후 임상시험이 필요하다\"고 밝히고 있습니다.\n참고로 이 성분은 가열하면 상당 부분 파괴되어 연구들은 주로 생채소를 봅니다. 김치는 발효·염장된 형태라 같지 않습니다.", src: "J Natl Compr Canc Netw 2024 · Molecules 2020", kw: ["브로콜리","십자화과","양배추","무 먹","44%","채소 효과"] },
+    { q: "녹차나 차는 도움이 되나요?", a: "가능성은 있지만 확실하지 않습니다. 세계암연구기금은 과일·채소와 차가 방광암 위험을 낮출 가능성이 있다고 보면서도, 확실한 결론을 내리기에는 근거가 부족하다고 명시하고 있습니다.\n진단 후 재발과 관련해서는, 종합 검토에서 녹차를 포함한 개별 음료와 재발 사이의 연관이 확인되지 않았습니다.\n즐기시는 정도면 충분하고, 치료 목적으로 많이 드실 필요는 없습니다.", src: "WCRF/AICR 2018 · Bladder Cancer 2020 종합검토", kw: ["녹차","차 마셔","홍차","보리차"] },
+    { q: "커피를 마셔도 되나요?", a: "괜찮습니다. 방광암 재발과 관련해 커피, 녹차, 콜라, 술 등 개별 음료와의 연관은 확인되지 않았습니다.\n카페인이 방광 자극 물질로 자주 언급되지만 연구 근거는 약합니다. 배뇨 증상이 실제로 불편하시다면 1~2주 끊었다가 다시 드셔보며 본인에게 해당되는지 확인하는 것이 가장 확실합니다.", src: "Bladder Cancer 2020 종합검토", kw: ["커피","카페인","아메리카노","에스프레소"] },
+    { q: "술은 마셔도 되나요?", a: "권장하지 않습니다. 방광암 재발과 술 섭취 사이의 직접적인 연관은 연구에서 확인되지 않았지만, 미국암학회와 세계암연구기금 모두 암 예방과 생존자 관리 관점에서 \"술은 마시지 않는 것이 가장 좋다\"고 권고합니다.\n또한 치료 중에는 약물 상호작용과 영양 문제가 있을 수 있으니 담당 의료진과 상의하세요.", src: "American Cancer Society 2022 · WCRF/AICR 2018", kw: ["술","음주","맥주","알코올","소주","와인","막걸리"] },
+    { q: "가공육이나 붉은 고기는 어떤가요?", a: "가공육은 줄이시는 것이 좋습니다. 메타분석에서 가공육을 하루 50g씩 더 먹을 때마다 방광암 위험이 20% 높아졌습니다(상대위험도 1.20, 95% 신뢰구간 1.06~1.37). 여러 연구를 종합한 검토에서도 가공육 과다 섭취와 방광암의 연관이 확실한 수준으로 평가됐습니다.\n붉은 고기는 조금 다릅니다. 환자-대조군 연구에서는 연관이 나타났지만 더 신뢰도가 높은 코호트 연구에서는 연관이 확인되지 않았습니다. 세계암연구기금 일반 권고인 조리 후 무게로 주 350~500g 이내 정도면 적당합니다.\n햄·소시지·베이컨·통조림햄은 \"가능한 한 아주 적게\"가 권고입니다.", src: "Eur J Nutr 2018 · Int J Food Sci Nutr 2022 · WCRF/AICR", kw: ["가공육","붉은 고기","햄","소시지","베이컨","고기 먹어도","삼겹살"] },
+    { q: "채소와 과일은 얼마나 먹어야 하나요?", a: "세계암연구기금 권고 기준으로 채소·과일 하루 400g 이상, 식이섬유 하루 30g 이상이 목표입니다.\n방광암 진단 3개월 후 이 권고 전반을 잘 지킨 분들에서 첫 재발 위험이 26% 낮았다는 연구가 있습니다(위험비 0.74). 다만 관찰 연구이고, 다발 재발이나 진행에서는 유의하지 않았습니다.\n특정 슈퍼푸드를 찾기보다 전체 식단의 방향을 식물성 위주로 바꾸는 편이 근거에 맞습니다. 주스보다는 과일을 통째로 드세요.", src: "Am J Clin Nutr 2023 · WCRF/AICR 2018", kw: ["채소 얼마나","과일","400g","식이섬유","야채"] },
+    { q: "영양제나 건강기능식품을 먹어도 되나요?", a: "방광암 재발을 줄이는 것으로 입증된 보충제는 없습니다.\n종합 검토에 따르면 셀레늄, 비타민 A·C·B6 보충제는 재발과 연관이 확인되지 않았습니다. 특히 엽산(비타민 B9) 보충제는 오히려 피하도록 제안된 연구가 있어 주의가 필요합니다.\n또한 일부 보충제는 항암제나 다른 약과 상호작용할 수 있습니다. 드시는 것이 있다면 제품을 그대로 가져오시거나 사진을 찍어 진료 때 보여주세요.\n검사 결과에 따라 실제로 필요한 보충(예: 요로전환술 후 비타민 B12)은 의료진이 판단합니다.", src: "Bladder Cancer 2020 종합검토", kw: ["영양제","건강기능식품","보충제","홍삼","비타민 먹","즙","한약","보조식품"] },
+    { q: "엽산이 왜 주의 대상인가요?", a: "종합 검토에서 보충 형태의 엽산(비타민 B9)은 방광암 예후에 이롭지 않을 가능성이 제기되어, 피하도록 제안한 개별 연구가 있습니다. 다만 이는 개별 연구 수준이며 확립된 결론은 아닙니다.\n중요한 구분: 이는 알약·영양제 형태의 고용량 보충을 말하는 것이며, 채소에 자연적으로 들어 있는 엽산을 피하라는 뜻이 아닙니다.\n엽산 보충제를 다른 이유로 복용 중이시라면 임의로 중단하지 마시고 담당 의료진과 상의하세요.", src: "Bladder Cancer 2020 종합검토", kw: ["엽산","비타민b9","folic"] },
+    { q: "유산균이나 프로바이오틱스는 어떤가요?", a: "재발을 줄일 가능성이 제기된 항목이지만 아직 확립되지 않았습니다. 종합 검토에서 \"프로바이오틱스 보충이 재발을 줄일 수 있다\"고 언급되지만 근거 수준은 낮습니다.\n일상적으로 요구르트 등을 드시는 것은 문제없습니다. 다만 재발 예방을 목적으로 고가의 제품을 구입하실 근거는 아직 충분하지 않습니다. 면역억제 상태이거나 항암치료 중이라면 균주 제품 복용 전 담당 의료진과 상의하세요.", src: "Bladder Cancer 2020 종합검토", kw: ["유산균","프로바이오틱스","요구르트","장내 세균"] },
+    { q: "체중 관리가 중요한가요?", a: "네, 식품 하나하나보다 근거가 확실한 항목입니다.\n유전 정보를 이용한 분석(멘델 무작위화 메타분석)에서 높은 체질량지수가 방광암 위험을 높이는 인과적 요인으로 나타났습니다. 방광암 예후를 다룬 종합 검토에서도 적정 체중 유지가 근거 수준이 좋은 항목으로 분류됩니다.\n다만 치료 중 체중이 줄고 있는 시기라면 이야기가 다릅니다. 그때는 감량이 아니라 충분한 열량과 단백질 확보가 우선입니다.", src: "BMC Med 2021 · Bladder Cancer 2020 종합검토", kw: ["체중","비만","살","몸무게","다이어트","체질량"] },
+    { q: "운동은 얼마나 해야 하나요?", a: "144만 명을 분석한 대규모 연구에서 여가 신체활동이 많은 군의 방광암 발생 위험이 13% 낮았습니다(위험비 0.87). 이 관계는 체중이나 흡연력과 무관하게 유지됐습니다.\n일반적인 목표는 주당 중강도 운동 150~300분 또는 고강도 75~150분에 주 2회 이상 근력운동입니다. 걷기부터 시작하셔도 좋습니다.\n수술 직후라면 시작 시점과 강도는 담당 의료진과 상의하세요.", src: "JAMA Intern Med 2016", kw: ["운동","신체활동","걷기","헬스","활동량"] },
+    { q: "당뇨가 있는데 관련이 있나요?", a: "네. 방광암 예후를 다룬 종합 검토에서 제2형 당뇨의 예방과 치료가 근거 수준이 좋은 항목으로 분류됩니다. 금연, 적정 체중과 함께 세 가지 중 하나입니다.\n혈당 관리는 이미 하고 계신 당뇨 치료를 잘 따르는 것이 핵심입니다. 참고로 인슐린이나 경구 혈당강하제, 스타틴 등은 방광암 재발 목적으로는 연관이 확인되지 않았지만, 원래 질환 치료를 위한 복용은 계속하셔야 합니다.", src: "Bladder Cancer 2020 종합검토", kw: ["당뇨","혈당","인슐린","혈당강하제","스타틴"] },
+    { q: "매운 음식이나 자극적인 음식은 피해야 하나요?", a: "근거는 약합니다. 방광 자극 물질 목록(카페인·술·탄산·인공감미료·매운 음식·신 과일)은 거의 모든 환자 안내문에 실려 있지만 연구 근거는 뒷받침되지 않습니다.\n배뇨 증상이 실제로 불편하시다면 의심되는 것을 1~2주 끊었다가 하나씩 다시 드셔보며 확인하는 방법이 가장 확실합니다. 사람마다 다르므로 일률적으로 끊을 필요는 없습니다.\n다만 수술 직후나 항암치료 중 위장이 예민한 시기에는 자극적인 음식을 줄이는 것이 편합니다.", src: "방광 자극 물질 문헌 (근거 수준 낮음)", kw: ["매운","자극적","고추","맵게","탄산","인공감미료","신 과일"] },
+    { q: "튀긴 음식이나 서구식 식단이 나쁜가요?", a: "해로울 가능성을 시사하는 개별 연구가 있습니다. 종합 검토에서 튀긴 음식과 붉은 고기 위주의 \"서구식 식단\" 패턴이 방광암 예후에 좋지 않을 가능성이 개별 연구 수준으로 언급됩니다.\n다만 확립된 결론은 아닙니다. 흥미롭게도 같은 검토에서 여러 식단 패턴(고과일·채소 식단, 저지방 식단 등)은 재발과의 연관이 확인되지 않았습니다.\n실용적인 결론: 특정 식단 이름을 좇기보다 튀김과 가공육을 줄이고 채소를 늘리는 방향이면 충분합니다.", src: "Bladder Cancer 2020 종합검토", kw: ["튀긴","튀김","서구식","패스트푸드","기름진"] },
+    { q: "물에 비소가 들었다는 이야기가 있던데요?", a: "비소가 든 식수가 방광암 위험을 높인다는 것은 세계암연구기금이 강력한 근거로 인정한 몇 안 되는 항목입니다.\n다만 이는 주로 방글라데시, 인도, 캄보디아, 아르헨티나, 칠레, 멕시코 등 지하수 비소 오염이 심한 지역의 문제입니다. 국내 상수도는 수질 기준으로 관리되므로 일반적으로 걱정하실 필요는 없습니다.\n사설 지하수나 약수를 상시 음용하신다면 수질 검사를 한 번 받아보시는 것을 권합니다.", src: "WCRF/AICR 2018", kw: ["비소","지하수","약수","수돗물","정수기","물이 안전"] },
+    { q: "김치나 짠 음식은 어떤가요?", a: "방광암에 대해 나트륨 섭취 기준을 제시한 공신력 있는 권고는 확인되지 않았습니다. 이 점을 먼저 밝혀둡니다.\n다만 한국인 평균 나트륨 섭취는 WHO 권고(하루 2,000mg)의 약 두 배로 알려져 있고, 고염식은 위암 위험과 관련이 있으며 신장·심혈관 건강에도 영향을 줍니다. 방광암 치료 과정에서 신장 기능이 중요한 경우가 많으므로 과도한 염분은 줄이는 편이 좋습니다.\n실용적으로는 김치를 끊기보다 국·찌개 국물을 다 드시지 않는 것이 효과가 큽니다. 국물·면류가 김치 못지않은 나트륨 공급원입니다.\n참고로 김치는 발효·염장된 형태라, 십자화과 채소 연구에서 말하는 \"생채소\"와는 다릅니다.", src: "WHO · 국민건강영양조사 (방광암 특이적 권고는 없음)", kw: ["김치","짠","나트륨","염분","소금","국물","찌개"] },
+    { q: "BCG 치료 중에는 무엇을 조심해야 하나요?", a: "수분 섭취는 병원 지시를 그대로 따르세요. 약물이 방광에 충분히 머물도록 주입 전에는 수분을 제한하고 배출 후에 늘리도록 안내하는 것이 일반적입니다. 이 시기 수분 조절은 재발 예방이 아니라 치료 효과와 안전을 위한 것이므로 일반적인 설명보다 병원 안내가 우선합니다.\n중요한 점: 흡연은 방광내 주입치료의 효과를 떨어뜨리는 것과 연관이 있다고 보고됩니다. 치료를 시작하시는 시점이 금연하기에 가장 좋은 때입니다.\n주입 후 38도 이상의 발열이나 오한이 있으면 즉시 연락하세요.", src: "Curr Opin Urol 2018 · 병원별 주입치료 안내", kw: ["bcg","방광내","주입치료","주입","약물 주입"] },
+    { q: "항암치료 중에는 어떻게 먹어야 하나요?", a: "이 시기에는 \"무엇이 암에 좋은가\"보다 충분한 열량과 단백질을 확보하는 것이 우선입니다.\n① 하루 3끼 대신 조금씩 자주 드세요.\n② 매 끼니 단백질(두부·계란·생선·살코기)을 조금이라도 포함하세요.\n③ 구내염이 있으면 자극적이고 뜨거운 음식을 피하고 부드럽게 드세요.\n④ 체중이 계속 줄면 담당팀에 알리고 영양 상담이나 경구영양보충음료 처방이 가능한지 문의하세요.\n시스플라틴 계열 항암제는 신장 기능에 영향을 줄 수 있어 수분과 신장 보호에 대한 별도 지침이 있습니다. 반드시 담당 의료진의 안내를 따르세요.", src: "암 환자 영양 일반 지침 · 각 요법별 병원 안내", kw: ["항암","항암치료","화학요법","시스플라틴","구내염","입안"] },
+    { q: "방광 제거 수술을 받았는데 식사가 다른가요?", a: "네, 다릅니다. 방광을 제거하고 소장으로 요로를 만드는 수술(요루·인공방광)은 장을 잘라 이었기 때문에 이 페이지의 일반적인 안내와는 별개의 관리가 필요합니다.\n① 회복 초기 몇 주간 저섬유식(잡곡·생나물·깨·견과류 등 제한)\n② 이후 한 가지씩 서서히 섬유질 재도입\n③ 요루·인공방광 각각의 수분·점액·전해질 관리\n④ 장기적으로 비타민 B12 정기 검사 — 비타민 B12는 소장 끝부분에서만 흡수되는데 그 부위를 수술에 사용하기 때문입니다.\n이 부분은 병원마다 프로토콜이 다르므로 수술받으신 병원의 개별 안내를 따라주세요.", src: "요로전환술 후 관리 문헌 · 병원별 안내", kw: ["방광 제거","요루","인공방광","방광절제","요로전환","스토마","소변주머니"] },
+    { q: "경요도 수술(TURBT) 후 식사는 어떻게 하나요?", a: "대개 식사 제한은 없습니다. 장을 건드리지 않았기 때문에 평소대로 드시면 됩니다.\n중요한 것은 두 가지입니다.\n① 소변에 피가 섞여 나오는 동안에는 수분을 늘리세요. 핏덩어리가 요도를 막는 것을 예방하기 위해서입니다.\n② 힘주는 배변이 불편하므로 채소와 수분으로 변비를 예방하세요.\n회복 기간에 술과 자극적인 음식을 잠시 줄이라는 안내가 흔하지만 근거 수준은 낮은 편입니다.", src: "비뇨의학과 수술 후 안내 (수분은 근거 중간, 자극물질은 낮음)", kw: ["경요도","turbt","내시경","종양절제","방광경"] },
+    { q: "체중이 계속 줄어요", a: "가볍게 넘기지 마세요. 근육량이 줄면 치료 부작용과 회복 지연 위험이 높아집니다.\n① 하루 3끼 대신 6끼로 나눠 조금씩 자주 드세요.\n② 매 끼니 단백질을 포함하세요.\n③ 물로 배를 채우지 말고 식사 사이에 수분을 드세요.\n④ 담당팀에 알리고 영양 상담이나 경구영양보충음료 처방이 가능한지 문의하세요.\n참고로 회복기에 체중을 지키는 것과 장기적으로 적정 체중을 유지하는 것은 시기가 다른 목표입니다. 지금 줄고 있다면 감량이 아니라 확보가 우선입니다.", src: "암 환자 영양 일반 지침", kw: ["체중 줄","살이 빠","마르","식욕","입맛","못 먹"] },
+    { q: "정기 검사는 꼭 받아야 하나요?", a: "네. 어떤 식이보다 중요합니다. 방광암은 재발이 흔한 암이고, 정기 방광경 검사와 영상 검사로 조기에 발견하면 대응이 훨씬 수월합니다.\n식이 관리는 검진과 금연을 대신하는 것이 아니라 보태는 것으로 생각해 주세요. 세계암연구기금 권고를 잘 지킨 분들에서 첫 재발이 26% 적었다는 연구가 있지만, 이는 관찰 연구이고 다발 재발이나 진행에서는 유의하지 않았습니다.", src: "Am J Clin Nutr 2023 · 일반 진료 원칙", kw: ["정기 검사","방광경","추적","검진","재발 검사"] },
+    { q: "소변에 피가 보이는데 어떻게 하나요?", a: "즉시 담당 의료진에게 연락하세요. 통증이 없어도, 한 번뿐이었어도 반드시 알리셔야 합니다. 혈뇨는 방광암의 가장 대표적인 신호입니다.\n다음 증상도 예약을 기다리지 말고 연락하세요.\n① 소변이 나오지 않거나 핏덩어리가 나옴\n② 배뇨 시 심한 통증, 갑자기 심해진 빈뇨·절박뇨\n③ 38도 이상의 발열·오한 (특히 방광내 주입치료 직후)\n④ 옆구리·허리 통증\n⑤ 이유 없는 체중 감소, 지속되는 피로\n⑥ 다리 부종\n식사나 영양제 때문인지 스스로 판단하려 하지 마시고 먼저 연락하세요.", src: "일반 진료 원칙", kw: ["혈뇨","소변에 피","피가","응급","위험","이상 증상","발열","연락"] },
+    { q: "항염증 식단이 재발을 막아주나요?", a: "최근 연구는 그렇지 않다고 봅니다. 2026년 발표된 1,300여 명 대상 연구에서, 항염증 정도로 점수화한 생활습관·식이와 혈중 염증 지표(hsCRP)는 모두 방광암 재발이나 진행과 관계가 없었습니다. 생활습관 점수는 염증 지표 자체를 실제로 변화시켰지만, 그것이 암 결과로 이어지지는 않았습니다.\n식이가 전혀 무의미하다는 뜻은 아닙니다. 다만 특정 식단 이름을 좇는 것보다 금연·체중·혈당 같은 큰 항목이 훨씬 중요하다는 근거로 읽는 것이 맞습니다.", src: "Nutrition 2026 (UroLife 코호트)", kw: ["항염증","염증","crp","해독","디톡스","특별한 식단"] },
+    { q: "방광암 환자의 식이와 생활습관을 전반적으로 정리해 주세요", a: "우선순위 순으로 말씀드립니다.\n\n[1순위 · 금연] 다른 모든 것을 합친 것보다 중요합니다. 흡연자의 방광암 위험은 비흡연자의 3배 이상이고 방광암의 약 절반이 흡연 때문입니다. 이미 진단받으셨어도 늦지 않았습니다. 혼자 하지 마시고 금연클리닉·약물 도움을 받으세요.\n\n[2순위 · 체중과 혈당] 적정 체중 유지와 제2형 당뇨 관리는 개별 식품보다 근거가 확실합니다. 주 150분 이상 신체활동을 함께 하세요.\n\n[3순위 · 식단의 방향] 채소·과일 하루 400g, 식이섬유 30g 이상. 가공육과 술은 줄이세요. 특정 슈퍼푸드를 찾기보다 전체 방향을 바꾸는 편이 근거에 맞습니다.\n\n[근거가 없는 것] 물을 많이 마셔 재발을 막는다는 것, 브로콜리의 치료 효과, 각종 건강기능식품 — 모두 재발을 줄인다는 근거가 없습니다. 특히 엽산 보충제는 주의가 필요합니다.\n\n[가장 중요] 정기 방광경 검사를 거르지 마세요. 식이는 검진과 금연을 대신하는 것이 아니라 보태는 것입니다.\n\n금연 방법, 수분, 십자화과 채소, 영양제, 가공육, 체중, BCG 치료 중 식사 등 구체적으로 물어보시면 자세히 답해드릴게요.", src: "ACS · WCRF/AICR · Bladder Cancer 2020 종합검토 · UroLife 코호트", kw: ["전반","전체적","정리해","요약","알려주세요"] }
+  ];
+
+  var QUICK = [31, 0, 1, 2, 5, 7, 13, 11].map(function (i) { return QA[i]; });
+
+  var log = document.getElementById("chatLog");
+  var chipRow = document.getElementById("chipRow");
+  var form = document.getElementById("chatForm");
+  var input = document.getElementById("chatInput");
+
+  function addMsg(role, html) {
+    var msg = document.createElement("div");
+    msg.className = "msg " + role;
+    var avatar = document.createElement("div");
+    avatar.className = "avatar";
+    avatar.textContent = role === "bot" ? "비뇨" : "나";
+    var bubble = document.createElement("div");
+    bubble.className = "bubble";
+    bubble.innerHTML = html;
+    msg.appendChild(avatar);
+    msg.appendChild(bubble);
+    log.appendChild(msg);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function formatAnswer(item) {
+    var body = escapeHtml(item.a).replace(/\n/g, "<br>");
+    return body + '<span class="src">출처: ' + escapeHtml(item.src) + "</span>";
+  }
+
+  function renderChips() {
+    chipRow.innerHTML = "";
+    QUICK.forEach(function (item) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip";
+      b.textContent = item.q;
+      b.addEventListener("click", function () { ask(item.q); });
+      chipRow.appendChild(b);
+    });
+  }
+
+  var PARTICLES = ["에서","에게","까지","부터","처럼","보다","라도","이나","은는","은","는","이","가","을","를","의","에","도","만","과","와","나"];
+  function stripParticle(w) {
+    for (var i = 0; i < PARTICLES.length; i++) {
+      var p = PARTICLES[i];
+      if (w.length > p.length && w.slice(-p.length) === p) return w.slice(0, -p.length);
+    }
+    return w;
+  }
+  function corpusOf(item) {
+    return (item.q + " " + item.a).toLowerCase().replace(/\s+/g, "");
+  }
+  function kwScore(norm, item) {
+    var s = 0;
+    item.kw.forEach(function (k) {
+      var words = k.toLowerCase().split(/\s+/).filter(Boolean);
+      var allFound = words.every(function (w) { return norm.indexOf(w) !== -1; });
+      if (allFound) s += words.length;
+    });
+    if (norm.indexOf(item.q.toLowerCase().replace(/\s+/g, "").slice(0, 6)) !== -1) s += 1;
+    return s;
+  }
+  function docFreq(word) {
+    var c = 0;
+    QA.forEach(function (item) { if (corpusOf(item).indexOf(word) !== -1) c++; });
+    return c;
+  }
+  function fuzzyScore(text, item) {
+    var words = text.toLowerCase().replace(/[?!.,]/g, " ").split(/\s+/)
+      .map(stripParticle)
+      .filter(function (w) { return w.length >= 2; });
+    var c = corpusOf(item);
+    var s = 0;
+    words.forEach(function (w) {
+      if (c.indexOf(w) === -1) return;
+      if (docFreq(w) > 3) return; // too generic (appears in most answers) — not a useful signal
+      s += 1;
+    });
+    return s;
+  }
+  function score(text, item) {
+    var norm = text.toLowerCase().replace(/\s+/g, "");
+    return kwScore(norm, item) * 5 + fuzzyScore(text, item);
+  }
+
+  function findAnswer(text) {
+    var best = null, bestScore = 0;
+    QA.forEach(function (item) {
+      var s = score(text, item);
+      if (s > bestScore) { bestScore = s; best = item; }
+    });
+    return bestScore > 0 ? best : null;
+  }
+
+  function ask(text) {
+    addMsg("user", escapeHtml(text));
+    var hit = findAnswer(text);
+    setTimeout(function () {
+      if (hit) {
+        addMsg("bot", formatAnswer(hit));
+      } else {
+        addMsg("bot", "죄송해요, 정확히 이해하지 못했어요. 아래 예시 질문 중 비슷한 것을 눌러보시거나, 다른 표현으로 다시 질문해 주세요. 답변이 어려운 개인적인 증상은 반드시 담당 진료팀에 직접 문의해 주세요.");
+      }
+    }, 260);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = input.value.trim();
+    if (!v) return;
+    ask(v);
+    input.value = "";
+  });
+
+  renderChips();
+  addMsg("bot", "안녕하세요, 충북대학교 비뇨의학과입니다. 방광암의 금연과 식이에 대해 궁금하신 점을 입력하시거나 아래 예시 질문을 눌러보세요. 이 챗봇은 실제 연구 근거를 바탕으로 준비된 답변만 안내하며, 근거가 약한 부분은 약하다고 그대로 말씀드립니다. 담당 의료진의 개별 진료를 대신하지 않습니다.");
+})();
+</script>
