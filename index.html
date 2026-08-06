@@ -19,6 +19,15 @@
     --shadow: 0 1px 2px rgba(22,34,31,0.06), 0 8px 24px -12px rgba(22,34,31,0.18);
     --radius: 14px;
     color-scheme: light;
+
+    /* Brand surfaces stay dark green in both themes — the theme blocks below
+       never redefine these, so white text on them keeps its contrast. */
+    --brand-dark: #163b34;
+    --brand-mid: #24534a;
+    --on-brand: #f4f8f6;
+    --on-brand-soft: #cfe7dc;
+    --chip-bg: #f1e3c4;
+    --chip-ink: #6b4a12;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -73,8 +82,8 @@
 
   /* ---------- Header ---------- */
   header.top {
-    background: linear-gradient(180deg, var(--pine-strong) 0%, var(--pine) 100%);
-    color: #f4f8f6;
+    background: linear-gradient(180deg, var(--brand-dark) 0%, var(--brand-mid) 100%);
+    color: var(--on-brand);
     padding: 36px 20px 44px;
   }
   header.top .wrap { padding-bottom: 0; }
@@ -85,7 +94,7 @@
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     font-weight: 600;
-    color: #cfe7dc;
+    color: var(--on-brand-soft);
     text-transform: uppercase;
     margin: 0 0 14px;
   }
@@ -119,12 +128,12 @@
     padding: 7px 14px;
     border-radius: 100px;
     border: 1px solid rgba(244,248,246,0.4);
-    color: #dcece5;
+    color: var(--on-brand-soft);
   }
   .pagenav a[aria-current="page"] {
-    background: #f4f8f6;
-    color: var(--pine-strong);
-    border-color: #f4f8f6;
+    background: var(--on-brand);
+    color: var(--brand-dark);
+    border-color: var(--on-brand);
   }
   .pagenav a:hover:not([aria-current]) { background: rgba(244,248,246,0.14); }
 
@@ -264,12 +273,12 @@
     align-items: center;
     gap: 10px;
     padding: 14px 18px;
-    background: var(--pine-strong);
-    color: #f4f8f6;
+    background: var(--brand-dark);
+    color: var(--on-brand);
   }
   .chat-head .dot { width: 9px; height: 9px; border-radius: 50%; background: #7fe0b8; }
   .chat-head strong { font-size: 0.96rem; }
-  .chat-head span { font-size: 0.8rem; color: #cfe7dc; }
+  .chat-head span { font-size: 0.8rem; color: var(--on-brand-soft); }
   .chat-log {
     padding: 18px;
     display: flex;
@@ -402,7 +411,7 @@
     <p class="lede">근치적 전립선절제술을 받으신 분들이 가장 많이 묻는 운동·활동 관련 질문을 국내외 공신력 있는 의료기관 자료를 바탕으로 정리했습니다.</p>
     <nav class="pagenav" aria-label="자료 목록">
       <a href="index.html" aria-current="page">전립선암 수술 후 운동</a>
-      <a href="bladder-diet.html">방광암 수술 후 식이</a>
+      <a href="bladder-diet.html">방광암 금연·식이</a>
     </nav>
   </div>
 </header>
@@ -563,7 +572,7 @@
 
   <footer>
     <p><strong>충북대학교 비뇨의학과</strong> 환자 교육 자료 · 정기적으로 업데이트됩니다.</p>
-    <p>함께 보기: <a href="bladder-diet.html">방광암 수술 후 식이 가이드</a></p>
+    <p>함께 보기: <a href="bladder-diet.html">방광암 환자의 금연·식이 가이드</a></p>
     <p>운동 중 이상 증상이 있거나 궁금한 점은 챗봇 답변과 관계없이 언제든 담당 진료팀에 문의해 주세요.</p>
   </footer>
 </div>
