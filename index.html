@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>전립선암 수술 후 운동 가이드 · 충북대학교 비뇨의학과</title>
@@ -8,13 +11,14 @@
     --paper: #eff2ed;
     --paper-raised: #ffffff;
     --pine: #24534a;
+    --fill: #24534a; --fill-strong: #163b34;
     --pine-strong: #163b34;
     --pine-soft: #dbe7e1;
     --gold: #93691f;
     --gold-soft: #f1e3c4;
     --brick: #8a3d32;
     --brick-soft: #f3ddd8;
-    --mist: #6e7c77;
+    --mist: #5f6b66;
     --line: #d3ddd6;
     --shadow: 0 1px 2px rgba(22,34,31,0.06), 0 8px 24px -12px rgba(22,34,31,0.18);
     --radius: 14px;
@@ -27,6 +31,7 @@
       --paper: #101815;
       --paper-raised: #16211d;
       --pine: #74ab9c;
+      --fill: #23504a; --fill-strong: #16332f;
       --pine-strong: #a7cdc0;
       --pine-soft: #1c2f29;
       --gold: #dcb15c;
@@ -42,6 +47,7 @@
   :root[data-theme="dark"] {
     --ink: #e9efec; --ink-soft: #b3c1bb; --paper: #101815; --paper-raised: #16211d;
     --pine: #74ab9c; --pine-strong: #a7cdc0; --pine-soft: #1c2f29; --gold: #dcb15c;
+    --fill: #23504a; --fill-strong: #16332f;
     --gold-soft: #33291a; --brick: #e0897b; --brick-soft: #35211d; --mist: #8ba098; --line: #26332d;
     --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.6);
     color-scheme: dark;
@@ -49,7 +55,8 @@
   :root[data-theme="light"] {
     --ink: #16221f; --ink-soft: #43524d; --paper: #eff2ed; --paper-raised: #ffffff;
     --pine: #24534a; --pine-strong: #163b34; --pine-soft: #dbe7e1; --gold: #93691f;
-    --gold-soft: #f1e3c4; --brick: #8a3d32; --brick-soft: #f3ddd8; --mist: #6e7c77; --line: #d3ddd6;
+    --fill: #24534a; --fill-strong: #163b34;
+    --gold-soft: #f1e3c4; --brick: #8a3d32; --brick-soft: #f3ddd8; --mist: #5f6b66; --line: #d3ddd6;
     --shadow: 0 1px 2px rgba(22,34,31,0.06), 0 8px 24px -12px rgba(22,34,31,0.18);
     color-scheme: light;
   }
@@ -73,7 +80,7 @@
 
   /* ---------- Header ---------- */
   header.top {
-    background: linear-gradient(180deg, var(--pine-strong) 0%, var(--pine) 100%);
+    background: linear-gradient(180deg, var(--fill-strong) 0%, var(--fill) 100%);
     color: #f4f8f6;
     padding: 36px 20px 44px;
   }
@@ -246,7 +253,7 @@
     align-items: center;
     gap: 10px;
     padding: 14px 18px;
-    background: var(--pine-strong);
+    background: var(--fill-strong);
     color: #f4f8f6;
   }
   .chat-head .dot { width: 9px; height: 9px; border-radius: 50%; background: #7fe0b8; }
@@ -277,7 +284,7 @@
     line-height: 1.55;
   }
   .msg.bot .bubble { background: var(--paper); border: 1px solid var(--line); border-top-left-radius: 4px; }
-  .msg.user .bubble { background: var(--pine); color: #f4f8f6; border-top-right-radius: 4px; }
+  .msg.user .bubble { background: var(--fill); color: #f4f8f6; border-top-right-radius: 4px; }
   .bubble .src {
     display: block;
     margin-top: 8px;
@@ -301,7 +308,7 @@
     font-family: inherit;
     transition: background 0.15s ease, color 0.15s ease;
   }
-  .chip:hover, .chip:focus-visible { background: var(--pine); color: #fff; }
+  .chip:hover, .chip:focus-visible { background: var(--fill); color: #fff; }
   .chat-input {
     display: flex;
     gap: 8px;
@@ -322,7 +329,7 @@
   .chat-input input:focus-visible { outline: 2px solid var(--pine); outline-offset: 1px; }
   .chat-input button {
     border: none;
-    background: var(--pine);
+    background: var(--fill);
     color: #fff;
     border-radius: 100px;
     padding: 0 20px;
@@ -331,7 +338,7 @@
     cursor: pointer;
     font-family: inherit;
   }
-  .chat-input button:hover { background: var(--pine-strong); }
+  .chat-input button:hover { background: var(--fill-strong); }
   .chat-input button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
   /* ---------- Sources ---------- */
@@ -371,7 +378,15 @@
   table.consensus th { color: var(--mist); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; }
   table.consensus td { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
   table.consensus td:first-child { color: var(--ink); font-weight: 600; }
+
+  /* On phones let the table wrap instead of scrolling sideways */
+  @media (max-width: 520px) {
+    table { min-width: 0 !important; }
+    table th, table td { padding: 8px 9px; }
+  }
 </style>
+</head>
+<body>
 
 <header class="top">
   <div class="wrap">
@@ -693,3 +708,6 @@
   addMsg("bot", "안녕하세요, 충북대학교 비뇨의학과입니다. 전립선 수술 후 운동에 대해 궁금하신 점을 입력하시거나 아래 예시 질문을 눌러보세요. 이 챗봇은 공신력 있는 의료기관 자료로 준비된 답변만 안내하며, 담당 의료진의 개별 진료를 대신하지 않습니다.");
 })();
 </script>
+
+</body>
+</html>
